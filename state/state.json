@@ -5,18 +5,16 @@
    "date": "2026-11-20T22:17:58+00:00",
    "ig_media_id": "18142917139715535",
    "permalink": "https://www.instagram.com/reel/Df-tnN1EvbK/"
+  },
+  {
+   "id": "dunyanin-en-yuksek-10-dagi",
+   "date": "2026-11-20T22:30:37+00:00",
+   "ig_media_id": "18645079291024491",
+   "permalink": "https://www.instagram.com/reel/Df-u6RXEfH6/"
   }
  ],
  "rejected": [],
- "pending": {
-  "key": "20261120",
-  "topic_id": "dunyanin-en-yuksek-10-dagi",
-  "file_id": "BAACAgIAAxkDAAMMawAByHQZ9tqCzsCXgOJel0td_V_nAAK7ogAC4qUISKpptgW-68C4PQQ",
-  "message_id": 12,
-  "caption": "Dünyanın en yüksek 10 dağı 🏔️ 8.000 metreyi aşan 14 dağın hepsi Asya'da! Sen hangisini biliyordun? 👇\n\n#everest #dağ #himalaya #bilgi #bunlarıbiliyormuydunuz #coğrafya #keşfet #reels",
-  "theme": "zumrut",
-  "created": "2026-11-20T22:23:48+00:00"
- },
- "tg_offset": 518928463,
+ "pending": null,
+ "tg_offset": 518928465,
  "last_daily": "20261120"
 }
