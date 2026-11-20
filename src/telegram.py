@@ -27,8 +27,10 @@ class Telegram:
                               chat_id=self.chat_id, caption=caption[:1024], supports_streaming="true",
                               reply_markup=json.dumps(kb))
 
-    def get_updates(self, offset):
-        return self._call("getUpdates", offset=offset, timeout=0, allowed_updates=json.dumps(["callback_query", "message"]))
+    def get_updates(self, offset, wait=0):
+        """wait > 0: Telegram long polling, returns as soon as an update arrives (max `wait` s)."""
+        return self._call("getUpdates", http_timeout=wait + 30, offset=offset, timeout=wait,
+                          allowed_updates=json.dumps(["callback_query", "message"]))
 
     def webhook_info(self):
         return self._call("getWebhookInfo")

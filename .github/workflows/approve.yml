@@ -36,6 +36,7 @@ jobs:
           IG_LOGIN: ${{ vars.IG_LOGIN }}   # boşsa token'ın başından anlaşılır (IGAA… / EAA…)
           IG_UPLOAD_MODE: ${{ vars.IG_UPLOAD_MODE || 'auto' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # geçici video linki (media branch) için
+          WAIT_SECONDS: ${{ github.event_name == 'workflow_dispatch' && '150' || '0' }}   # elle başlatınca butonu 2,5 dk bekle
         run: python -m src.approve
 
       - name: Durumu kaydet

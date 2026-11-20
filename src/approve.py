@@ -1,5 +1,5 @@
 """Hourly job: read the Telegram buttons and publish (or drop) the pending video."""
-import datetime as dt, sys, traceback
+import datetime as dt, os, sys, traceback
 
 from . import state as S
 from .telegram import Telegram
@@ -11,6 +11,14 @@ def main():
     tg = Telegram()
     s = S.load()
     updates = tg.get_updates(s.get("tg_offset", 0))
+    # started by hand: wait up to WAIT_SECONDS for a button press instead of looking once
+    wait_total = int(os.environ.get("WAIT_SECONDS", "0")); waited = 0
+    off = s.get("tg_offset", 0)
+    while wait_total and waited < wait_total and not any(u.get("callback_query") for u in updates):
+        if updates: off = updates[-1]["update_id"] + 1
+        print(f"buton bekleniyor… ({waited}/{wait_total} sn)", flush=True)
+        more = tg.get_updates(off, wait=min(50, wait_total - waited)); waited += 50
+        updates = updates + more
     p0 = s.get("pending")
     print(f"offset {s.get('tg_offset', 0)}: {len(updates)} güncelleme; bekleyen: {p0['key'] + ' ' + p0['topic_id'] if p0 else 'yok'}")
     if not updates:
