@@ -14,7 +14,15 @@
   }
  ],
  "rejected": [],
- "pending": null,
+ "pending": {
+  "key": "20261120",
+  "topic_id": "dunyanin-en-buyuk-10-adasi",
+  "file_id": "BAACAgIAAxkDAAMOawABy55wJsaiCCY92tBCTp9ZqYCZAALFogAC4qUISMdq_mHkZoXfPQQ",
+  "message_id": 14,
+  "caption": "Dünyanın en büyük 10 adası 🏝️ Grönland, 2. sıradakinin neredeyse 3 katı! Sen hangisini biliyordun? 👇\n\n#ada #grönland #coğrafya #bilgi #bunlarıbiliyormuydunuz #dünya #keşfet #reels",
+  "theme": "zumrut",
+  "created": "2026-11-20T22:37:19+00:00"
+ },
  "tg_offset": 518928465,
  "last_daily": "20261120"
 }
