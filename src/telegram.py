@@ -4,8 +4,8 @@ import requests
 
 class Telegram:
     def __init__(self, token=None, chat_id=None):
-        self.token = token or os.environ["TELEGRAM_BOT_TOKEN"]
-        self.chat_id = str(chat_id or os.environ["TELEGRAM_CHAT_ID"])
+        self.token = (token or os.environ["TELEGRAM_BOT_TOKEN"]).strip()
+        self.chat_id = str(chat_id or os.environ["TELEGRAM_CHAT_ID"]).strip()
         self.base = f"https://api.telegram.org/bot{self.token}"
 
     def _call(self, method, files=None, http_timeout=60, **params):

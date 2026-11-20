@@ -11,14 +11,20 @@ def main():
     tg = Telegram()
     s = S.load()
     updates = tg.get_updates(s.get("tg_offset", 0))
+    p0 = s.get("pending")
+    print(f"{len(updates)} güncelleme; bekleyen: {p0['key'] + ' ' + p0['topic_id'] if p0 else 'yok'}")
     for u in updates:
         s["tg_offset"] = u["update_id"] + 1
         cb = u.get("callback_query")
         if not cb:
+            print(f"- {u['update_id']}: buton değil ({', '.join(k for k in u if k != 'update_id')}), atlandı")
             continue
-        if str(cb["from"]["id"]) != tg.chat_id and str(cb.get("message", {}).get("chat", {}).get("id")) != tg.chat_id:
-            continue  # only the owner may approve
         action, _, key = cb.get("data", "").partition("|")
+        from_id = str(cb["from"]["id"]); chat = str(cb.get("message", {}).get("chat", {}).get("id"))
+        if from_id != tg.chat_id and chat != tg.chat_id:
+            print(f"- {u['update_id']}: {action}|{key} başka birinden (…{from_id[-3:]}), atlandı")
+            continue  # only the owner may approve
+        print(f"- {u['update_id']}: {action}|{key}")
         p = s.get("pending")
         if not p or p["key"] != key:
             tg.answer_callback(cb["id"], "Bu video artık beklemede değil.")
