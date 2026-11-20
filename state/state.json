@@ -20,8 +20,16 @@
   }
  ],
  "rejected": [],
- "pending": null,
+ "pending": {
+  "key": "20261120",
+  "topic_id": "turkiyenin-yuzolcumu-en-buyuk-10-ili",
+  "file_id": "BAACAgIAAxkDAAMRawABz8zg7TG73hInUOt2n34P3WvAAALKogAC4qUISCXlccSa-wOYPQQ",
+  "message_id": 17,
+  "caption": "Türkiye'nin yüzölçümü en büyük 10 ili 🗺️ Konya tek başına Belçika'dan büyük! Senin ilin listede mi? 👇\n\n#türkiye #konya #iller #bilgi #bunlarıbiliyormuydunuz #coğrafya #keşfet #reels",
+  "theme": "safir",
+  "created": "2026-11-20T22:55:08+00:00"
+ },
  "tg_offset": 518928466,
  "last_daily": "20261120",
- "last_theme": "zumrut"
+ "last_theme": "safir"
 }
