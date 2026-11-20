@@ -120,6 +120,47 @@ class Renderer:
                 d.line([(0, y), (W, y)], fill=c + (int(30 + 80 * p),), width=2)
             d.line([(0, hy), (W, hy)], fill=acc + (160,), width=3)
 
+        elif m == "snow":
+            for k in range(90):
+                x0 = rng.uniform(0, W); spd = rng.uniform(40, 120); r = rng.uniform(2, 6)
+                y = ((gt * spd + rng.uniform(0, H)) % (H + 40)) - 20
+                x = x0 + 30 * math.sin(gt * 0.8 + k)
+                d.ellipse([x - r, y - r, x + r, y + r], fill=(255, 255, 255, int(90 + 20 * r)))
+            pts = [(x, 1760 + 25 * math.sin(2 * math.pi * x / 700)) for x in range(0, W + 20, 20)]
+            d.polygon(pts + [(W, H), (0, H)], fill=(230, 245, 255, 70))
+        elif m == "dunes":
+            for i, (base, amp, wl, sh, sp) in enumerate([(1380, 110, 1300, 0.55, 0.03), (1530, 90, 900, 0.40, 0.05), (1700, 70, 700, 0.26, 0.08)]):
+                pts = [(x, base + amp * math.sin(2 * math.pi * x / wl + i * 2.1 + gt * sp)) for x in range(0, W + 20, 20)]
+                d.polygon(pts + [(W, H), (0, H)], fill=tuple(int(v * sh) for v in c) + (240,))
+            for r, al in ((160, 30), (110, 50)):
+                d.ellipse([W * 0.78 - r, 330 - r, W * 0.78 + r, 330 + r], fill=acc + (al,))
+            for k in range(25):  # drifting sand
+                x = (rng.uniform(0, W) + gt * rng.uniform(60, 140)) % W; y = rng.uniform(900, 1700)
+                d.ellipse([x - 2, y - 2, x + 2, y + 2], fill=acc + (90,))
+        elif m == "aurora":
+            for i, (base, amp, col, al) in enumerate([(380, 90, acc, 55), (520, 70, c, 45), (640, 60, acc, 35)]):
+                top = [(x, base + amp * math.sin(2 * math.pi * x / (900 + 200 * i) + gt * (0.4 + 0.15 * i) + i)) for x in range(0, W + 20, 20)]
+                bot = [(x, y + 160 + 40 * math.sin(x / 140 + gt + i)) for x, y in reversed(top)]
+                d.polygon(top + bot, fill=col + (al,))
+            for k in range(70):
+                x = rng.uniform(0, W); y = rng.uniform(0, H * 0.6); r = rng.uniform(1, 2.5)
+                d.ellipse([x - r, y - r, x + r, y + r], fill=(255, 255, 255, int(60 + 60 * (0.5 + 0.5 * math.sin(gt * 2 + k)))))
+        elif m == "bokeh":
+            for k in range(16):
+                r = rng.uniform(40, 140); x = (rng.uniform(0, W) + 20 * math.sin(gt * 0.3 + k)) % (W + 200) - 100
+                y = (rng.uniform(0, H) - gt * rng.uniform(8, 25)) % (H + 300) - 150
+                col = acc if k % 3 == 0 else c
+                d.ellipse([x - r, y - r, x + r, y + r], fill=col + (int(18 + 14 * math.sin(gt + k) + 14),))
+        elif m == "rings":
+            cx, cy = W / 2, 1110
+            for k in range(7):
+                ph = (gt * 0.25 + k / 7) % 1
+                r = 120 + ph * 900
+                d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=c + (int(110 * (1 - ph)),), width=4)
+            for k in range(40):
+                x = rng.uniform(0, W); y = rng.uniform(0, H); r = rng.uniform(1, 2.5)
+                d.ellipse([x - r, y - r, x + r, y + r], fill=(255, 255, 255, 70))
+
     def background(self, gt, key=None, t=0.0, dur=1.0):
         im = self.photo(key) if key else None
         if im is not None:
