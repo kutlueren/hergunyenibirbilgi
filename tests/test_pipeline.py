@@ -10,6 +10,11 @@ from src import state as S
 TG = "https://api.telegram.org/botTEST"
 
 
+def s_caption():
+    t = json.load(open(os.path.join(S.ROOT, "topics", "001-turkiyenin-en-buyuk-10-golu.json"), encoding="utf-8"))
+    return (t["aciklama"] + "\n\n" + " ".join(t["etiketler"])).strip()
+
+
 def jpeg():
     b = io.BytesIO(); Image.new("RGB", (1200, 1800), (40, 120, 160)).save(b, "JPEG"); return b.getvalue()
 
@@ -42,6 +47,12 @@ def run():
     print("daily ok →", sent["caption"].splitlines()[0])
 
     instagram.time.sleep = lambda *_: None
+    from src import hosting
+    hosted = []
+    hosting.publish = lambda b, name: (hosted.append(name), f"https://raw.githubusercontent.com/o/r/media/{name}")[1]
+    hosting.cleanup = lambda: hosted.append("cleanup")
+    os.environ["IG_LOGIN"] = "instagram"
+    G = "https://graph.instagram.com/v25.0"
     with responses.RequestsMock(assert_all_requests_are_fired=True) as rs:
         rs.add(responses.POST, f"{TG}/getUpdates", json={"ok": True, "result": [
             {"update_id": 100, "callback_query": {"id": "cbX", "from": {"id": 999}, "data": f"ok|{key}", "message": {"chat": {"id": 999}}}},
@@ -49,19 +60,51 @@ def run():
         rs.add(responses.POST, f"{TG}/answerCallbackQuery", json={"ok": True, "result": True})
         rs.add(responses.POST, f"{TG}/getFile", json={"ok": True, "result": {"file_path": "videos/f.mp4"}})
         rs.add(responses.GET, "https://api.telegram.org/file/botTEST/videos/f.mp4", body=b"\x00" * 1000)
-        rs.add(responses.POST, "https://graph.facebook.com/v25.0/1789/media",
-               json={"id": "C1", "uri": "https://rupload.facebook.com/ig-api-upload/v25.0/C1"})
-        rs.add(responses.POST, "https://rupload.facebook.com/ig-api-upload/v25.0/C1", json={"success": True},
-               match=[responses.matchers.header_matcher({"Authorization": "OAuth IGT", "offset": "0", "file_size": "1000"})])
-        rs.add(responses.GET, re.compile(r"https://graph\.facebook\.com/v25\.0/C1\?.*"), json={"status_code": "IN_PROGRESS"})
-        rs.add(responses.GET, re.compile(r"https://graph\.facebook\.com/v25\.0/C1\?.*"), json={"status_code": "FINISHED"})
-        rs.add(responses.POST, "https://graph.facebook.com/v25.0/1789/media_publish", json={"id": "M1"})
-        rs.add(responses.GET, re.compile(r"https://graph\.facebook\.com/v25\.0/M1\?.*"), json={"permalink": "https://instagram.com/reel/X"})
+        # resumable is refused on Instagram Login -> must fall back to video_url
+        rs.add(responses.POST, f"{G}/1789/media", status=400, json={"error": {"message": "upload_type not supported"}},
+               match=[responses.matchers.urlencoded_params_matcher({"media_type": "REELS", "upload_type": "resumable",
+                      "caption": s_caption(), "share_to_feed": "true", "access_token": "IGT"})])
+        rs.add(responses.POST, f"{G}/1789/media", json={"id": "C1"},
+               match=[responses.matchers.urlencoded_params_matcher({"media_type": "REELS",
+                      "video_url": f"https://raw.githubusercontent.com/o/r/media/{key}.mp4",
+                      "caption": s_caption(), "share_to_feed": "true", "access_token": "IGT"})])
+        rs.add(responses.GET, re.compile(G.replace(".", r"\.") + r"/C1\?.*"), json={"status_code": "IN_PROGRESS"})
+        rs.add(responses.GET, re.compile(G.replace(".", r"\.") + r"/C1\?.*"), json={"status_code": "FINISHED"})
+        rs.add(responses.POST, f"{G}/1789/media_publish", json={"id": "M1"})
+        rs.add(responses.GET, re.compile(G.replace(".", r"\.") + r"/M1\?.*"), json={"permalink": "https://instagram.com/reel/X"})
         rs.add(responses.POST, f"{TG}/editMessageReplyMarkup", json={"ok": True, "result": True})
         rs.add(responses.POST, f"{TG}/sendMessage", json={"ok": True, "result": {"message_id": 9}})
         approve.main()
         answered = [c.request.body for c in rs.calls if c.request.url.endswith("answerCallbackQuery")]
         assert len(answered) == 1 and "cb1" in answered[0], "stranger's button must be ignored"
+    assert hosted == [f"{key}.mp4", "cleanup"], hosted
+
+    # Facebook Login path: resumable upload succeeds, no public URL is made
+    hosted.clear()
+    os.environ["IG_LOGIN"] = "facebook"
+    GF = "https://graph.facebook.com/v25.0"
+    with responses.RequestsMock(assert_all_requests_are_fired=True) as rs:
+        rs.add(responses.POST, f"{GF}/1789/media", json={"id": "C2", "uri": "https://rupload.facebook.com/ig-api-upload/v25.0/C2"})
+        rs.add(responses.POST, "https://rupload.facebook.com/ig-api-upload/v25.0/C2", json={"success": True},
+               match=[responses.matchers.header_matcher({"Authorization": "OAuth IGT", "offset": "0", "file_size": "5"})])
+        rs.add(responses.GET, re.compile(GF.replace(".", r"\.") + r"/C2\?.*"), json={"status_code": "FINISHED"})
+        rs.add(responses.POST, f"{GF}/1789/media_publish", json={"id": "M2"})
+        rs.add(responses.GET, re.compile(GF.replace(".", r"\.") + r"/M2\?.*"), json={"permalink": "https://instagram.com/reel/Y"})
+        assert instagram.publish_reel(b"12345", "c", public_url_fn=lambda b: hosted.append("x")) == ("M2", "https://instagram.com/reel/Y")
+    assert hosted == []
+    os.environ["IG_LOGIN"] = "instagram"
+
+    # token refresh: new token is stored as the repo secret
+    from src import refresh_token as RT
+    stored = {}
+    RT.store_secret = lambda n, v: stored.update({n: v})
+    os.environ["GH_PAT"] = "PAT"
+    with responses.RequestsMock() as rs:
+        rs.add(responses.GET, re.compile(r"https://graph\.instagram\.com/refresh_access_token\?.*"),
+               json={"access_token": "IGT2", "token_type": "bearer", "expires_in": 5184000})
+        RT.main()
+    assert stored == {"IG_ACCESS_TOKEN": "IGT2"}, stored
+    print("instagram login / facebook login / token refresh ok")
 
     s = json.load(open(S.PATH))
     assert s["pending"] is None and s["published"][0]["permalink"] == "https://instagram.com/reel/X", s

@@ -4,6 +4,7 @@ import datetime as dt, sys, traceback
 from . import state as S
 from .telegram import Telegram
 from .instagram import publish_reel
+from . import hosting
 
 
 def main():
@@ -33,7 +34,8 @@ def main():
             tg.answer_callback(cb["id"], "Paylaşılıyor…")
             try:
                 video = tg.download(p["file_id"])
-                mid, link = publish_reel(video, p["caption"])
+                mid, link = publish_reel(video, p["caption"],
+                                         public_url_fn=lambda b: hosting.publish(b, f"{p['key']}.mp4"))
             except Exception as e:
                 traceback.print_exc()
                 tg.send_message(f"❌ Instagram'a yüklenemedi: {e}\nButona tekrar basarsan bir sonraki kontrolde yeniden denenir.")
@@ -42,6 +44,7 @@ def main():
             s["published"].append({"id": p["topic_id"], "date": now, "ig_media_id": mid, "permalink": link})
             s["pending"] = None
             tg.send_message(f"✅ Instagram'da paylaşıldı! {link or ''}".strip())
+        hosting.cleanup()
         S.save(s)  # save after every handled button so a later failure can't replay it
     S.save(s)
 

@@ -34,30 +34,36 @@ Sadece bu chat ID'den gelen butonlar kabul edilir; botu başkası bulsa bile ona
 
 https://www.pexels.com/api/ → ücretsiz hesap → **Your API Key**. Eklemezsen videolar fotoğrafsız, sadece animasyonlu temalarla üretilir.
 
-### 3. Instagram → `IG_USER_ID`, `IG_ACCESS_TOKEN`
+### 3. Instagram → `IG_USER_ID`, `IG_ACCESS_TOKEN`, `GH_PAT`
 
-Gerekenler: Instagram **Business veya Creator** hesabı + ona bağlı bir **Facebook Sayfası**.
+Varsayılan yol **Instagram ile giriş** (Facebook sayfası gerekmez). Gereken: Instagram **Business veya Creator** hesabı.
 
-1. https://developers.facebook.com/apps → **Create app** → kullanım durumu olarak Instagram/içerik yayınlama (**Facebook Login for Business**) seçeneğini seç.
-2. **Tools → Graph API Explorer**'ı aç, uygulamanı seç, **User Token** iste ve şu izinleri işaretle:
-   `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management`
-   → **Generate Access Token** (Facebook'ta sayfanı ve Instagram hesabını seçerek onayla).
-3. Kısa ömürlü tokenı **uzun ömürlüye** çevir (App ID ve App Secret: App settings → Basic):
+1. https://developers.facebook.com/apps → **Create app** → kullanım durumu: **Manage messaging & content on Instagram**.
+2. Uygulama panelinde **Use cases → Manage messaging & content on Instagram → Customize → API setup with Instagram login**.
+3. **Permissions** bölümünde `instagram_business_basic` ve `instagram_business_content_publish` izinlerinin ekli olduğundan emin ol.
+4. **Generate access tokens** bölümünde **Add account** → Instagram hesabınla giriş yap → **Generate token**.
+   Çıkan token = **`IG_ACCESS_TOKEN`** (60 gün geçerli; haftalık `Instagram token yenileme` workflow'u GH_PAT ile otomatik uzatır).
+5. Hesap ID'si (aynı ekranda görünmüyorsa) tarayıcıda:
    ```
-   https://graph.facebook.com/v25.0/oauth/access_token?grant_type=fb_exchange_token&client_id=APP_ID&client_secret=APP_SECRET&fb_exchange_token=KISA_TOKEN
+   https://graph.instagram.com/v25.0/me?fields=user_id,username&access_token=IG_ACCESS_TOKEN
    ```
-4. Uzun ömürlü kullanıcı tokenı ile **sayfa tokenını** al (bu token süresiz):
-   ```
-   https://graph.facebook.com/v25.0/me/accounts?access_token=UZUN_TOKEN
-   ```
-   Sayfanın `access_token` değeri = **`IG_ACCESS_TOKEN`**, `id` değeri = sayfa ID'si.
-5. Instagram hesap ID'si:
-   ```
-   https://graph.facebook.com/v25.0/SAYFA_ID?fields=instagram_business_account&access_token=IG_ACCESS_TOKEN
-   ```
-   `instagram_business_account.id` = **`IG_USER_ID`**.
+   `user_id` = **`IG_USER_ID`**.
+6. **`GH_PAT`** (token'ın kendiliğinden yenilenmesi için): GitHub → Settings → Developer settings → **Fine-grained tokens** → Generate new token → *Repository access: Only select repositories → hergunyenibirbilgi* → *Permissions: Repository → **Secrets: Read and write***. Çıkan token'ı `GH_PAT` secret'ı olarak ekle.
 
-İpucu: Token'ı https://developers.facebook.com/tools/debug/accesstoken/ adresinde kontrol edebilirsin; "Expires: Never" görmelisin.
+**Repo public olmalı.** Instagram ile giriş yolunda Instagram videoyu bir linkten çekmek isteyebiliyor. Bu durumda video yayın sırasında birkaç dakikalığına `media` branch'ine konur (`raw.githubusercontent.com` linki), Instagram aldıktan sonra silinir. Private repo'da bu link açılmaz.
+Repo → Settings → General → en altta **Change repository visibility → Public**. Secret'lar public repo'da da gizli kalır; ayrıca GitHub Actions dakikaları public repo'da sınırsızdır.
+
+<details>
+<summary>Alternatif: Facebook ile giriş (Facebook sayfası gerekir, token süresiz, repo private kalabilir)</summary>
+
+Repo **Variables** → `IG_LOGIN` = `facebook`. Graph API Explorer'da `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management` izinleriyle kullanıcı token'ı üret, [Access Token Debugger](https://developers.facebook.com/tools/debug/accesstoken/)'da **Extend Access Token** ile uzat, sonra Explorer'da:
+
+```
+me/accounts?fields=name,access_token,instagram_business_account
+```
+
+Sayfanın `access_token` = `IG_ACCESS_TOKEN`, `instagram_business_account.id` = `IG_USER_ID`. Bu yolda video doğrudan yüklenir, `GH_PAT` gerekmez.
+</details>
 
 ### 4. İlk deneme
 
@@ -75,9 +81,11 @@ Gerekenler: Instagram **Business veya Creator** hesabı + ona bağlı bir **Face
 | `.github/workflows/approve.yml` → `cron` | Onay kontrol saatleri | her saat 12:25–22:25 |
 | Repo **Variables** → `PHOTO_RATIO` | Fotoğraflı sahne oranı (0–1) | `0.5` |
 | Repo **Variables** → `GRAPH_API_VERSION` | Instagram API sürümü | `v25.0` |
+| Repo **Variables** → `IG_LOGIN` | `instagram` (Instagram ile giriş) veya `facebook` | `instagram` |
+| Repo **Variables** → `IG_UPLOAD_MODE` | `auto`: önce doğrudan yükleme, olmazsa geçici link · `url` · `resumable` | `auto` |
 | `src/themes.py` | Renk temaları | 6 tema, güne göre sırayla |
 
-GitHub Actions dakikası: private repo'da ayda 2.000 dakika ücretsiz; bu kurulum ayda yaklaşık 500–650 dakika kullanır.
+GitHub Actions dakikası: public repo'da sınırsız; private repo'da (Facebook ile giriş yolu) ayda 2.000 dakika ücretsiz, bu kurulum ayda yaklaşık 500–650 dakika kullanır.
 
 ---
 

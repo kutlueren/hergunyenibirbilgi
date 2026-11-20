@@ -33,6 +33,9 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GRAPH_API_VERSION: ${{ vars.GRAPH_API_VERSION || 'v25.0' }}
+          IG_LOGIN: ${{ vars.IG_LOGIN || 'instagram' }}
+          IG_UPLOAD_MODE: ${{ vars.IG_UPLOAD_MODE || 'auto' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # geçici video linki (media branch) için
         run: python -m src.approve
 
       - name: Durumu kaydet
