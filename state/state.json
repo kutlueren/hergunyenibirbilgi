@@ -1,15 +1,14 @@
 {
- "published": [],
+ "published": [
+  {
+   "id": "turkiyenin-en-buyuk-10-golu",
+   "date": "2026-11-20T22:17:58+00:00",
+   "ig_media_id": "18142917139715535",
+   "permalink": "https://www.instagram.com/reel/Df-tnN1EvbK/"
+  }
+ ],
  "rejected": [],
- "pending": {
-  "key": "20261120",
-  "topic_id": "turkiyenin-en-buyuk-10-golu",
-  "file_id": "BAACAgIAAxkDAAMJawABxPXbwMj9VGM3P3w79rY0VY4yAAKqogAC4qUISCTgLZ53CcF7PQQ",
-  "message_id": 9,
-  "caption": "Türkiye'nin en büyük 10 doğal gölü 🌊 1 numara neredeyse diğer 9'unun toplamı kadar! Sen hangisini gördün? 👇\n\n#türkiye #göl #vangölü #bilgi #bunlarıbiliyormuydunuz #coğrafya #keşfet #reels",
-  "theme": "zumrut",
-  "created": "2026-11-20T22:08:53+00:00"
- },
- "tg_offset": 518928462,
+ "pending": null,
+ "tg_offset": 518928463,
  "last_daily": "20261120"
 }
