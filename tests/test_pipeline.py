@@ -20,6 +20,17 @@ def jpeg():
 
 
 def run():
+    # responses does not validate timeouts; make sure no call passes an invalid one (bug seen in production)
+    import requests.adapters as _ad
+    _orig_send = _ad.HTTPAdapter.send
+    import requests as _rq
+    for _m in ("get", "post"):
+        _f = getattr(_rq, _m)
+        def _wrap(*a, _f=_f, **k):
+            t = k.get("timeout")
+            assert t is None or (t if not isinstance(t, tuple) else min(t)) > 0, f"invalid timeout {t!r}"
+            return _f(*a, **k)
+        setattr(_rq, _m, _wrap)
     tmp = tempfile.mkdtemp()
     S.PATH = os.path.join(tmp, "state.json")
     os.environ.update(TELEGRAM_BOT_TOKEN="TEST", TELEGRAM_CHAT_ID="42", PEXELS_API_KEY="PX",
@@ -109,7 +120,7 @@ def run():
     s = json.load(open(S.PATH))
     assert s["pending"] is None and s["published"][0]["permalink"] == "https://instagram.com/reel/X", s
     assert s["tg_offset"] == 102
-    assert S.next_topic(s) == (None, None)
+    assert S.next_topic(s)[1]["id"] == "dunyanin-en-yuksek-10-dagi"
     print("approve ok →", s["published"][0])
     shutil.rmtree(tmp)
 

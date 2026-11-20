@@ -8,8 +8,9 @@ class Telegram:
         self.chat_id = str(chat_id or os.environ["TELEGRAM_CHAT_ID"])
         self.base = f"https://api.telegram.org/bot{self.token}"
 
-    def _call(self, method, files=None, timeout=60, **params):
-        r = requests.post(f"{self.base}/{method}", data=params, files=files, timeout=timeout)
+    def _call(self, method, files=None, http_timeout=60, **params):
+        # http_timeout = requests timeout; Telegram's own "timeout" parameter (long polling) stays in params
+        r = requests.post(f"{self.base}/{method}", data=params, files=files, timeout=http_timeout)
         j = r.json()
         if not j.get("ok"):
             raise RuntimeError(f"telegram {method}: {j}")
@@ -22,7 +23,7 @@ class Telegram:
         kb = {"inline_keyboard": [[{"text": "✅ Paylaş", "callback_data": f"ok|{key}"},
                                    {"text": "❌ Reddet", "callback_data": f"no|{key}"}]]}
         with open(path, "rb") as f:
-            return self._call("sendVideo", files={"video": ("video.mp4", f, "video/mp4")}, timeout=300,
+            return self._call("sendVideo", files={"video": ("video.mp4", f, "video/mp4")}, http_timeout=300,
                               chat_id=self.chat_id, caption=caption[:1024], supports_streaming="true",
                               reply_markup=json.dumps(kb))
 
