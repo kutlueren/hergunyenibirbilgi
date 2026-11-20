@@ -39,10 +39,11 @@ https://www.pexels.com/api/ → ücretsiz hesap → **Your API Key**. Eklemezsen
 Varsayılan yol **Instagram ile giriş** (Facebook sayfası gerekmez). Gereken: Instagram **Business veya Creator** hesabı.
 
 1. https://developers.facebook.com/apps → **Create app** → kullanım durumu: **Manage messaging & content on Instagram**.
-2. Uygulama panelinde **Use cases → Manage messaging & content on Instagram → Customize → API setup with Instagram login**.
+2. Uygulama panelinde **Use cases → Manage messaging & content on Instagram → Customize** → Facebook olmayan kurulumu seç (panelde **API setup with Instagram login** veya **Unified login** adıyla geçebilir).
 3. **Permissions** bölümünde `instagram_business_basic` ve `instagram_business_content_publish` izinlerinin ekli olduğundan emin ol.
 4. **Generate access tokens** bölümünde **Add account** → Instagram hesabınla giriş yap → **Generate token**.
-   Çıkan token = **`IG_ACCESS_TOKEN`** (60 gün geçerli; haftalık `Instagram token yenileme` workflow'u GH_PAT ile otomatik uzatır).
+   Çıkan token = **`IG_ACCESS_TOKEN`**. **`IGAA` ile başlamalı** (Instagram token'ı). `EAA` ile başlıyorsa Facebook token'ıdır; o da çalışır ama aşağıdaki Facebook yolunun adımları geçerli olur.
+   (60 gün geçerli; haftalık `Instagram token yenileme` workflow'u GH_PAT ile otomatik uzatır).
 5. Hesap ID'si (aynı ekranda görünmüyorsa) tarayıcıda:
    ```
    https://graph.instagram.com/v25.0/me?fields=user_id,username&access_token=IG_ACCESS_TOKEN
@@ -56,7 +57,7 @@ Repo → Settings → General → en altta **Change repository visibility → Pu
 <details>
 <summary>Alternatif: Facebook ile giriş (Facebook sayfası gerekir, token süresiz, repo private kalabilir)</summary>
 
-Repo **Variables** → `IG_LOGIN` = `facebook`. Graph API Explorer'da `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management` izinleriyle kullanıcı token'ı üret, [Access Token Debugger](https://developers.facebook.com/tools/debug/accesstoken/)'da **Extend Access Token** ile uzat, sonra Explorer'da:
+Token `EAA` ile başladığı için `IG_LOGIN` ayarlamana gerek yok. Graph API Explorer'da `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management` izinleriyle kullanıcı token'ı üret, [Access Token Debugger](https://developers.facebook.com/tools/debug/accesstoken/)'da **Extend Access Token** ile uzat, sonra Explorer'da:
 
 ```
 me/accounts?fields=name,access_token,instagram_business_account
@@ -81,7 +82,7 @@ Sayfanın `access_token` = `IG_ACCESS_TOKEN`, `instagram_business_account.id` = 
 | `.github/workflows/approve.yml` → `cron` | Onay kontrol saatleri | her saat 12:25–22:25 |
 | Repo **Variables** → `PHOTO_RATIO` | Fotoğraflı sahne oranı (0–1) | `0.5` |
 | Repo **Variables** → `GRAPH_API_VERSION` | Instagram API sürümü | `v25.0` |
-| Repo **Variables** → `IG_LOGIN` | `instagram` (Instagram ile giriş) veya `facebook` | `instagram` |
+| Repo **Variables** → `IG_LOGIN` | `instagram` veya `facebook` | boş: token `IGAA…` ile başlıyorsa instagram, `EAA…` ise facebook |
 | Repo **Variables** → `IG_UPLOAD_MODE` | `auto`: önce doğrudan yükleme, olmazsa geçici link · `url` · `resumable` | `auto` |
 | `src/themes.py` | Renk temaları | 6 tema, güne göre sırayla |
 

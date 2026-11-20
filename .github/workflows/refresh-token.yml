@@ -17,7 +17,7 @@ jobs:
       - run: pip install requests pynacl
       - name: Token'ı yenile
         env:
-          IG_LOGIN: ${{ vars.IG_LOGIN || 'instagram' }}
+          IG_LOGIN: ${{ vars.IG_LOGIN }}   # boşsa token'ın başından anlaşılır (IGAA… / EAA…)
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

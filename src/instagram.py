@@ -13,8 +13,18 @@ import requests
 V = os.environ.get("GRAPH_API_VERSION", "v25.0")
 
 
-def _host():
-    return "https://graph.facebook.com" if os.environ.get("IG_LOGIN", "instagram") == "facebook" else "https://graph.instagram.com"
+def login_type(token=None):
+    """IG_LOGIN if set, otherwise guessed from the token: Instagram user tokens start with IGAA,
+    Facebook user/page tokens with EAA."""
+    v = os.environ.get("IG_LOGIN", "").strip().lower()
+    if v in ("instagram", "facebook"):
+        return v
+    token = token or os.environ.get("IG_ACCESS_TOKEN", "")
+    return "facebook" if token.startswith("EAA") else "instagram"
+
+
+def _host(token=None):
+    return "https://graph.facebook.com" if login_type(token) == "facebook" else "https://graph.instagram.com"
 
 
 def _check(r):
@@ -60,7 +70,7 @@ def publish_reel(video_bytes, caption, public_url_fn=None, ig_user_id=None, toke
     """public_url_fn(video_bytes) -> url  is called only if the direct upload is refused."""
     ig = ig_user_id or os.environ["IG_USER_ID"]
     token = token or os.environ["IG_ACCESS_TOKEN"]
-    G = f"{_host()}/{V}"
+    G = f"{_host(token)}/{V}"
     mode = os.environ.get("IG_UPLOAD_MODE", "auto")  # auto | resumable | url
     cid = None
     if mode in ("auto", "resumable"):

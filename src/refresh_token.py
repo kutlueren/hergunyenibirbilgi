@@ -4,7 +4,7 @@ Without GH_PAT it only checks the token and warns on Telegram well before it exp
 import base64, os, sys, traceback
 import requests
 
-from .instagram import refresh_token
+from .instagram import refresh_token, login_type
 from .telegram import Telegram
 
 
@@ -22,7 +22,7 @@ def store_secret(name, value):
 
 
 def main():
-    if os.environ.get("IG_LOGIN", "instagram") == "facebook":
+    if login_type() == "facebook":
         print("Facebook Login page tokens do not expire; nothing to do."); return
     tg = Telegram()
     new, expires_in = refresh_token(os.environ["IG_ACCESS_TOKEN"])
