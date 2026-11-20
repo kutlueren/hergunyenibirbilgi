@@ -30,6 +30,9 @@ class Telegram:
     def get_updates(self, offset):
         return self._call("getUpdates", offset=offset, timeout=0, allowed_updates=json.dumps(["callback_query", "message"]))
 
+    def webhook_info(self):
+        return self._call("getWebhookInfo")
+
     def answer_callback(self, cb_id, text=""):
         try:
             self._call("answerCallbackQuery", callback_query_id=cb_id, text=text)

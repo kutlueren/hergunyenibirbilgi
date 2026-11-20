@@ -12,7 +12,14 @@ def main():
     s = S.load()
     updates = tg.get_updates(s.get("tg_offset", 0))
     p0 = s.get("pending")
-    print(f"{len(updates)} güncelleme; bekleyen: {p0['key'] + ' ' + p0['topic_id'] if p0 else 'yok'}")
+    print(f"offset {s.get('tg_offset', 0)}: {len(updates)} güncelleme; bekleyen: {p0['key'] + ' ' + p0['topic_id'] if p0 else 'yok'}")
+    if not updates:
+        try:
+            wi = tg.webhook_info()
+            print(f"webhook: {'VAR (getUpdates çalışmaz!)' if wi.get('url') else 'yok'}, bekleyen güncelleme: {wi.get('pending_update_count')}, "
+                  f"son hata: {wi.get('last_error_message', '-')}, izinli tipler: {wi.get('allowed_updates', '-')}")
+        except Exception as e:
+            print(f"getWebhookInfo hata: {e}")
     for u in updates:
         s["tg_offset"] = u["update_id"] + 1
         cb = u.get("callback_query")
