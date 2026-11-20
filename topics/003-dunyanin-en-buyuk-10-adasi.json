@@ -1,0 +1,152 @@
+{
+ "id": "dunyanin-en-buyuk-10-adasi",
+ "baslik": [
+  "DÜNYANIN",
+  "EN BÜYÜK",
+  "ADASI"
+ ],
+ "kanca": [
+  "1 numara, 2. sıradakinin",
+  "neredeyse 3 KATI!"
+ ],
+ "kanca_seslendirme": "Dünyanın en büyük on adası! Bir numara, ikinci sıradakinin neredeyse üç katı.",
+ "birim": "km²",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 10,
+   "ad": "Ellesmere Adası",
+   "deger": 196236,
+   "yer": "Kanada",
+   "bilgi": [
+    "Kuzey Kutbu'na en yakın",
+    "kara parçalarından biri"
+   ],
+   "seslendirme": "Onuncu sırada, Ellesmir Adası. Kuzey Kutbu'na en yakın kara parçalarından biri.",
+   "foto": "Ellesmere Island"
+  },
+  {
+   "sira": 9,
+   "ad": "Büyük Britanya",
+   "deger": 209331,
+   "yer": "Birleşik Krallık",
+   "bilgi": [
+    "Avrupa'nın",
+    "en büyük adası"
+   ],
+   "seslendirme": "Dokuzuncu, Büyük Britanya. Avrupa'nın en büyük adası.",
+   "foto": "Great Britain cliffs coast"
+  },
+  {
+   "sira": 8,
+   "ad": "Victoria Adası",
+   "deger": 217291,
+   "yer": "Kanada",
+   "bilgi": [
+    "Büyük Britanya'dan bile büyük,",
+    "ama neredeyse bomboş"
+   ],
+   "seslendirme": "Sekizinci, Viktorya Adası. Büyük Britanya'dan bile büyük, ama neredeyse bomboş.",
+   "foto": "Victoria Island Arctic"
+  },
+  {
+   "sira": 7,
+   "ad": "Honşu",
+   "deger": 227960,
+   "yer": "Japonya",
+   "bilgi": [
+    "Tokyo ve Fuji Dağı",
+    "bu adada"
+   ],
+   "seslendirme": "Yedinci, Honşu. Tokyo ve Fuji Dağı bu adada.",
+   "foto": "Mount Fuji Honshu"
+  },
+  {
+   "sira": 6,
+   "ad": "Sumatra",
+   "deger": 443066,
+   "yer": "Endonezya",
+   "bilgi": [
+    "Orangutanların yaşadığı",
+    "iki adadan biri"
+   ],
+   "seslendirme": "Altıncı, Sumatra. Orangutanların yaşadığı iki adadan biri.",
+   "foto": "Sumatra rainforest"
+  },
+  {
+   "sira": 5,
+   "ad": "Baffin Adası",
+   "deger": 507451,
+   "yer": "Kanada",
+   "bilgi": [
+    "Kanada'nın",
+    "en büyük adası"
+   ],
+   "seslendirme": "Beşinci, Baffin Adası. Kanada'nın en büyük adası.",
+   "foto": "Baffin Island"
+  },
+  {
+   "sira": 4,
+   "ad": "Madagaskar",
+   "deger": 587041,
+   "yer": "Madagaskar",
+   "bilgi": [
+    "Lemurların",
+    "neredeyse tek yurdu"
+   ],
+   "seslendirme": "Dördüncü, Madagaskar. Lemurların neredeyse tek yurdu.",
+   "foto": "Madagascar baobab"
+  },
+  {
+   "sira": 3,
+   "ad": "Borneo",
+   "deger": 748168,
+   "yer": "Endonezya – Malezya – Brunei",
+   "bilgi": [
+    "Üç ülkenin",
+    "paylaştığı tek ada"
+   ],
+   "seslendirme": "Üçüncü, Borneo. Üç ülkenin paylaştığı tek ada.",
+   "foto": "Borneo rainforest"
+  },
+  {
+   "sira": 2,
+   "ad": "Yeni Gine",
+   "deger": 785753,
+   "yer": "Endonezya – Papua Yeni Gine",
+   "bilgi": [
+    "Adada 800'den fazla",
+    "dil konuşuluyor"
+   ],
+   "seslendirme": "İkinci, Yeni Gine. Adada sekiz yüzden fazla dil konuşuluyor.",
+   "foto": "New Guinea jungle"
+  },
+  {
+   "sira": 1,
+   "ad": "Grönland",
+   "deger": 2130800,
+   "yer": "Danimarka",
+   "bilgi": [
+    "Yaklaşık %80'i",
+    "buzla kaplı!"
+   ],
+   "seslendirme": "Ve bir numara, Grönland! Yaklaşık yüzde sekseni buzla kaplı!",
+   "foto": "Greenland ice"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en büyük 10 adası 🏝️ Grönland, 2. sıradakinin neredeyse 3 katı! Sen hangisini biliyordun? 👇",
+ "etiketler": [
+  "#ada",
+  "#grönland",
+  "#coğrafya",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#dünya",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Avustralya kıta sayıldığı için listede yok. Alanlar kaynağa göre birkaç bin km² farklı olabilir."
+}

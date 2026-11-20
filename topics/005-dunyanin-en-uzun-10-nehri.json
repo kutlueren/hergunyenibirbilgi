@@ -1,0 +1,152 @@
+{
+ "id": "dunyanin-en-uzun-10-nehri",
+ "baslik": [
+  "DÜNYANIN",
+  "EN UZUN",
+  "NEHRİ"
+ ],
+ "kanca": [
+  "1 numara hâlâ tartışmalı:",
+  "Nil mi, Amazon mu?"
+ ],
+ "kanca_seslendirme": "Dünyanın en uzun on nehri! Bir numara hâlâ tartışmalı: Nil mi, Amazon mu?",
+ "birim": "km",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 10,
+   "ad": "Amur",
+   "deger": 4444,
+   "yer": "Rusya – Çin",
+   "bilgi": [
+    "Rusya ile Çin arasında",
+    "sınır çizer"
+   ],
+   "seslendirme": "Onuncu sırada, Amur. Rusya ile Çin arasında sınır çizer.",
+   "foto": "Amur river"
+  },
+  {
+   "sira": 9,
+   "ad": "Kongo",
+   "deger": 4700,
+   "yer": "Orta Afrika",
+   "bilgi": [
+    "Dünyanın en derin nehri:",
+    "200 metreyi aşan derinlik"
+   ],
+   "seslendirme": "Dokuzuncu, Kongo. Dünyanın en derin nehri, derinliği iki yüz metreyi aşıyor.",
+   "foto": "Congo river"
+  },
+  {
+   "sira": 8,
+   "ad": "Paraná",
+   "deger": 4880,
+   "yer": "Güney Amerika",
+   "bilgi": [
+    "Dev Itaipu Barajı",
+    "bu nehrin üzerinde"
+   ],
+   "seslendirme": "Sekizinci, Parana. Dev Itaipu Barajı bu nehrin üzerinde.",
+   "foto": "Itaipu dam"
+  },
+  {
+   "sira": 7,
+   "ad": "Ob – İrtiş",
+   "deger": 5410,
+   "yer": "Rusya – Kazakistan – Çin",
+   "bilgi": [
+    "Kışın aylarca",
+    "buz tutar"
+   ],
+   "seslendirme": "Yedinci, Ob İrtiş. Kışın aylarca buz tutar.",
+   "foto": "Ob river Siberia"
+  },
+  {
+   "sira": 6,
+   "ad": "Sarı Irmak",
+   "deger": 5464,
+   "yer": "Çin",
+   "bilgi": [
+    "Adını taşıdığı",
+    "sarı balçıktan alır"
+   ],
+   "seslendirme": "Altıncı, Sarı Irmak. Adını taşıdığı sarı balçıktan alır.",
+   "foto": "Yellow River China"
+  },
+  {
+   "sira": 5,
+   "ad": "Yenisey",
+   "deger": 5539,
+   "yer": "Rusya – Moğolistan",
+   "bilgi": [
+    "Baykal Gölü'nün sularını da",
+    "okyanusa taşır"
+   ],
+   "seslendirme": "Beşinci, Yenisey. Baykal Gölü'nün sularını da okyanusa taşır.",
+   "foto": "Yenisei river"
+  },
+  {
+   "sira": 4,
+   "ad": "Mississippi – Missouri",
+   "deger": 6275,
+   "yer": "ABD",
+   "bilgi": [
+    "ABD'nin 31 eyaletinden",
+    "su toplar"
+   ],
+   "seslendirme": "Dördüncü, Misisipi Missuri. ABD'nin otuz bir eyaletinden su toplar.",
+   "foto": "Mississippi river"
+  },
+  {
+   "sira": 3,
+   "ad": "Yangtze",
+   "deger": 6300,
+   "yer": "Çin",
+   "bilgi": [
+    "Dünyanın en büyük barajı",
+    "Üç Boğaz bu nehirde"
+   ],
+   "seslendirme": "Üçüncü, Yangçe. Dünyanın en büyük barajı Üç Boğaz bu nehirde.",
+   "foto": "Yangtze river"
+  },
+  {
+   "sira": 2,
+   "ad": "Amazon",
+   "deger": 6400,
+   "yer": "Güney Amerika",
+   "bilgi": [
+    "Okyanusa akan tatlı suyun",
+    "yaklaşık beşte biri"
+   ],
+   "seslendirme": "İkinci, Amazon. Okyanusa akan tatlı suyun yaklaşık beşte birini taşır.",
+   "foto": "Amazon river aerial"
+  },
+  {
+   "sira": 1,
+   "ad": "Nil",
+   "deger": 6650,
+   "yer": "Afrika",
+   "bilgi": [
+    "11 ülkenin",
+    "topraklarından su toplar"
+   ],
+   "seslendirme": "Ve bir numara, Nil! Altı bin altı yüz elli kilometre ve on bir ülkeden su topluyor!",
+   "foto": "Nile river Egypt"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en uzun 10 nehri 🌊 1 numara hâlâ tartışmalı: Nil mi, Amazon mu? Sence hangisi? 👇",
+ "etiketler": [
+  "#nehir",
+  "#nil",
+  "#amazon",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#coğrafya",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Nehir uzunlukları ölçüm yöntemine göre değişir; Amazon'u Nil'den uzun ölçen çalışmalar da var."
+}

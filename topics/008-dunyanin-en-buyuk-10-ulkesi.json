@@ -1,0 +1,152 @@
+{
+ "id": "dunyanin-en-buyuk-10-ulkesi",
+ "baslik": [
+  "DÜNYANIN",
+  "EN BÜYÜK",
+  "ÜLKESİ"
+ ],
+ "kanca": [
+  "1 numara tek başına",
+  "Türkiye'nin 22 KATI!"
+ ],
+ "kanca_seslendirme": "Dünyanın yüzölçümü en büyük on ülkesi! Bir numara, tek başına Türkiye'nin yirmi iki katı.",
+ "birim": "milyon km²",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 10,
+   "ad": "Cezayir",
+   "deger": 2.38,
+   "yer": "Afrika",
+   "bilgi": [
+    "Afrika'nın en büyük ülkesi;",
+    "%80'inden fazlası çöl"
+   ],
+   "seslendirme": "Onuncu sırada, Cezayir. Afrika'nın en büyük ülkesi, yüzde sekseninden fazlası çöl.",
+   "foto": "Sahara desert Algeria"
+  },
+  {
+   "sira": 9,
+   "ad": "Kazakistan",
+   "deger": 2.72,
+   "yer": "Asya",
+   "bilgi": [
+    "Denize kıyısı olmayan",
+    "en büyük ülke"
+   ],
+   "seslendirme": "Dokuzuncu, Kazakistan. Denize kıyısı olmayan en büyük ülke.",
+   "foto": "Kazakhstan steppe"
+  },
+  {
+   "sira": 8,
+   "ad": "Arjantin",
+   "deger": 2.78,
+   "yer": "Güney Amerika",
+   "bilgi": [
+    "Amerika kıtasının en yüksek",
+    "dağı Aconcagua burada"
+   ],
+   "seslendirme": "Sekizinci, Arjantin. Amerika kıtasının en yüksek dağı Akonkagua burada.",
+   "foto": "Patagonia Argentina"
+  },
+  {
+   "sira": 7,
+   "ad": "Hindistan",
+   "deger": 3.29,
+   "yer": "Asya",
+   "bilgi": [
+    "Dünyanın",
+    "en kalabalık ülkesi"
+   ],
+   "seslendirme": "Yedinci, Hindistan. Dünyanın en kalabalık ülkesi.",
+   "foto": "Taj Mahal"
+  },
+  {
+   "sira": 6,
+   "ad": "Avustralya",
+   "deger": 7.74,
+   "yer": "Okyanusya",
+   "bilgi": [
+    "Hem bir ülke,",
+    "hem de bir kıta"
+   ],
+   "seslendirme": "Altıncı, Avustralya. Hem bir ülke, hem de bir kıta.",
+   "foto": "Australia outback"
+  },
+  {
+   "sira": 5,
+   "ad": "Brezilya",
+   "deger": 8.52,
+   "yer": "Güney Amerika",
+   "bilgi": [
+    "Amazon ormanlarının",
+    "büyük kısmı burada"
+   ],
+   "seslendirme": "Beşinci, Brezilya. Amazon ormanlarının büyük kısmı burada.",
+   "foto": "Rio de Janeiro"
+  },
+  {
+   "sira": 4,
+   "ad": "Çin",
+   "deger": 9.6,
+   "yer": "Asya",
+   "bilgi": [
+    "Bu kadar büyük ama",
+    "tek saat dilimi kullanıyor"
+   ],
+   "seslendirme": "Dördüncü, Çin. Bu kadar büyük ama tek bir saat dilimi kullanıyor.",
+   "foto": "Great Wall of China"
+  },
+  {
+   "sira": 3,
+   "ad": "ABD",
+   "deger": 9.83,
+   "yer": "Kuzey Amerika",
+   "bilgi": [
+    "Sadece Alaska bile",
+    "Türkiye'nin 2 katından büyük"
+   ],
+   "seslendirme": "Üçüncü, ABD. Sadece Alaska bile Türkiye'nin iki katından büyük.",
+   "foto": "Grand Canyon"
+  },
+  {
+   "sira": 2,
+   "ad": "Kanada",
+   "deger": 9.98,
+   "yer": "Kuzey Amerika",
+   "bilgi": [
+    "Dünyanın en uzun",
+    "kıyı şeridine sahip"
+   ],
+   "seslendirme": "İkinci, Kanada. Dünyanın en uzun kıyı şeridine sahip.",
+   "foto": "Canada lake mountains"
+  },
+  {
+   "sira": 1,
+   "ad": "Rusya",
+   "deger": 17.1,
+   "yer": "Avrupa – Asya",
+   "bilgi": [
+    "11 saat dilimine",
+    "yayılıyor!"
+   ],
+   "seslendirme": "Ve bir numara, Rusya! On yedi milyon kilometrekare ve on bir saat dilimi!",
+   "foto": "Russia winter landscape"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "gezmek isterdin?",
+ "kapanis_seslendirme": "Sen hangisini gezmek isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın yüzölçümü en büyük 10 ülkesi 🌍 Rusya tek başına Türkiye'nin 22 katı! Hangisini gezmek isterdin? 👇",
+ "etiketler": [
+  "#ülkeler",
+  "#rusya",
+  "#coğrafya",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#dünya",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "ABD ile Çin'in sırası, kıyı/iç suların sayılmasına göre kaynaktan kaynağa değişir."
+}

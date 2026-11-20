@@ -1,0 +1,152 @@
+{
+ "id": "dunyanin-en-buyuk-10-golu",
+ "baslik": [
+  "DÜNYANIN",
+  "EN BÜYÜK",
+  "GÖLÜ"
+ ],
+ "kanca": [
+  "1 numara, sonraki 5 gölün",
+  "TOPLAMINDAN büyük!"
+ ],
+ "kanca_seslendirme": "Dünyanın en büyük on gölü! Bir numara, sonraki beş gölün toplamından bile büyük.",
+ "birim": "km²",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 10,
+   "ad": "Büyük Esir Gölü",
+   "deger": 27200,
+   "yer": "Kanada",
+   "bilgi": [
+    "Kuzey Amerika'nın en derin",
+    "gölü: 614 metre"
+   ],
+   "seslendirme": "Onuncu sırada, Büyük Esir Gölü. Kuzey Amerika'nın en derin gölü.",
+   "foto": "Great Slave Lake"
+  },
+  {
+   "sira": 9,
+   "ad": "Malavi Gölü",
+   "deger": 29500,
+   "yer": "Malavi – Mozambik – Tanzanya",
+   "bilgi": [
+    "Dünyada en çok balık türü",
+    "yaşayan göl"
+   ],
+   "seslendirme": "Dokuzuncu, Malavi Gölü. Dünyada en çok balık türünün yaşadığı göl.",
+   "foto": "Lake Malawi"
+  },
+  {
+   "sira": 8,
+   "ad": "Büyük Ayı Gölü",
+   "deger": 31000,
+   "yer": "Kanada",
+   "bilgi": [
+    "Kuzey Kutup Dairesi'nde;",
+    "yılın çoğu donuk"
+   ],
+   "seslendirme": "Sekizinci, Büyük Ayı Gölü. Kuzey Kutup Dairesi'nde, yılın çoğu donuk.",
+   "foto": "Great Bear Lake"
+  },
+  {
+   "sira": 7,
+   "ad": "Baykal Gölü",
+   "deger": 31500,
+   "yer": "Rusya",
+   "bilgi": [
+    "En derin ve en eski göl:",
+    "1.642 m, ~25 milyon yıl"
+   ],
+   "seslendirme": "Yedinci, Baykal Gölü. Dünyanın en derin ve en eski gölü.",
+   "foto": "Lake Baikal ice"
+  },
+  {
+   "sira": 6,
+   "ad": "Tanganika Gölü",
+   "deger": 32600,
+   "yer": "Doğu Afrika",
+   "bilgi": [
+    "Dünyanın en uzun",
+    "tatlı su gölü: ~670 km"
+   ],
+   "seslendirme": "Altıncı, Tanganika Gölü. Dünyanın en uzun tatlı su gölü.",
+   "foto": "Lake Tanganyika"
+  },
+  {
+   "sira": 5,
+   "ad": "Michigan Gölü",
+   "deger": 58000,
+   "yer": "ABD",
+   "bilgi": [
+    "Tamamı tek bir ülkede",
+    "olan en büyük göl"
+   ],
+   "seslendirme": "Beşinci, Miçigan Gölü. Tamamı tek bir ülkede olan en büyük göl.",
+   "foto": "Lake Michigan Chicago"
+  },
+  {
+   "sira": 4,
+   "ad": "Huron Gölü",
+   "deger": 59600,
+   "yer": "ABD – Kanada",
+   "bilgi": [
+    "Michigan Gölü'yle",
+    "aslında birbirine bağlı"
+   ],
+   "seslendirme": "Dördüncü, Huron Gölü. Miçigan Gölü'yle aslında birbirine bağlı.",
+   "foto": "Lake Huron"
+  },
+  {
+   "sira": 3,
+   "ad": "Victoria Gölü",
+   "deger": 68800,
+   "yer": "Uganda – Kenya – Tanzanya",
+   "bilgi": [
+    "Nil Nehri'nin",
+    "ana kaynağı"
+   ],
+   "seslendirme": "Üçüncü, Viktorya Gölü. Nil Nehri'nin ana kaynağı.",
+   "foto": "Lake Victoria"
+  },
+  {
+   "sira": 2,
+   "ad": "Superior Gölü",
+   "deger": 82100,
+   "yer": "ABD – Kanada",
+   "bilgi": [
+    "Dünyanın en büyük",
+    "tatlı su gölü"
+   ],
+   "seslendirme": "İkinci, Süperior Gölü. Dünyanın en büyük tatlı su gölü.",
+   "foto": "Lake Superior"
+  },
+  {
+   "sira": 1,
+   "ad": "Hazar Gölü",
+   "deger": 371000,
+   "yer": "Avrupa – Asya",
+   "bilgi": [
+    "Deniz mi, göl mü?",
+    "Adı 'deniz' ama bir göl!"
+   ],
+   "seslendirme": "Ve bir numara, Hazar Gölü! Üç yüz yetmiş bir bin kilometrekare. Adı deniz, ama aslında bir göl!",
+   "foto": "Caspian Sea coast"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en büyük 10 gölü 🌊 Hazar, sonraki 5 gölün toplamından büyük! Sen hangisini biliyordun? 👇",
+ "etiketler": [
+  "#göl",
+  "#hazar",
+  "#baykal",
+  "#coğrafya",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Alanlar yaklaşık (Britannica vb.); su seviyesine göre değişir."
+}

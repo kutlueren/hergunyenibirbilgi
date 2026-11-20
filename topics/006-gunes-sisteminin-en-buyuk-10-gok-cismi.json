@@ -1,0 +1,153 @@
+{
+ "id": "gunes-sisteminin-en-buyuk-10-gok-cismi",
+ "baslik": [
+  "GÜNEŞ SİSTEMİ'NİN",
+  "EN BÜYÜK",
+  "GÖK CİSMİ"
+ ],
+ "kanca": [
+  "Bir UYDU,",
+  "bir gezegenden büyük!"
+ ],
+ "kanca_seslendirme": "Güneş Sistemi'nin en büyük on gök cismi! Ve bir uydu, bir gezegenden büyük.",
+ "birim": "km",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 10,
+   "ad": "Merkür",
+   "deger": 4879,
+   "yer": "Gezegen",
+   "bilgi": [
+    "İki uydudan bile",
+    "küçük bir gezegen!"
+   ],
+   "seslendirme": "Onuncu sırada, Merkür. İki uydudan bile küçük bir gezegen!",
+   "foto": null
+  },
+  {
+   "sira": 9,
+   "ad": "Titan",
+   "deger": 5150,
+   "yer": "Satürn'ün uydusu",
+   "bilgi": [
+    "Kalın bir atmosferi olan",
+    "tek uydu"
+   ],
+   "seslendirme": "Dokuzuncu, Titan. Kalın bir atmosferi olan tek uydu.",
+   "foto": null
+  },
+  {
+   "sira": 8,
+   "ad": "Ganymede",
+   "deger": 5268,
+   "yer": "Jüpiter'in uydusu",
+   "bilgi": [
+    "Güneş Sistemi'nin",
+    "en büyük uydusu"
+   ],
+   "seslendirme": "Sekizinci, Ganimed. Güneş Sistemi'nin en büyük uydusu.",
+   "foto": null
+  },
+  {
+   "sira": 7,
+   "ad": "Mars",
+   "deger": 6779,
+   "yer": "Gezegen",
+   "bilgi": [
+    "Olympus Dağı, Everest'in",
+    "yaklaşık 2,5 katı"
+   ],
+   "seslendirme": "Yedinci, Mars. Üzerindeki Olimpos Dağı, Everest'in yaklaşık iki buçuk katı.",
+   "foto": null
+  },
+  {
+   "sira": 6,
+   "ad": "Venüs",
+   "deger": 12104,
+   "yer": "Gezegen",
+   "bilgi": [
+    "En sıcak gezegen:",
+    "yüzeyi yaklaşık 465 °C"
+   ],
+   "seslendirme": "Altıncı, Venüs. En sıcak gezegen, yüzeyi yaklaşık dört yüz altmış beş derece.",
+   "foto": null
+  },
+  {
+   "sira": 5,
+   "ad": "Dünya",
+   "deger": 12742,
+   "yer": "Gezegen",
+   "bilgi": [
+    "Bildiğimiz kadarıyla",
+    "hayat olan tek yer"
+   ],
+   "seslendirme": "Beşinci, Dünya. Bildiğimiz kadarıyla hayat olan tek yer.",
+   "foto": null
+  },
+  {
+   "sira": 4,
+   "ad": "Neptün",
+   "deger": 49244,
+   "yer": "Gezegen",
+   "bilgi": [
+    "Rüzgârları saatte",
+    "2.000 km'yi aşıyor"
+   ],
+   "seslendirme": "Dördüncü, Neptün. Rüzgârları saatte iki bin kilometreyi aşıyor.",
+   "foto": null
+  },
+  {
+   "sira": 3,
+   "ad": "Uranüs",
+   "deger": 50724,
+   "yer": "Gezegen",
+   "bilgi": [
+    "Yan yatmış döner:",
+    "ekseni ~98° eğik"
+   ],
+   "seslendirme": "Üçüncü, Uranüs. Yan yatmış gibi döner.",
+   "foto": null
+  },
+  {
+   "sira": 2,
+   "ad": "Satürn",
+   "deger": 116460,
+   "yer": "Gezegen",
+   "bilgi": [
+    "Yoğunluğu sudan az:",
+    "dev bir küvette yüzerdi!"
+   ],
+   "seslendirme": "İkinci, Satürn. Yoğunluğu sudan az, dev bir küvette yüzerdi!",
+   "foto": null
+  },
+  {
+   "sira": 1,
+   "ad": "Jüpiter",
+   "deger": 139820,
+   "yer": "Gezegen",
+   "bilgi": [
+    "İçine 1.300'den fazla",
+    "Dünya sığar!"
+   ],
+   "seslendirme": "Ve bir numara, Jüpiter! İçine bin üç yüzden fazla Dünya sığar!",
+   "foto": null
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Güneş Sistemi'nin en büyük 10 gök cismi 🪐 Bir uydu, bir gezegenden büyük! Sen hangisini biliyordun? 👇",
+ "etiketler": [
+  "#uzay",
+  "#jüpiter",
+  "#gezegen",
+  "#astronomi",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#keşfet",
+  "#reels"
+ ],
+ "olcek": "dogrusal",
+ "notlar": "Güneş hariç, ortalama çaplar (km). Daireler çapla doğru orantılı."
+}

@@ -1,0 +1,152 @@
+{
+ "id": "dunyanin-en-yuksek-10-binasi",
+ "baslik": [
+  "DÜNYANIN",
+  "EN YÜKSEK",
+  "BİNASI"
+ ],
+ "kanca": [
+  "1 numara, 2. sıradakinden",
+  "150 metre daha uzun!"
+ ],
+ "kanca_seslendirme": "Dünyanın en yüksek on binası! Bir numara, ikinci sıradakinden yaklaşık yüz elli metre daha uzun.",
+ "birim": "m",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 10,
+   "ad": "China Zun",
+   "deger": 528,
+   "yer": "Pekin, Çin",
+   "bilgi": [
+    "Adını antik bir",
+    "Çin şarap kabından alır"
+   ],
+   "seslendirme": "Onuncu sırada, Çayna Zun. Adını antik bir Çin şarap kabından alır.",
+   "foto": null
+  },
+  {
+   "sira": 9,
+   "ad": "Tianjin CTF Finans Merkezi",
+   "deger": 530,
+   "yer": "Tianjin, Çin",
+   "bilgi": [
+    "Guangzhou'daki ikiziyle",
+    "tam aynı boyda"
+   ],
+   "seslendirme": "Dokuzuncu, Tiencin Finans Merkezi. Guangzhou'daki ikiziyle tam aynı boyda.",
+   "foto": null
+  },
+  {
+   "sira": 8,
+   "ad": "Guangzhou CTF Finans Merkezi",
+   "deger": 530,
+   "yer": "Guangzhou, Çin",
+   "bilgi": [
+    "Asansörleri saatte",
+    "75 km hıza çıkıyor"
+   ],
+   "seslendirme": "Sekizinci, Guangzhou Finans Merkezi. Asansörleri saatte yetmiş beş kilometre hıza çıkıyor.",
+   "foto": null
+  },
+  {
+   "sira": 7,
+   "ad": "One World Trade Center",
+   "deger": 541,
+   "yer": "New York, ABD",
+   "bilgi": [
+    "541 metre = 1776 fit:",
+    "ABD'nin bağımsızlık yılı"
+   ],
+   "seslendirme": "Yedinci, Van Vörld Treyd Sentır. Boyu bin yedi yüz yetmiş altı fit, ABD'nin bağımsızlık yılı.",
+   "foto": null
+  },
+  {
+   "sira": 6,
+   "ad": "Lotte World Tower",
+   "deger": 555,
+   "yer": "Seul, Güney Kore",
+   "bilgi": [
+    "Güney Kore'nin",
+    "en yüksek binası"
+   ],
+   "seslendirme": "Altıncı, Lotte Vörld Tavır. Güney Kore'nin en yüksek binası.",
+   "foto": null
+  },
+  {
+   "sira": 5,
+   "ad": "Ping An Finans Merkezi",
+   "deger": 599,
+   "yer": "Shenzhen, Çin",
+   "bilgi": [
+    "Shenzhen birkaç on yıl önce",
+    "küçük bir kasabaydı"
+   ],
+   "seslendirme": "Beşinci, Ping An Finans Merkezi. Şenzen, birkaç on yıl önce küçük bir kasabaydı.",
+   "foto": null
+  },
+  {
+   "sira": 4,
+   "ad": "Mekke Kraliyet Saat Kulesi",
+   "deger": 601,
+   "yer": "Mekke, Suudi Arabistan",
+   "bilgi": [
+    "Dünyanın en büyük",
+    "saat kadranlarından: 43 m"
+   ],
+   "seslendirme": "Dördüncü, Mekke Saat Kulesi. Dünyanın en büyük saat kadranlarından birine sahip.",
+   "foto": null
+  },
+  {
+   "sira": 3,
+   "ad": "Shanghai Tower",
+   "deger": 632,
+   "yer": "Şanghay, Çin",
+   "bilgi": [
+    "120° bükülen gövdesi",
+    "rüzgârın etkisini azaltır"
+   ],
+   "seslendirme": "Üçüncü, Şanghay Kulesi. Yüz yirmi derece bükülen gövdesi rüzgârın etkisini azaltır.",
+   "foto": null
+  },
+  {
+   "sira": 2,
+   "ad": "Merdeka 118",
+   "deger": 679,
+   "yer": "Kuala Lumpur, Malezya",
+   "bilgi": [
+    "2023'te tamamlandı ve",
+    "Shanghai Tower'ı geçti"
+   ],
+   "seslendirme": "İkinci, Merdeka yüz on sekiz. İki bin yirmi üçte tamamlandı ve Şanghay Kulesi'ni geçti.",
+   "foto": null
+  },
+  {
+   "sira": 1,
+   "ad": "Burj Khalifa",
+   "deger": 828,
+   "yer": "Dubai, BAE",
+   "bilgi": [
+    "163 katlı; tepesi",
+    "95 km uzaktan görülür"
+   ],
+   "seslendirme": "Ve bir numara, Burç Halife! Sekiz yüz yirmi sekiz metre, tepesi doksan beş kilometre uzaktan görülüyor!",
+   "foto": null
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "görmek isterdin?",
+ "kapanis_seslendirme": "Sen hangisini görmek isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en yüksek 10 binası 🏙️ Burj Khalifa, 2. sıradakinden yaklaşık 150 metre daha uzun! Hangisini görmek isterdin? 👇",
+ "etiketler": [
+  "#gökdelen",
+  "#burjkhalifa",
+  "#mimari",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#dünya",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "CTBUH sıralaması, tamamlanmış binalar (2026). Jeddah Tower henüz tamamlanmadı."
+}

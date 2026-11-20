@@ -1,0 +1,92 @@
+{
+ "id": "turkiyenin-en-kalabalik-5-ili",
+ "baslik": [
+  "TÜRKİYE'NİN",
+  "EN KALABALIK",
+  "İLİ"
+ ],
+ "kanca": [
+  "Her 5 kişiden",
+  "neredeyse 1'i İSTANBUL'da!"
+ ],
+ "kanca_seslendirme": "Türkiye'nin en kalabalık beş ili! Türkiye'de her beş kişiden neredeyse biri İstanbul'da yaşıyor.",
+ "birim": "milyon",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Antalya",
+   "deger": 2.78,
+   "yer": "Akdeniz",
+   "bilgi": [
+    "Türkiye'nin",
+    "turizm başkenti"
+   ],
+   "seslendirme": "Beşinci sırada, Antalya. İki milyon yedi yüz bini aşan nüfusuyla Türkiye'nin turizm başkenti.",
+   "foto": "Antalya old town"
+  },
+  {
+   "sira": 4,
+   "ad": "Bursa",
+   "deger": 3.26,
+   "yer": "Marmara",
+   "bilgi": [
+    "Osmanlı'nın",
+    "ilk başkenti"
+   ],
+   "seslendirme": "Dördüncü, Bursa. Osmanlı'nın ilk başkenti.",
+   "foto": "Bursa Uludag"
+  },
+  {
+   "sira": 3,
+   "ad": "İzmir",
+   "deger": 4.5,
+   "yer": "Ege",
+   "bilgi": [
+    "Ege'nin en büyük şehri;",
+    "4,5 milyonu aştı"
+   ],
+   "seslendirme": "Üçüncü, İzmir. Ege'nin en büyük şehri, nüfusu dört buçuk milyonu aştı.",
+   "foto": "Izmir clock tower"
+  },
+  {
+   "sira": 2,
+   "ad": "Ankara",
+   "deger": 5.91,
+   "yer": "İç Anadolu",
+   "bilgi": [
+    "Çankaya ve Keçiören, en kalabalık",
+    "5 ilçenin ikisi"
+   ],
+   "seslendirme": "İkinci, Ankara. Çankaya ve Keçiören, Türkiye'nin en kalabalık beş ilçesinden ikisi.",
+   "foto": "Ankara Anitkabir"
+  },
+  {
+   "sira": 1,
+   "ad": "İstanbul",
+   "deger": 15.75,
+   "yer": "Marmara",
+   "bilgi": [
+    "Esenyurt: nüfusu 1 milyonu",
+    "aşan ilk ilçe!"
+   ],
+   "seslendirme": "Ve bir numara, İstanbul! On beş milyon yedi yüz elli bin kişi. Esenyurt, nüfusu bir milyonu aşan ilk ilçe oldu!",
+   "foto": "Istanbul Bosphorus"
+  }
+ ],
+ "kapanis_ust": "Sen hangi ilde",
+ "kapanis_vurgu": "yaşıyorsun?",
+ "kapanis_seslendirme": "Sen hangi ilde yaşıyorsun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Türkiye'nin en kalabalık 5 ili 🏙️ Her 5 kişiden neredeyse 1'i İstanbul'da yaşıyor! Sen hangi ildesin? 👇",
+ "etiketler": [
+  "#türkiye",
+  "#istanbul",
+  "#nüfus",
+  "#tüik",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "TÜİK ADNKS 2025 sonuçları (9 Şubat 2026): İstanbul 15.754.053, Ankara 5.910.320, İzmir 4.504.185, Bursa 3.263.011, Antalya 2.777.677."
+}

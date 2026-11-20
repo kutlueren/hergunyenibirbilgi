@@ -198,7 +198,8 @@ class Renderer:
             if not is_top:
                 d.ellipse([cx - R, cy - R, cx + R, cy + R], outline=(255, 255, 255, int(90 * ac)), width=4)
                 lw = d.textlength(label, font=lab); d.text((cx - lw / 2, cy - R - 50), label, font=lab, fill=(255, 255, 255, int(130 * ac)))
-            r = R * math.sqrt(v / self.maxv) * ac
+            frac = v / self.maxv
+            r = R * (frac if self.T.get("olcek") == "dogrusal" else math.sqrt(frac)) * ac
             if r > 1:
                 d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=circ + (200,))
                 d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=tuple(min(255, x + 110) for x in circ) + (255,), width=5)
@@ -221,8 +222,9 @@ class Renderer:
         ov = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(ov)
         self.progress(d, gt)
         a = ease_back(prog(t, 0, 0.5))
-        self.text_c(d, 600 + 50 * (1 - a), "Sen hangisini", BLACK(110), WHITE, 255 * clamp(a))
-        self.text_c(d, 730 + 50 * (1 - a), self.T.get("kapanis_vurgu", "biliyordun?"), BLACK(110), acc, 255 * clamp(a))
+        ust = self.T.get("kapanis_ust", "Sen hangisini"); vurgu = self.T.get("kapanis_vurgu", "biliyordun?")
+        self.text_c(d, 600 + 50 * (1 - a), ust, self.fit(d, ust, BLACK, 110, W - 120), WHITE, 255 * clamp(a))
+        self.text_c(d, 730 + 50 * (1 - a), vurgu, self.fit(d, vurgu, BLACK, 110, W - 120), acc, 255 * clamp(a))
         a2 = ease_out(prog(t, 0.5, 0.9))
         self.text_c(d, 960, "Yorumlara yaz", BOLD(70), WHITE, 255 * a2)
         by = 1080 + 25 * abs(math.sin(t * 5)) * a2

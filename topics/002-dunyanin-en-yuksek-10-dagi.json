@@ -1,0 +1,152 @@
+{
+ "id": "dunyanin-en-yuksek-10-dagi",
+ "baslik": [
+  "DÜNYANIN",
+  "EN YÜKSEK",
+  "DAĞI"
+ ],
+ "kanca": [
+  "8.000 metreyi aşan 14 dağın",
+  "HEPSİ Asya'da!"
+ ],
+ "kanca_seslendirme": "Dünyanın en yüksek on dağı! Sekiz bin metreyi aşan on dört dağın hepsi Asya'da.",
+ "birim": "m",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 10,
+   "ad": "Annapurna",
+   "deger": 8091,
+   "yer": "Nepal",
+   "bilgi": [
+    "İnsanların zirvesine çıktığı",
+    "ilk 8.000'lik dağ (1950)"
+   ],
+   "seslendirme": "Onuncu sırada, Annapurna. İnsanların zirvesine çıktığı ilk sekiz binlik dağ.",
+   "foto": "Annapurna mountain"
+  },
+  {
+   "sira": 9,
+   "ad": "Nanga Parbat",
+   "deger": 8126,
+   "yer": "Pakistan",
+   "bilgi": [
+    "Dağcılar arasında",
+    "'katil dağ' diye anılır"
+   ],
+   "seslendirme": "Dokuzuncu, Nanga Parbat. Dağcılar arasında katil dağ diye anılır.",
+   "foto": "Nanga Parbat"
+  },
+  {
+   "sira": 8,
+   "ad": "Manaslu",
+   "deger": 8163,
+   "yer": "Nepal",
+   "bilgi": [
+    "Adı Sanskritçede",
+    "'ruhun dağı' anlamına gelir"
+   ],
+   "seslendirme": "Sekizinci, Manaslu. Adı, ruhun dağı anlamına gelir.",
+   "foto": "Manaslu mountain"
+  },
+  {
+   "sira": 7,
+   "ad": "Dhaulagiri",
+   "deger": 8167,
+   "yer": "Nepal",
+   "bilgi": [
+    "Adı 'beyaz dağ' demek;",
+    "zirvesi hep karlı"
+   ],
+   "seslendirme": "Yedinci, Dhaulagiri. Adı, beyaz dağ demek.",
+   "foto": "Dhaulagiri"
+  },
+  {
+   "sira": 6,
+   "ad": "Cho Oyu",
+   "deger": 8188,
+   "yer": "Nepal – Çin",
+   "bilgi": [
+    "8.000'liklerin",
+    "en kolay tırmanılanı sayılır"
+   ],
+   "seslendirme": "Altıncı, Cho Oyu. Sekiz binliklerin en kolay tırmanılanı sayılır.",
+   "foto": "Cho Oyu"
+  },
+  {
+   "sira": 5,
+   "ad": "Makalu",
+   "deger": 8485,
+   "yer": "Nepal – Çin",
+   "bilgi": [
+    "Dört kenarlı",
+    "dev bir piramit gibi"
+   ],
+   "seslendirme": "Beşinci, Makalu. Dört kenarlı dev bir piramide benzer.",
+   "foto": "Makalu mountain"
+  },
+  {
+   "sira": 4,
+   "ad": "Lhotse",
+   "deger": 8516,
+   "yer": "Nepal – Çin",
+   "bilgi": [
+    "Everest'e bir sırtla bağlı;",
+    "adı 'güney zirve' demek"
+   ],
+   "seslendirme": "Dördüncü, Lhotse. Everest'e bir sırtla bağlıdır.",
+   "foto": "Lhotse"
+  },
+  {
+   "sira": 3,
+   "ad": "Kangchenjunga",
+   "deger": 8586,
+   "yer": "Nepal – Hindistan",
+   "bilgi": [
+    "1852'ye kadar dünyanın",
+    "en yükseği sanılıyordu"
+   ],
+   "seslendirme": "Üçüncü, Kangçencunga. Bin sekiz yüz elli ikiye kadar dünyanın en yüksek dağı sanılıyordu.",
+   "foto": "Kangchenjunga"
+  },
+  {
+   "sira": 2,
+   "ad": "K2",
+   "deger": 8611,
+   "yer": "Pakistan – Çin",
+   "bilgi": [
+    "'Vahşi dağ': tırmanması",
+    "Everest'ten çok daha zor"
+   ],
+   "seslendirme": "İkinci, Ka iki. Vahşi dağ lakaplı, tırmanması Everest'ten çok daha zor.",
+   "foto": "K2 mountain Karakoram"
+  },
+  {
+   "sira": 1,
+   "ad": "Everest",
+   "deger": 8849,
+   "yer": "Nepal – Çin",
+   "bilgi": [
+    "Zirvesi her yıl",
+    "birkaç milimetre yükseliyor!"
+   ],
+   "seslendirme": "Ve bir numara, Everest! Sekiz bin sekiz yüz kırk dokuz metre. Ve zirvesi her yıl birkaç milimetre yükseliyor!",
+   "foto": "Mount Everest"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en yüksek 10 dağı 🏔️ 8.000 metreyi aşan 14 dağın hepsi Asya'da! Sen hangisini biliyordun? 👇",
+ "etiketler": [
+  "#everest",
+  "#dağ",
+  "#himalaya",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#coğrafya",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Yükseklikler yaygın kabul gören ölçümler (Everest: 2020 Nepal–Çin ölçümü 8.848,86 m)."
+}
