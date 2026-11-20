@@ -1,4 +1,5 @@
 import datetime as dt
+import random
 
 THEMES = {
     "okyanus":   dict(top=(6, 22, 48),  bot=(4, 90, 120),  accent=(255, 205, 60),  soft=(170, 225, 240), circle=(60, 200, 230),  ink=(10, 30, 50),  motif="waves"),
@@ -10,8 +11,7 @@ THEMES = {
 }
 
 
-def pick_theme(_topic_id=None, day=None):
-    """Rotate through the themes by calendar day, so consecutive days never repeat."""
-    day = day or dt.date.today()
-    names = list(THEMES)
-    return names[day.toordinal() % len(names)]
+def pick_theme(_topic_id=None, day=None, exclude=None):
+    """Random theme for every video, never the same as the previous one (`exclude`)."""
+    names = [n for n in THEMES if n != exclude] or list(THEMES)
+    return random.choice(names)

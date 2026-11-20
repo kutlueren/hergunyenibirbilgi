@@ -5,6 +5,7 @@ from . import state as S
 from .render import render
 from .telegram import Telegram
 from .photos import fetch as fetch_photos
+from .themes import pick_theme
 
 ROOT = S.ROOT
 
@@ -47,7 +48,9 @@ def main():
     if os.environ.get("PEXELS_API_KEY"):
         got = fetch_photos(topic, img_dir, os.environ["PEXELS_API_KEY"],
                            ratio=float(os.environ.get("PHOTO_RATIO", "0.5")), seed=key)
-    theme = render(path, work, img_dir=img_dir)
+    prev = s.get("last_theme") or (s["published"][-1].get("theme") if s.get("published") else None)
+    theme = render(path, work, theme=pick_theme(exclude=prev), img_dir=img_dir)
+    s["last_theme"] = theme
 
     cap = caption_for(topic)
     left = S.remaining(s) - 1
