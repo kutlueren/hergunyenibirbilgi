@@ -1,19 +1,19 @@
 # Her Gün Yeni Bir Bilgi
 
-Her sabah otomatik olarak dikey (9:16) bir "Top 10" bilgi videosu üretir, onayın için Telegram'a gönderir, **✅ Paylaş**'a basınca Instagram'a Reels olarak yükler.
+Her gün öğlen 12:00'de otomatik olarak dikey (9:16) bir "Top 10" bilgi videosu üretir, onayın için Telegram'a gönderir, **✅ Paylaş**'a basınca Instagram'a Reels olarak yükler.
 
 ```
-08:00  GitHub Actions ──► konu seç ► Pexels fotoğrafları ► video + Türkçe seslendirme ► Telegram'a gönder
+12:00  GitHub Actions ──► konu seç ► Pexels fotoğrafları ► video + Türkçe seslendirme ► Telegram'a gönder
                                                                                     │
                        sen Telegram'da ✅ Paylaş / ❌ Reddet ◄──────────────────────┘
                                                                                     │
-her saat (08:25–22:25) ──► butonları oku ► Instagram Reels olarak yayınla ► Telegram'a link
+her saat (12:25–22:25) ──► butonları oku ► Instagram Reels olarak yayınla ► Telegram'a link
 ```
 
 - **Video:** Python (Pillow) + ffmpeg, LLM yok. Her gün farklı renk teması (6 tema), bazı sahnelerde gerçek fotoğraf.
 - **Ses:** Piper "Fahrettin" Türkçe sesi (CC0 lisans, ticari kullanım serbest), GitHub Actions içinde çalışır.
 - **Konular:** `topics/` klasöründeki JSON dosyaları, dosya adı sırasıyla. Yayınlanan/reddedilen konular `state/state.json`'a yazılır ve bir daha gelmez.
-- **Onaylanmayan video:** Ertesi sabah süresi dolar, konu sıraya geri döner.
+- **Onaylanmayan video:** Ertesi gün öğlen süresi dolar, konu sıraya geri döner.
 
 ---
 
@@ -71,8 +71,8 @@ Gerekenler: Instagram **Business veya Creator** hesabı + ona bağlı bir **Face
 
 | Nerede | Ne | Varsayılan |
 |---|---|---|
-| `.github/workflows/daily.yml` → `cron` | Videonun üretileceği saat (UTC) | `0 7 * * *` = 08:00 kış saati |
-| `.github/workflows/approve.yml` → `cron` | Onay kontrol saatleri | her saat 08:25–22:25 |
+| `src/daily.py` → `SEND_WINDOW` + `daily.yml` → `cron` | Videonun Telegram'a geleceği saat. Cron UTC'dir; yaz/kış saati için iki tetikleyici var, script Berlin saatine göre birini seçer | ~12:00 (Berlin) |
+| `.github/workflows/approve.yml` → `cron` | Onay kontrol saatleri | her saat 12:25–22:25 |
 | Repo **Variables** → `PHOTO_RATIO` | Fotoğraflı sahne oranı (0–1) | `0.5` |
 | Repo **Variables** → `GRAPH_API_VERSION` | Instagram API sürümü | `v25.0` |
 | `src/themes.py` | Renk temaları | 6 tema, güne göre sırayla |

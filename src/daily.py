@@ -14,11 +14,20 @@ def caption_for(t):
     return (t.get("aciklama", "") + ("\n\n" + tags if tags else "")).strip()
 
 
+SEND_WINDOW = (dt.time(11, 30), dt.time(13, 30))  # Berlin saati; video ~12:00'de gelsin
+
+
 def main():
-    tg = Telegram()
     s = S.load()
-    today = dt.date.today()
+    now = dt.datetime.now()  # TZ=Europe/Berlin in the workflow
+    today = now.date()
     key = today.strftime("%Y%m%d")
+    if os.environ.get("EVENT") == "schedule":
+        if not (SEND_WINDOW[0] <= now.time() <= SEND_WINDOW[1]):
+            print(f"{now:%H:%M} gönderim penceresinin dışında, atlanıyor."); return
+        if s.get("last_daily") == key:
+            print("Bugünün videosu zaten gönderildi, atlanıyor."); return
+    tg = Telegram()
 
     old = s.get("pending")
     if old:
@@ -50,6 +59,7 @@ def main():
     s["pending"] = {"key": key, "topic_id": topic["id"], "file_id": res["video"]["file_id"],
                     "message_id": res["message_id"], "caption": cap, "theme": theme,
                     "created": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")}
+    s["last_daily"] = key
     S.save(s)
     if left <= 5:
         tg.send_message(f"📚 Konu bankasında {left} konu kaldı, yenilerini eklemeyi unutma.")

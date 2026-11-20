@@ -2,7 +2,10 @@ name: Günlük video
 
 on:
   schedule:
-    - cron: "0 7 * * *"   # 08:00 Türkiye/Almanya kış saati (UTC 07:00). Yaz saatinde 09:00 olur.
+    # GitHub sadece UTC bilir: iki saatte tetiklenir, script Berlin saatine bakıp
+    # yalnızca ~11:50'deki çalışmayı kullanır → video yaz/kış saatinde de ~12:00'de gelir.
+    - cron: "50 9 * * *"
+    - cron: "50 10 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -48,6 +51,7 @@ jobs:
       - name: Videoyu üret ve Telegram'a gönder
         env:
           TZ: Europe/Berlin
+          EVENT: ${{ github.event_name }}
           PIPER_MODEL: ${{ github.workspace }}/.piper/tr_TR-fahrettin-medium.onnx
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

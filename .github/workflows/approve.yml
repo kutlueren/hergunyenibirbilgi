@@ -2,7 +2,7 @@ name: Onay kontrolü
 
 on:
   schedule:
-    - cron: "25 7-21 * * *"   # her saat 08:25–22:25 arası (kış saati)
+    - cron: "25 11-21 * * *"   # her saat 12:25–22:25 arası (yaz saatinde 13:25–23:25)
   workflow_dispatch: {}        # Telegram'da onayladıktan sonra beklemek istemezsen elle çalıştır
 
 permissions:
