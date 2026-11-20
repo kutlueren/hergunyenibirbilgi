@@ -1,0 +1,44 @@
+name: Onay kontrolü
+
+on:
+  schedule:
+    - cron: "25 7-21 * * *"   # her saat 08:25–22:25 arası (kış saati)
+  workflow_dispatch: {}        # Telegram'da onayladıktan sonra beklemek istemezsen elle çalıştır
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Paketler
+        run: pip install requests
+
+      - name: Telegram onaylarını işle
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GRAPH_API_VERSION: ${{ vars.GRAPH_API_VERSION || 'v25.0' }}
+        run: python -m src.approve
+
+      - name: Durumu kaydet
+        if: always()
+        run: |
+          git config user.name "hergunyenibirbilgi-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/state.json
+          git diff --cached --quiet || (git commit -m "durum: onay kontrolü" && git pull --rebase && git push)
