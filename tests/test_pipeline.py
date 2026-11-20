@@ -122,6 +122,25 @@ def run():
     assert s["tg_offset"] == 102
     assert S.next_topic(s)[1]["id"] == "dunyanin-en-yuksek-10-dagi"
     print("approve ok →", s["published"][0])
+
+    # waiting mode (daily job): nothing at first, then a ❌ arrives while long polling -> handled, loop exits
+    s["pending"] = {"key": "K2", "topic_id": "x", "file_id": "F", "message_id": 5, "caption": "c"}
+    S.save(s)
+    os.environ["WAIT_SECONDS"] = "120"
+    with responses.RequestsMock(assert_all_requests_are_fired=True) as rs:
+        rs.add(responses.POST, f"{TG}/getUpdates", json={"ok": True, "result": []})
+        rs.add(responses.POST, f"{TG}/getUpdates", json={"ok": True, "result": [
+            {"update_id": 200, "callback_query": {"id": "cb9", "from": {"id": 42}, "data": "no|K2", "message": {"chat": {"id": 42}}}}]})
+        rs.add(responses.POST, f"{TG}/answerCallbackQuery", json={"ok": True, "result": True})
+        rs.add(responses.POST, f"{TG}/editMessageReplyMarkup", json={"ok": True, "result": True})
+        rs.add(responses.POST, f"{TG}/sendMessage", json={"ok": True, "result": {"message_id": 10}})
+        approve.main()
+        polls = [c.request.body for c in rs.calls if c.request.url.endswith("getUpdates")]
+        assert "timeout=0" in polls[0] and "timeout=50" in polls[1], polls
+    s = json.load(open(S.PATH))
+    assert s["pending"] is None and s["rejected"][-1]["id"] == "x" and s["tg_offset"] == 201, s
+    os.environ["WAIT_SECONDS"] = "0"
+    print("wait mode ok")
     shutil.rmtree(tmp)
 
 

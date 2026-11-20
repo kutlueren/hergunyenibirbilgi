@@ -18,7 +18,7 @@ concurrency:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 350   # video sonrası onayı 5,5 saate kadar bekler (public repoda dakika ücretsiz)
     steps:
       - uses: actions/checkout@v4
 
@@ -59,10 +59,30 @@ jobs:
           PHOTO_RATIO: ${{ vars.PHOTO_RATIO || '0.5' }}
         run: python -m src.daily
 
+      - name: Durumu kaydet (video gönderildi)
+        run: |
+          git config user.name "hergunyenibirbilgi-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/state.json
+          git diff --cached --quiet || (git commit -m "durum: günlük video $(date +%F)" && git pull --rebase && git push)
+
+      - name: Onayı bekle ve paylaş
+        env:
+          WAIT_SECONDS: "19800"   # 5,5 saat; butona basıldığı anda paylaşır ve biter
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GRAPH_API_VERSION: ${{ vars.GRAPH_API_VERSION || 'v25.0' }}
+          IG_LOGIN: ${{ vars.IG_LOGIN }}
+          IG_UPLOAD_MODE: ${{ vars.IG_UPLOAD_MODE || 'auto' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m src.approve
+
       - name: Durumu kaydet
         if: always()
         run: |
           git config user.name "hergunyenibirbilgi-bot"
           git config user.email "actions@users.noreply.github.com"
           git add state/state.json
-          git diff --cached --quiet || (git commit -m "durum: günlük video $(date +%F)" && git pull --rebase && git push)
+          git diff --cached --quiet || (git commit -m "durum: onay $(date +%F)" && git pull --rebase && git push)

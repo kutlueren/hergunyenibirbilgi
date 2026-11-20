@@ -52,7 +52,7 @@ def main():
     cap = caption_for(topic)
     left = S.remaining(s) - 1
     msg = (f"📅 {today.strftime('%d.%m.%Y')} · {topic['id']}\n🎨 Tema: {theme} · 📷 Foto: {len(got)}\n"
-           f"📚 Kalan konu: {left}\n\n— Instagram açıklaması —\n{cap}")
+           f"📚 Kalan konu: {left}\n👉 ✅ Paylaş'a bastığın anda Instagram'a yüklenir.\n\n— Instagram açıklaması —\n{cap}")
     if topic.get("notlar"):
         msg += f"\n\n📝 Not: {topic['notlar']}"
     res = tg.send_video_for_approval(os.path.join(work, "video.mp4"), msg, key)

@@ -19,9 +19,20 @@ class Telegram:
     def send_message(self, text, **kw):
         return self._call("sendMessage", chat_id=self.chat_id, text=text[:4096], **kw)
 
+    @staticmethod
+    def _kb(key):
+        return {"inline_keyboard": [[{"text": "✅ Paylaş", "callback_data": f"ok|{key}"},
+                                     {"text": "❌ Reddet", "callback_data": f"no|{key}"}]]}
+
+    def send_video_buttons(self, message_id, key):
+        try:
+            self._call("editMessageReplyMarkup", chat_id=self.chat_id, message_id=message_id,
+                       reply_markup=json.dumps(self._kb(key)))
+        except Exception:
+            pass
+
     def send_video_for_approval(self, path, caption, key):
-        kb = {"inline_keyboard": [[{"text": "✅ Paylaş", "callback_data": f"ok|{key}"},
-                                   {"text": "❌ Reddet", "callback_data": f"no|{key}"}]]}
+        kb = self._kb(key)
         with open(path, "rb") as f:
             return self._call("sendVideo", files={"video": ("video.mp4", f, "video/mp4")}, http_timeout=300,
                               chat_id=self.chat_id, caption=caption[:1024], supports_streaming="true",
