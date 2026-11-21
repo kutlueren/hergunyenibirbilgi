@@ -26,8 +26,16 @@
   }
  ],
  "rejected": [],
- "pending": null,
+ "pending": {
+  "key": "20261121",
+  "topic_id": "dunyanin-en-uzun-10-nehri",
+  "file_id": "BAACAgIAAxkDAAMUawGcwfLOfLHH4INAChczZeHGOpUAAoqmAALipQhIC_91CpEAAfmoPQQ",
+  "message_id": 20,
+  "caption": "Dünyanın en uzun 10 nehri 🌊 1 numara hâlâ tartışmalı: Nil mi, Amazon mu? Sence hangisi? 👇\n\n#nehir #nil #amazon #bilgi #bunlarıbiliyormuydunuz #coğrafya #keşfet #reels",
+  "theme": "gunbatimi",
+  "created": "2026-11-21T13:29:37+00:00"
+ },
  "tg_offset": 518928467,
- "last_daily": "20261120",
- "last_theme": "safir"
+ "last_daily": "20261121",
+ "last_theme": "gunbatimi"
 }
