@@ -6,14 +6,7 @@ on:
     # yalnızca ~11:50'deki çalışmayı kullanır → video yaz/kış saatinde de ~12:00'de gelir.
     - cron: "50 9 * * *"
     - cron: "50 10 * * *"
-  workflow_dispatch:
-    inputs:
-      force:
-        description: "Bugün video gönderilmiş olsa bile yeni video gönder"
-        type: boolean
-        default: false
-  repository_dispatch:
-    types: [daily]
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -59,7 +52,6 @@ jobs:
         env:
           TZ: Europe/Berlin
           EVENT: ${{ github.event_name }}
-          FORCE: ${{ inputs.force || github.event.client_payload.force || 'false' }}
           PIPER_MODEL: ${{ github.workspace }}/.piper/tr_TR-fahrettin-medium.onnx
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

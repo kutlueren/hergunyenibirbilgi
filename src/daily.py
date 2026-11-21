@@ -23,12 +23,11 @@ def main():
     now = dt.datetime.now()  # TZ=Europe/Berlin in the workflow
     today = now.date()
     key = today.strftime("%Y%m%d")
-    event = os.environ.get("EVENT"); force = os.environ.get("FORCE", "").lower() == "true"
-    if event == "schedule" and not (SEND_WINDOW[0] <= now.time() <= SEND_WINDOW[1]):
-        print(f"{now:%H:%M} gönderim penceresinin dışında, atlanıyor."); return
-    # GitHub's own schedule and the external trigger (cron-job.org) may both fire: one video per day
-    if not force and s.get("last_daily") == key:
-        print("Bugünün videosu zaten gönderildi, atlanıyor. (Yine de göndermek için 'force' ile çalıştır.)"); return
+    if os.environ.get("EVENT") == "schedule":
+        if not (SEND_WINDOW[0] <= now.time() <= SEND_WINDOW[1]):
+            print(f"{now:%H:%M} gönderim penceresinin dışında, atlanıyor."); return
+        if s.get("last_daily") == key:
+            print("Bugünün videosu zaten gönderildi, atlanıyor."); return
     tg = Telegram()
 
     old = s.get("pending")
