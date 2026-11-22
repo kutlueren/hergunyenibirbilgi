@@ -31,17 +31,14 @@
    "permalink": "https://www.instagram.com/reel/DgAV4lsD4Bs/"
   }
  ],
- "rejected": [],
- "pending": {
-  "key": "20261122",
-  "topic_id": "gunes-sisteminin-en-buyuk-10-gok-cismi",
-  "file_id": "BAACAgIAAxkDAAMYawLKjFljSjGyA54KduLucy3uKC0AAhuwAALv0BlIo4aQEPwGKAE9BA",
-  "message_id": 24,
-  "caption": "Güneş Sistemi'nin en büyük 10 gök cismi 🪐 Bir uydu, bir gezegenden büyük! Sen hangisini biliyordun? 👇\n\n#uzay #jüpiter #gezegen #astronomi #bilgi #bunlarıbiliyormuydunuz #keşfet #reels",
-  "theme": "gece",
-  "created": "2026-11-22T10:57:17+00:00"
- },
- "tg_offset": 518928468,
+ "rejected": [
+  {
+   "id": "gunes-sisteminin-en-buyuk-10-gok-cismi",
+   "date": "2026-11-22T10:59:02+00:00"
+  }
+ ],
+ "pending": null,
+ "tg_offset": 518928469,
  "last_daily": "20261122",
  "last_theme": "gece"
 }
