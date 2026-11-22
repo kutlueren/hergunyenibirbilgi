@@ -275,6 +275,287 @@ class Renderer:
                 dx, dy, r = dx * sc, dy * sc, r * sc
                 d.ellipse([cx_ + dx - r, cy_ + dy - r * 0.6, cx_ + dx + r, cy_ + dy + r * 0.6], fill=(255, 255, 255, int(150 * ac)))
 
+    def _tower_shape(self, cx, ground, h, bw, rng, tiers):
+        """Stepped skyscraper outline: list of (x0, x1, y_top) blocks from bottom to top + spire height."""
+        spire = h * rng.uniform(0.08, 0.14)
+        body = h - spire
+        blocks, y, w = [], ground, bw
+        heights = rng.dirichlet(np.ones(tiers) * 3) * body
+        for i, th in enumerate(sorted(heights, reverse=True)):
+            blocks.append((cx - w / 2, cx + w / 2, y - th))
+            y -= th
+            w *= rng.uniform(0.62, 0.8)
+        return blocks, spire
+
+    @staticmethod
+    def _stepped_outline(blocks, ground):
+        """Outline (left side up, across the top, right side down) of stacked blocks."""
+        pts = [(blocks[0][0], ground)]
+        for x0, x1, yt in blocks:
+            pts += [(x0, pts[-1][1]), (x0, yt)]
+        for i in range(len(blocks) - 1, -1, -1):
+            x0, x1, yt = blocks[i]
+            below = blocks[i - 1][2] if i > 0 else ground
+            pts += [(x1, yt), (x1, below)]
+        return pts
+
+    def draw_building(self, d, it, v, ac, t, gt, is_top):
+        th = self.th; acc = th["accent"]; c = th["circle"]
+        ground, Hmax, cx = 1350, 540, W / 2
+        floor, vmax, step = self._axis()
+        unit = self.T.get("birim", "")
+        lab = SEMI(28)
+        for k in range(math.ceil(floor / step), int(vmax // step) + 1):
+            val = k * step
+            y = ground - Hmax * (val - floor) / (vmax - floor)
+            d.line([(60, y), (90, y)], fill=(255, 255, 255, int(110 * ac)), width=3)
+            d.text((98, y - 16), f"{fmt_num(val, val)} {unit}".strip(), font=lab, fill=(255, 255, 255, int(130 * ac)))
+        d.line([(150, ground), (W - 150, ground)], fill=(255, 255, 255, int(120 * ac)), width=3)
+        # small city skyline at the foot, for scale and atmosphere
+        rs = np.random.default_rng(11)
+        x = 150
+        while x < W - 150:
+            bw_ = rs.uniform(30, 70); bh_ = rs.uniform(25, 90)
+            if abs(x + bw_ / 2 - cx) > 120:
+                d.rectangle([x, ground - bh_ * ac, x + bw_ - 6, ground], fill=tuple(int(q * 0.35) for q in c) + (220,))
+            x += bw_
+        # reference outline: the tallest one
+        if not is_top:
+            rr = np.random.default_rng(5)
+            blocks, spire = self._tower_shape(cx, ground, Hmax, 190, rr, 4)
+            d.line(self._stepped_outline(blocks, ground) , fill=(255, 255, 255, int(90 * ac)), width=3)
+            top_y = blocks[-1][2]
+            d.line([(cx, top_y), (cx, top_y - spire)], fill=(255, 255, 255, int(90 * ac)), width=3)
+            lw = d.textlength("#1 ?", font=lab)
+            d.text((cx - 95 - lw, ground - Hmax - 10), "#1 ?", font=lab, fill=(255, 255, 255, int(140 * ac)))
+        # the building, rising from the ground
+        frac = (v - floor) / (vmax - floor)
+        h = max(60.0, Hmax * frac) * ac
+        rng = np.random.default_rng(sum(map(ord, it["ad"])))
+        tiers = int(rng.integers(2, 5)) if not is_top else 6
+        blocks, spire = self._tower_shape(cx, ground, h, 170 + 40 * frac, rng, tiers)
+        body = tuple(int(q * 0.62) for q in c); side = tuple(int(q * 0.38) for q in c); edge = tuple(min(255, q + 110) for q in c)
+        prev_top = ground
+        for i, (x0, x1, yt) in enumerate(blocks):
+            yb = prev_top
+            d.rectangle([x0, yt, x1, yb], fill=body + (255,))
+            d.polygon([(x1, yt), (x1 + 18, yt - 10), (x1 + 18, yb - 10), (x1, yb)], fill=side + (255,))  # 3D side face
+            d.line([(x0, yt), (x1, yt)], fill=edge + (255,), width=3)
+            # windows
+            cols = int((x1 - x0 - 16) // 22); rows = int((yb - yt - 10) // 26)
+            if cols < 1 or rows < 1:
+                prev_top = yt; continue
+            ww = (x1 - x0 - 16) / cols
+            for r_ in range(rows):
+                for c_ in range(cols):
+                    seed = (i * 131 + r_ * 17 + c_ * 7) % 23
+                    lit = (seed + int(gt * 1.5 + seed)) % 5 != 0 and seed % 3 != 0
+                    wx = x0 + 8 + c_ * ww; wy = yb - 14 - r_ * 26
+                    col = (255, 236, 170, 230) if lit else tuple(int(q * 0.6) for q in c) + (200,)
+                    d.rectangle([wx + 3, wy - 13, wx + ww - 4, wy], fill=col)
+            prev_top = yt
+        top = blocks[-1][2]
+        d.line([(cx, top), (cx, top - spire)], fill=edge + (255,), width=5)
+        if ease_out(prog(t, 1.15, 1.3)) > 0 and int(gt * 2) % 2 == 0:  # blinking aircraft warning light
+            d.ellipse([cx - 9, top - spire - 9, cx + 9, top - spire + 9], fill=(255, 70, 60, 255))
+            d.ellipse([cx - 22, top - spire - 22, cx + 22, top - spire + 22], fill=(255, 70, 60, 60))
+
+    # --- organic shapes: land, water, desert, ice -------------------------------------
+    STYLES = {
+        "kara": dict(fill=(70, 150, 90), inner=(110, 180, 110), edge=(235, 215, 160)),
+        "su":   dict(fill=(40, 130, 205), inner=(70, 165, 230), edge=(170, 220, 255)),
+        "col":  dict(fill=(225, 175, 95), inner=(240, 200, 125), edge=(170, 120, 55)),
+        "buz":  dict(fill=(232, 243, 255), inner=(205, 228, 250), edge=(160, 205, 240)),
+    }
+
+    @staticmethod
+    def _blob(cx, cy, r, seed, n=72):
+        rng = np.random.default_rng(seed)
+        amps = rng.uniform(0.03, 0.11, 6) / np.arange(1, 7) ** 0.4
+        phs = rng.uniform(0, 2 * math.pi, 6)
+        pts = []
+        for i in range(n):
+            a = 2 * math.pi * i / n
+            k = 1 + sum(amps[j] * math.sin((j + 2) * a + phs[j]) for j in range(6))
+            pts.append((cx + r * k * math.cos(a), cy + r * k * 0.92 * math.sin(a)))
+        return pts
+
+    def draw_shape(self, d, it, v, ac, t, gt, is_top):
+        cx, cy, R = W / 2, 1090, 255
+        lab = SEMI(32)
+        top = max(self.items, key=lambda m: float(m["deger"]))
+        if not is_top:
+            ref = self._blob(cx, cy, R, sum(map(ord, top["ad"])))
+            d.line(ref + [ref[0]], fill=(255, 255, 255, int(85 * ac)), width=4, joint="curve")
+            lw = d.textlength("#1 ölçeği", font=lab)
+            d.text((cx - lw / 2, cy - R - 58), "#1 ölçeği", font=lab, fill=(255, 255, 255, int(130 * ac)))
+        frac = v / self.maxv
+        r = R * (frac if self.T.get("olcek") == "dogrusal" else math.sqrt(frac)) * ac
+        if r < 3:
+            return
+        st = self.STYLES.get(it.get("stil") or self.T.get("stil", "kara"), self.STYLES["kara"])
+        seed = sum(map(ord, it["ad"]))
+        pts = self._blob(cx, cy, r, seed)
+        d.polygon(pts, fill=st["fill"] + (255,))
+        inner = self._blob(cx - r * 0.12, cy - r * 0.1, r * 0.55, seed + 1)
+        d.polygon(inner, fill=st["inner"] + (255,))
+        d.line(pts + [pts[0]], fill=st["edge"] + (255,), width=max(2, int(r / 40) + 2), joint="curve")
+        stil = it.get("stil") or self.T.get("stil", "kara")
+        rng = np.random.default_rng(seed + 2)
+        if stil == "su":      # moving ripples
+            for k in range(4):
+                yy = cy - r * 0.5 + k * r * 0.3; xx = cx - r * 0.45 + (gt * 25 + k * 40) % (r * 0.6)
+                d.arc([xx - r * 0.18, yy - r * 0.06, xx + r * 0.18, yy + r * 0.06], 200, 340, fill=(255, 255, 255, 150), width=max(2, int(r / 60)))
+        elif stil == "col":   # dune lines
+            for k in range(4):
+                yy = cy - r * 0.45 + k * r * 0.28
+                d.arc([cx - r * 0.55, yy, cx + r * 0.35, yy + r * 0.25], 200, 330, fill=st["edge"] + (180,), width=max(2, int(r / 55)))
+        elif stil == "buz":   # cracks
+            for k in range(5):
+                a = rng.uniform(0, 2 * math.pi); l = r * rng.uniform(0.3, 0.7)
+                d.line([(cx, cy), (cx + l * math.cos(a), cy + l * math.sin(a) * 0.9)], fill=st["edge"] + (200,), width=max(2, int(r / 70)))
+        else:                 # land: a few hills/forest dots
+            for k in range(6):
+                a = rng.uniform(0, 2 * math.pi); l = r * rng.uniform(0.1, 0.6)
+                x, y = cx + l * math.cos(a), cy + l * math.sin(a) * 0.8; rr_ = max(3, r * 0.05)
+                d.ellipse([x - rr_, y - rr_, x + rr_, y + rr_], fill=(45, 110, 65, 230))
+
+    # --- icon charts: people, planes, speech bubbles ------------------------------------
+    @staticmethod
+    def _icon(d, kind, x, y, s, col):
+        """Draws one icon in the box (x, y, s×s)."""
+        if kind == "ucak":
+            cxi, cyi = x + s / 2, y + s / 2
+            d.polygon([(x + s * 0.08, cyi - s * 0.05), (x + s * 0.85, cyi - s * 0.06), (x + s * 0.98, cyi),
+                       (x + s * 0.85, cyi + s * 0.06), (x + s * 0.08, cyi + s * 0.05)], fill=col)          # body
+            d.polygon([(cxi - s * 0.05, cyi), (cxi + s * 0.12, cyi), (cxi - s * 0.12, cyi - s * 0.42), (cxi - s * 0.22, cyi - s * 0.42)], fill=col)
+            d.polygon([(cxi - s * 0.05, cyi), (cxi + s * 0.12, cyi), (cxi - s * 0.12, cyi + s * 0.42), (cxi - s * 0.22, cyi + s * 0.42)], fill=col)
+            d.polygon([(x + s * 0.1, cyi), (x + s * 0.22, cyi), (x + s * 0.12, cyi - s * 0.25), (x + s * 0.05, cyi - s * 0.25)], fill=col)
+        elif kind == "balon":
+            d.rounded_rectangle([x + s * 0.06, y + s * 0.12, x + s * 0.94, y + s * 0.7], s * 0.18, fill=col)
+            d.polygon([(x + s * 0.25, y + s * 0.66), (x + s * 0.2, y + s * 0.92), (x + s * 0.48, y + s * 0.66)], fill=col)
+            for k in range(3):
+                dx = x + s * (0.3 + 0.2 * k); d.ellipse([dx - s * 0.05, y + s * 0.36, dx + s * 0.05, y + s * 0.46], fill=(255, 255, 255, 200))
+        else:  # insan: head + shoulders
+            hr = s * 0.19
+            d.ellipse([x + s / 2 - hr, y + s * 0.04, x + s / 2 + hr, y + s * 0.04 + 2 * hr], fill=col)
+            d.pieslice([x + s * 0.12, y + s * 0.5, x + s * 0.88, y + s * 1.26], 180, 360, fill=col)
+
+    def draw_icons(self, d, it, v, ac, t, gt, is_top):
+        kind = self.T.get("ikon", "insan"); unit = float(self.T.get("ikon_deger", 1))
+        maxn = math.ceil(self.maxv / unit - 1e-9)
+        x0, y0, bw, bh = 120, 830, W - 240, 500
+        cols = max(1, math.ceil(math.sqrt(maxn * bw / bh))); rows = math.ceil(maxn / cols)
+        while rows * (bw / cols) > bh and cols < maxn:
+            cols += 1; rows = math.ceil(maxn / cols)
+        cell = min(bw / cols, bh / rows); s_ = cell * 0.86
+        gx = x0 + (bw - cols * cell) / 2; gy = y0 + (bh - rows * cell) / 2
+        lab = SEMI(32)
+        legend = f"1 simge = {self.T.get('ikon_etiket', fmt_num(unit, unit))}"
+        lw = d.textlength(legend, font=lab)
+        d.text((W / 2 - lw / 2, y0 - 58), legend, font=lab, fill=(255, 255, 255, int(150 * ac)))
+        c = self.th["circle"]; on = tuple(min(255, q + 40) for q in c) + (255,); off = (255, 255, 255, 38)
+        shown = (v / unit) * ac
+        img = d._image
+        for i in range(maxn):
+            r_, c_ = divmod(i, cols)
+            x = gx + c_ * cell + (cell - s_) / 2; y = gy + r_ * cell + (cell - s_) / 2
+            self._icon(d, kind, x, y, s_, off)
+            if i + 1 <= shown:
+                self._icon(d, kind, x, y, s_, on)
+            elif i < shown:  # partly filled icon, cut from the left
+                tile = Image.new("RGBA", (int(s_) + 2, int(s_) + 2), (0, 0, 0, 0))
+                self._icon(ImageDraw.Draw(tile), kind, 0, 0, s_, on)
+                wcut = max(1, int((shown - i) * s_))
+                img.alpha_composite(tile.crop((0, 0, wcut, tile.height)), (int(x), int(y)))
+
+    # --- planets ---------------------------------------------------------------------
+    def _sphere(self, r, look, gt):
+        """Shaded planet as an RGBA tile of size 2r (+ room for rings)."""
+        pad = int(r * 0.9) if look.get("halka") else 4
+        size = int(2 * r) + 2 * pad
+        tile = Image.new("RGBA", (size, size), (0, 0, 0, 0)); td = ImageDraw.Draw(tile)
+        c0 = tuple(look.get("renk", [180, 180, 180])); cxp = cyp = size / 2
+        body = Image.new("RGBA", (size, size), (0, 0, 0, 0)); bd = ImageDraw.Draw(body)
+        bd.ellipse([cxp - r, cyp - r, cxp + r, cyp + r], fill=c0 + (255,))
+        doku = look.get("doku", "duz"); rng = np.random.default_rng(int(sum(c0)))
+        if doku == "bant":
+            for k in range(-6, 7):
+                y = cyp + k * r / 6.5; hh = r / 13
+                shade = 1.12 if k % 2 else 0.86
+                col = tuple(min(255, int(q * shade)) for q in c0)
+                bd.rectangle([cxp - r, y - hh, cxp + r, y + hh], fill=col + (255,))
+            if look.get("leke"):
+                sx = cxp + r * 0.35 * math.sin(gt * 0.4)
+                bd.ellipse([sx - r * 0.2, cyp + r * 0.25, sx + r * 0.2, cyp + r * 0.4], fill=(190, 85, 60, 255))
+        elif doku == "krater":
+            for k in range(14):
+                a = rng.uniform(0, 2 * math.pi); l = r * math.sqrt(rng.uniform(0, 0.8)); cr = r * rng.uniform(0.05, 0.14)
+                x = cxp + l * math.cos(a); y = cyp + l * math.sin(a)
+                bd.ellipse([x - cr, y - cr, x + cr, y + cr], fill=tuple(int(q * 0.78) for q in c0) + (255,))
+        elif doku == "bulut":
+            for k in range(7):
+                y = cyp - r + (k + 0.5) * 2 * r / 7; off_ = r * 0.2 * math.sin(k + gt * 0.3)
+                bd.ellipse([cxp - r * 0.9 + off_, y - r * 0.08, cxp + r * 0.9 + off_, y + r * 0.08], fill=tuple(min(255, int(q * 1.1)) for q in c0) + (255,))
+        elif doku == "dunya":
+            for k in range(5):
+                a = rng.uniform(0, 2 * math.pi); l = r * rng.uniform(0.1, 0.7)
+                x = cxp + ((l * math.cos(a) + gt * r * 0.08) % (2 * r)) - r; y = cyp + l * math.sin(a) * 0.8
+                pts = self._blob(x, y, r * rng.uniform(0.18, 0.32), k + 3, n=24)
+                bd.polygon(pts, fill=(70, 160, 80, 255))
+            bd.ellipse([cxp - r * 0.42, cyp - r * 1.04, cxp + r * 0.42, cyp - r * 0.8], fill=(240, 248, 255, 255))
+        mask = Image.new("L", (size, size), 0); ImageDraw.Draw(mask).ellipse([cxp - r, cyp - r, cxp + r, cyp + r], fill=255)
+        # light from the top-left: darken towards the bottom-right edge
+        yy, xx = np.mgrid[0:size, 0:size]
+        dist = np.sqrt(((xx - (cxp - r * 0.35)) / r) ** 2 + ((yy - (cyp - r * 0.35)) / r) ** 2)
+        shade = np.clip(1.15 - 0.55 * dist, 0.25, 1.15)
+        arr = np.asarray(body).astype(np.float32)
+        arr[..., :3] = np.clip(arr[..., :3] * shade[..., None], 0, 255)
+        body = Image.fromarray(arr.astype(np.uint8), "RGBA"); body.putalpha(mask)
+        ring = look.get("halka")
+        if ring:
+            rw, rh = (r * 1.9, r * 0.45) if ring == "genis" else (r * 1.45, r * 0.6)
+            col = (230, 210, 160, 230) if ring == "genis" else (200, 235, 240, 150)
+            width = max(2, int(r * (0.12 if ring == "genis" else 0.03)))
+            td.ellipse([cxp - rw, cyp - rh, cxp + rw, cyp + rh], outline=col, width=width)   # back half
+            tile.alpha_composite(body)
+            front = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+            ImageDraw.Draw(front).arc([cxp - rw, cyp - rh, cxp + rw, cyp + rh], 0, 180, fill=col, width=width)
+            tile.alpha_composite(front)
+        else:
+            tile.alpha_composite(body)
+        return tile
+
+    def draw_planet(self, d, it, v, ac, t, gt, is_top):
+        img = d._image
+        earth_d = 12742.0
+        big = 215
+        look = {k: it[k] for k in ("renk", "doku", "halka", "leke") if k in it}
+        is_earth = it["ad"] == "Dünya"
+        if is_earth:
+            rp, re = big, 0
+        elif v >= earth_d:
+            rp, re = big, big * earth_d / v
+        else:
+            re, rp = big, big * v / earth_d
+        rp *= ease_back(min(1, ac * 1.02)) if ac < 1 else 1
+        if rp < 2:
+            return
+        cy = 1085
+        ring_extra = {"genis": 0.9, "ince": 0.45}.get(look.get("halka"), 0) * rp   # ring sticks out on both sides
+        gap = 60 if not is_earth else 0
+        group = 2 * rp + 2 * ring_extra + (gap + 2 * re if not is_earth else 0)
+        px = W / 2 - group / 2 + ring_extra + rp
+        tile = self._sphere(max(2, rp), look, gt)
+        img.alpha_composite(tile, (int(px - tile.width / 2), int(cy - tile.height / 2)))
+        if not is_earth and re > 0:
+            ex = W / 2 - group / 2 + 2 * ring_extra + 2 * rp + gap + re
+            er = max(2, re * ac)
+            et = self._sphere(er, {"renk": [50, 110, 200], "doku": "dunya"}, gt)
+            img.alpha_composite(et, (int(ex - et.width / 2), int(cy - et.height / 2)))
+            lab = SEMI(32); lw = d.textlength("Dünya", font=lab)
+            d.text((ex - lw / 2, cy + max(er, 12) + 14), "Dünya", font=lab, fill=(255, 255, 255, int(170 * ac)))
+
     # ---------- scenes ----------
     def frame_hook(self, t, gt, dur):
         th = self.th; acc = th["accent"]
@@ -320,6 +601,14 @@ class Renderer:
         lab = SEMI(32)
         if self.T.get("gorsel") == "dag":
             self.draw_mountain(d, it, v, ac, t, gt, is_top)
+        elif self.T.get("gorsel") == "bina":
+            self.draw_building(d, it, v, ac, t, gt, is_top)
+        elif self.T.get("gorsel") == "sekil":
+            self.draw_shape(d, it, v, ac, t, gt, is_top)
+        elif self.T.get("gorsel") == "ikon":
+            self.draw_icons(d, it, v, ac, t, gt, is_top)
+        elif self.T.get("gorsel") == "gezegen":
+            self.draw_planet(d, it, v, ac, t, gt, is_top)
         elif self.T.get("gorsel", "daire") == "cubuk":
             bx0, bx1, by1, bh = W / 2 - 110, W / 2 + 110, 1340, 520
             if not is_top:

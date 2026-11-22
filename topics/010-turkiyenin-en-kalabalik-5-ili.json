@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Türkiye'nin en kalabalık beş ili! Türkiye'de her beş kişiden neredeyse biri İstanbul'da yaşıyor.",
  "birim": "milyon",
- "gorsel": "daire",
+ "gorsel": "ikon",
  "maddeler": [
   {
    "sira": 5,
@@ -88,5 +88,8 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "TÜİK ADNKS 2025 sonuçları (9 Şubat 2026): İstanbul 15.754.053, Ankara 5.910.320, İzmir 4.504.185, Bursa 3.263.011, Antalya 2.777.677."
+ "notlar": "TÜİK ADNKS 2025 sonuçları (9 Şubat 2026): İstanbul 15.754.053, Ankara 5.910.320, İzmir 4.504.185, Bursa 3.263.011, Antalya 2.777.677.",
+ "ikon": "insan",
+ "ikon_deger": 1,
+ "ikon_etiket": "1 milyon kişi"
 }

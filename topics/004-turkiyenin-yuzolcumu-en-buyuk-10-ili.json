@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Türkiye'nin yüzölçümü en büyük on ili! Bir numara, tek başına Belçika'dan büyük.",
  "birim": "km²",
- "gorsel": "daire",
+ "gorsel": "sekil",
  "maddeler": [
   {
    "sira": 10,
@@ -148,5 +148,6 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "Göl yüzeyleri dahil yaygın kullanılan değerler; bazı kaynaklarda Konya 38.873 km² geçer (yine Belçika'dan büyük, 30.689 km²)."
+ "notlar": "Göl yüzeyleri dahil yaygın kullanılan değerler; bazı kaynaklarda Konya 38.873 km² geçer (yine Belçika'dan büyük, 30.689 km²).",
+ "stil": "kara"
 }

@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyanın en çok konuşulan sekiz dili! Bir numara Çince değil.",
  "birim": "milyar",
- "gorsel": "daire",
+ "gorsel": "ikon",
  "maddeler": [
   {
    "sira": 8,
@@ -124,5 +124,8 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "Ana dil + ikinci dil toplamı, Ethnologue/Statista 2025 (milyar): İngilizce 1,52 · Mandarin 1,18 · Hintçe 0,61 · İspanyolca 0,56 · Arapça 0,34 · Fransızca 0,31 · Bengalce 0,28 · Portekizce 0,27."
+ "notlar": "Ana dil + ikinci dil toplamı, Ethnologue/Statista 2025 (milyar): İngilizce 1,52 · Mandarin 1,18 · Hintçe 0,61 · İspanyolca 0,56 · Arapça 0,34 · Fransızca 0,31 · Bengalce 0,28 · Portekizce 0,27.",
+ "ikon": "balon",
+ "ikon_deger": 0.1,
+ "ikon_etiket": "100 milyon kişi"
 }

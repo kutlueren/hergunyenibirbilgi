@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyanın en büyük on gölü! Bir numara, sonraki beş gölün toplamından bile büyük.",
  "birim": "km²",
- "gorsel": "daire",
+ "gorsel": "sekil",
  "maddeler": [
   {
    "sira": 10,
@@ -148,5 +148,6 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "Alanlar yaklaşık (Britannica vb.); su seviyesine göre değişir."
+ "notlar": "Alanlar yaklaşık (Britannica vb.); su seviyesine göre değişir.",
+ "stil": "su"
 }

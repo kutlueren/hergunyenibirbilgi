@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyanın beş okyanusu! Bir numara, dünyadaki bütün karalardan daha büyük.",
  "birim": "milyon km²",
- "gorsel": "daire",
+ "gorsel": "sekil",
  "maddeler": [
   {
    "sira": 5,
@@ -23,7 +23,8 @@
     "yılın çoğu buzla kaplı"
    ],
    "seslendirme": "Beşinci sırada, Arktik Okyanusu. En küçük ve en sığ okyanus.",
-   "foto": "Arctic ocean ice"
+   "foto": "Arctic ocean ice",
+   "stil": "buz"
   },
   {
    "sira": 4,
@@ -88,5 +89,6 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "Alanlar NOAA/Britannica'ya yakın değerler; kenar denizlerinin sayılmasına göre kaynaklar arasında küçük farklar var. Dünyanın kara alanı ~149 milyon km²."
+ "notlar": "Alanlar NOAA/Britannica'ya yakın değerler; kenar denizlerinin sayılmasına göre kaynaklar arasında küçük farklar var. Dünyanın kara alanı ~149 milyon km².",
+ "stil": "su"
 }

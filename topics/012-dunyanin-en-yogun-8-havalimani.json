@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyanın en yoğun sekiz havalimanı! Ve listede bir de İstanbul var.",
  "birim": "milyon yolcu",
- "gorsel": "cubuk",
+ "gorsel": "ikon",
  "maddeler": [
   {
    "sira": 8,
@@ -124,5 +124,8 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "ACI World 2024 toplam yolcu sayıları (milyon). İstanbul (80,1) ile O'Hare (80,0) arasındaki fark çok küçük."
+ "notlar": "ACI World 2024 toplam yolcu sayıları (milyon). İstanbul (80,1) ile O'Hare (80,0) arasındaki fark çok küçük.",
+ "ikon": "ucak",
+ "ikon_deger": 10,
+ "ikon_etiket": "10 milyon yolcu"
 }

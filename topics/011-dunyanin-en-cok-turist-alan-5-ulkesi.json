@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyada en çok turist alan beş ülke! Türkiye listede, hem de İtalya'nın önünde.",
  "birim": "milyon",
- "gorsel": "cubuk",
+ "gorsel": "ikon",
  "maddeler": [
   {
    "sira": 5,
@@ -88,5 +88,8 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "BM Turizm Örgütü 2024 verileri (milyon uluslararası turist): Fransa 102,0 · İspanya 93,8 · ABD 72,4 · Türkiye 60,6 · İtalya 57,7."
+ "notlar": "BM Turizm Örgütü 2024 verileri (milyon uluslararası turist): Fransa 102,0 · İspanya 93,8 · ABD 72,4 · Türkiye 60,6 · İtalya 57,7.",
+ "ikon": "insan",
+ "ikon_deger": 10,
+ "ikon_etiket": "10 milyon turist"
 }

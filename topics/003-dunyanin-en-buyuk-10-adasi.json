@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyanın en büyük on adası! Bir numara, ikinci sıradakinin neredeyse üç katı.",
  "birim": "km²",
- "gorsel": "daire",
+ "gorsel": "sekil",
  "maddeler": [
   {
    "sira": 10,
@@ -131,7 +131,8 @@
     "buzla kaplı!"
    ],
    "seslendirme": "Ve bir numara, Grönland! Yaklaşık yüzde sekseni buzla kaplı!",
-   "foto": "Greenland ice"
+   "foto": "Greenland ice",
+   "stil": "buz"
   }
  ],
  "kapanis_ust": "Sen hangisini",
@@ -148,5 +149,6 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "Avustralya kıta sayıldığı için listede yok. Alanlar kaynağa göre birkaç bin km² farklı olabilir."
+ "notlar": "Avustralya kıta sayıldığı için listede yok. Alanlar kaynağa göre birkaç bin km² farklı olabilir.",
+ "stil": "kara"
 }

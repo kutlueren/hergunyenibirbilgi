@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyanın en büyük beş çölü! Ve en büyük çöl, sıcak değil, buz gibi.",
  "birim": "milyon km²",
- "gorsel": "daire",
+ "gorsel": "sekil",
  "maddeler": [
   {
    "sira": 5,
@@ -59,7 +59,8 @@
     "bu çölde yaşar"
    ],
    "seslendirme": "İkinci, Arktik Çölü. Kutup ayıları bu çölde yaşar.",
-   "foto": "Arctic ice"
+   "foto": "Arctic ice",
+   "stil": "buz"
   },
   {
    "sira": 1,
@@ -71,7 +72,8 @@
     "aslında bir çöl!"
    ],
    "seslendirme": "Ve bir numara, Antarktika! Yağış çok az olduğu için aslında dünyanın en büyük çölü!",
-   "foto": "Antarctica ice"
+   "foto": "Antarctica ice",
+   "stil": "buz"
   }
  ],
  "kapanis_ust": "Sen hangisini",
@@ -88,5 +90,6 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "Çöl, yağışa göre tanımlanır (yılda ~250 mm'den az). Avustralya çölünün alanı kaynağa göre 1,4–2,7 milyon km² arasında değiştiği için listeye alınmadı."
+ "notlar": "Çöl, yağışa göre tanımlanır (yılda ~250 mm'den az). Avustralya çölünün alanı kaynağa göre 1,4–2,7 milyon km² arasında değiştiği için listeye alınmadı.",
+ "stil": "col"
 }

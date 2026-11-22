@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyanın yüzölçümü en büyük on ülkesi! Bir numara, tek başına Türkiye'nin yirmi iki katı.",
  "birim": "milyon km²",
- "gorsel": "daire",
+ "gorsel": "sekil",
  "maddeler": [
   {
    "sira": 10,
@@ -23,7 +23,8 @@
     "%80'inden fazlası çöl"
    ],
    "seslendirme": "Onuncu sırada, Cezayir. Afrika'nın en büyük ülkesi, yüzde sekseninden fazlası çöl.",
-   "foto": "Sahara desert Algeria"
+   "foto": "Sahara desert Algeria",
+   "stil": "col"
   },
   {
    "sira": 9,
@@ -71,7 +72,8 @@
     "hem de bir kıta"
    ],
    "seslendirme": "Altıncı, Avustralya. Hem bir ülke, hem de bir kıta.",
-   "foto": "Australia outback"
+   "foto": "Australia outback",
+   "stil": "col"
   },
   {
    "sira": 5,
@@ -148,5 +150,6 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "ABD ile Çin'in sırası, kıyı/iç suların sayılmasına göre kaynaktan kaynağa değişir."
+ "notlar": "ABD ile Çin'in sırası, kıyı/iç suların sayılmasına göre kaynaktan kaynağa değişir.",
+ "stil": "kara"
 }

@@ -11,7 +11,7 @@
  ],
  "kanca_seslendirme": "Dünyanın yedi kıtası! Bir numara, tek başına Ay'ın yüzeyinden bile büyük.",
  "birim": "milyon km²",
- "gorsel": "daire",
+ "gorsel": "sekil",
  "maddeler": [
   {
    "sira": 7,
@@ -23,7 +23,8 @@
     "koalaların yurdu"
    ],
    "seslendirme": "Yedinci sırada, Avustralya. Kanguruların ve koalaların yurdu.",
-   "foto": "Australia Uluru"
+   "foto": "Australia Uluru",
+   "stil": "col"
   },
   {
    "sira": 6,
@@ -47,7 +48,8 @@
     "yaklaşık %70'i buzunda"
    ],
    "seslendirme": "Beşinci, Antarktika. Dünyadaki tatlı suyun yaklaşık yüzde yetmişi buzunda.",
-   "foto": "Antarctica penguins"
+   "foto": "Antarctica penguins",
+   "stil": "buz"
   },
   {
    "sira": 4,
@@ -112,5 +114,6 @@
   "#keşfet",
   "#reels"
  ],
- "notlar": "Ay'ın yüzey alanı ~38 milyon km², Asya ~44,6 milyon km². Kıta alanları kaynağa göre biraz değişir."
+ "notlar": "Ay'ın yüzey alanı ~38 milyon km², Asya ~44,6 milyon km². Kıta alanları kaynağa göre biraz değişir.",
+ "stil": "kara"
 }
