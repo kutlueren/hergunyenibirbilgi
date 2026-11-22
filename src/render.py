@@ -171,8 +171,11 @@ class Renderer:
         return img
 
     # ---------- drawing helpers ----------
+    fade, dy = 1.0, 0.0   # set per frame for the exit animation of the texts
+
     def text_c(self, d, y, s, font, fill, alpha=255, stroke=0):
         w = d.textlength(s, font=font)
+        alpha *= self.fade; y += self.dy
         d.text(((W - w) / 2, y), s, font=font, fill=fill + (int(alpha),), stroke_width=stroke, stroke_fill=(0, 0, 0, int(alpha * 0.6)))
 
     def fit(self, d, s, fontf, size, maxw):
@@ -556,6 +559,158 @@ class Renderer:
             lab = SEMI(32); lw = d.textlength("Dünya", font=lab)
             d.text((ex - lw / 2, cy + max(er, 12) + 14), "Dünya", font=lab, fill=(255, 255, 255, int(170 * ac)))
 
+    # --- continuous camera scene (animasyon: kamera) -----------------------------------
+    def draw_tower(self, d, cx, ground, h, bw, seed, tiers, z, gt, light=True):
+        """One skyscraper in screen space (z = camera zoom)."""
+        c = self.th["circle"]
+        rng = np.random.default_rng(seed)
+        blocks, spire = self._tower_shape(cx, ground, h, bw, rng, tiers)
+        body = tuple(int(q * 0.62) for q in c); side = tuple(int(q * 0.38) for q in c); edge = tuple(min(255, q + 110) for q in c)
+        prev_top = ground
+        wstep, hstep = max(7, 22 * z), max(8, 26 * z)
+        for i, (x0, x1, yt) in enumerate(blocks):
+            yb = prev_top
+            if yb - yt < 1: continue
+            d.rectangle([x0, yt, x1, yb], fill=body + (255,))
+            sd = 18 * z
+            d.polygon([(x1, yt), (x1 + sd, yt - sd * 0.55), (x1 + sd, yb - sd * 0.55), (x1, yb)], fill=side + (255,))
+            d.line([(x0, yt), (x1, yt)], fill=edge + (255,), width=max(1, int(3 * z)))
+            cols = int((x1 - x0 - 16 * z) // wstep); rows = int((yb - yt - 10 * z) // hstep)
+            if cols >= 1 and rows >= 1 and z > 0.22:
+                ww = (x1 - x0 - 16 * z) / cols
+                for r_ in range(rows):
+                    for c_ in range(cols):
+                        sd_ = (i * 131 + r_ * 17 + c_ * 7 + seed) % 23
+                        lit = (sd_ + int(gt * 1.5 + sd_)) % 5 != 0 and sd_ % 3 != 0
+                        wx = x0 + 8 * z + c_ * ww; wy = yb - 14 * z - r_ * hstep
+                        col = (255, 236, 170, 230) if lit else tuple(int(q * 0.6) for q in c) + (200,)
+                        x_a, x_b = wx + 3 * z, wx + ww - 4 * z
+                        if x_b > x_a: d.rectangle([x_a, wy - 13 * z, x_b, wy], fill=col)
+            prev_top = yt
+        top = blocks[-1][2]
+        d.line([(cx, top), (cx, top - spire)], fill=edge + (255,), width=max(2, int(5 * z)))
+        if light and int(gt * 2) % 2 == 0:
+            r = max(4, 9 * z)
+            d.ellipse([cx - r, top - spire - r, cx + r, top - spire + r], fill=(255, 70, 60, 255))
+            d.ellipse([cx - 2.4 * r, top - spire - 2.4 * r, cx + 2.4 * r, top - spire + 2.4 * r], fill=(255, 70, 60, 60))
+        return top - spire
+
+    def draw_skyline_scene(self, d, idx, ac, t, dur, gt):
+        """All buildings stand in one street; the camera glides to each new one while it rises
+        next to the previous ones, and pulls back to show the whole line-up at #1."""
+        ground, Hmax, S = 1350, 600, 330
+        floor, vmax, _ = self._axis()
+        n = len(self.items)
+        hs = [max(60.0, Hmax * (float(m["deger"]) - floor) / (vmax - floor)) for m in self.items]
+        xs = [j * S for j in range(n)]
+        # camera: glide from the previous building to this one, ease in-out
+        m_ = prog(t, 0.0, 0.9); m_ = m_ * m_ * (3 - 2 * m_)
+        camx = xs[idx - 1] + (xs[idx] - xs[idx - 1]) * m_ if idx > 0 else xs[0]
+        z = 1.0
+        if idx == n - 1:  # final pull-back to show everything
+            zf = (W - 140) / (xs[-1] + 360)
+            q = prog(t, 2.3, dur - 0.5); q = q * q * (3 - 2 * q)
+            z = 1 + (zf - 1) * q
+            camx = camx + (xs[-1] / 2 - camx) * q
+        sx = lambda wx: W / 2 + (wx - camx) * z
+        # far skyline (parallax 0.35) and ground
+        c = self.th["circle"]
+        rs = np.random.default_rng(21)
+        far_off = camx * 0.35
+        x = -400.0
+        while x < xs[-1] + 1200:
+            bw_ = rs.uniform(50, 110); bh_ = rs.uniform(60, 240)
+            X = W / 2 + (x - far_off - camx * 0.0) * max(z, 0.55) - camx * 0.0
+            X = W / 2 + (x - camx * 0.35) * max(z, 0.55)
+            if -150 < X < W + 150:
+                d.rectangle([X, ground - bh_ * max(z, 0.55), X + bw_ * max(z, 0.55) - 6, ground], fill=tuple(int(q * 0.28) for q in c) + (200,))
+            x += bw_
+        d.rectangle([0, ground, W, ground + 6], fill=tuple(min(255, q + 60) for q in c) + (170,))
+        lab = SEMI(max(22, int(34 * z)))
+        for j in range(idx + 1):
+            X = sx(xs[j])
+            if X < -300 or X > W + 300: continue
+            h = hs[j] * (ac if j == idx else 1.0) * z
+            bw = (170 + 40 * (hs[j] / Hmax)) * z
+            topy = self.draw_tower(d, X, ground, h, bw, sum(map(ord, self.items[j]["ad"])), 6 if j == n - 1 else 2 + j % 3, z, gt,
+                                   light=(j != idx or ac > 0.98))
+            tag = f"#{self.items[j]['sira']}"
+            if j < idx or ac > 0.98:
+                lw = d.textlength(tag, font=lab)
+                d.text((X - lw / 2, topy - 44 * max(z, 0.6)), tag, font=lab,
+                       fill=(self.th["accent"] if j == idx else (255, 255, 255)) + (230,))
+
+    def draw_map_scene(self, d, idx, ac, t, dur, gt):
+        """Shapes (lakes, islands…) side by side on one landscape. The camera zooms in on small ones and
+        backs out as bigger ones appear; at #1 it pulls back to show them all."""
+        n = len(self.items); R1 = 250.0; gap = 70.0; cy = 1080
+        rs_ = [R1 * math.sqrt(float(m["deger"]) / self.maxv) for m in self.items]
+        xs = [0.0]
+        for j in range(1, n):
+            xs.append(xs[-1] + rs_[j - 1] + gap + rs_[j])
+        def zoom_for(j):
+            return clamp(230.0 / rs_[j], 0.9, 2.6)
+        m_ = prog(t, 0.0, 1.0); m_ = m_ * m_ * (3 - 2 * m_)
+        if idx > 0:
+            camx = xs[idx - 1] + (xs[idx] - xs[idx - 1]) * m_
+            z = zoom_for(idx - 1) + (zoom_for(idx) - zoom_for(idx - 1)) * m_
+        else:
+            camx, z = xs[0], zoom_for(0)
+        if idx == n - 1:  # final pull-back
+            span = xs[-1] + rs_[-1] + rs_[0]
+            zf = (W - 120) / span
+            q = prog(t, 2.3, dur - 0.5); q = q * q * (3 - 2 * q)
+            z = z + (zf - z) * q
+            camx = camx + ((xs[-1] + rs_[-1] - rs_[0]) / 2 - camx) * q
+        sx = lambda wx: W / 2 + (wx - camx) * z
+        sy = lambda wy: cy + (wy - cy) * z
+        st_default = self.T.get("stil", "su")
+        # landscape: a wide strip of land with a wavy shore, trees scattered on it
+        land = (52, 112, 70) if st_default == "su" else (34, 70, 120)   # water shapes sit on land, land shapes on sea
+        # the land band stays between the titles and the value text, whatever the zoom
+        band_top, band_bot = 770, 1375
+        lo, hi = xs[0] - rs_[0] - 900, xs[-1] + rs_[-1] + 900
+        xs_line = np.linspace(-40, W + 40, 60)
+        top = [(X, band_top + 16 * math.sin(((X - W / 2) / z + camx) / 140.0)) for X in xs_line]
+        bot = [(X, band_bot + 16 * math.sin(((X - W / 2) / z + camx) / 170.0 + 1)) for X in reversed(xs_line)]
+        d.polygon(top + bot, fill=land + (235,))
+        rng = np.random.default_rng(31)
+        for k in range(int((hi - lo) / 22)):
+            wx = rng.uniform(lo, hi); wy = cy + rng.uniform(-320, 320)
+            if any(abs(wx - xs[j]) < rs_[j] * 1.15 and abs(wy - cy) < rs_[j] * 1.1 for j in range(n)):
+                continue
+            X, Y = sx(wx), sy(wy)
+            if -20 < X < W + 20 and band_top + 25 < Y < band_bot - 25:
+                r = max(2.0, 7 * z)
+                d.ellipse([X - r, Y - r, X + r, Y + r], fill=(38, 92, 56, 255) if st_default == "su" else (60, 110, 160, 255))
+        lab = SEMI(max(22, int(32 * min(z, 1.3))))
+        for j in range(idx + 1):
+            X = sx(xs[j])
+            r = rs_[j] * z * (ac if j == idx else 1.0)
+            if r < 2 or X + r < -50 or X - r > W + 50: continue
+            it = self.items[j]
+            stil = it.get("stil") or st_default
+            st = self.STYLES.get(stil, self.STYLES["su"])
+            seed = sum(map(ord, it["ad"]))
+            pts = self._blob(X, cy, r, seed)
+            d.polygon(pts, fill=st["fill"] + (255,))
+            d.polygon(self._blob(X - r * 0.12, cy - r * 0.1, r * 0.55, seed + 1), fill=st["inner"] + (255,))
+            d.line(pts + [pts[0]], fill=st["edge"] + (255,), width=max(2, int(r / 45) + 2), joint="curve")
+            if stil == "su":
+                for k in range(3):
+                    yy = cy - r * 0.45 + k * r * 0.32; xx = X - r * 0.4 + (gt * 22 + k * 37 + j * 11) % (r * 0.6)
+                    d.arc([xx - r * 0.16, yy - r * 0.05, xx + r * 0.16, yy + r * 0.05], 200, 340, fill=(255, 255, 255, 140), width=max(2, int(r / 70)))
+            if j == idx and ac > 0.6 and stil == "su":   # a small sailboat crossing the newest lake
+                bx = X - r * 0.5 + (r * 1.0) * ((t * 0.12) % 1.0); by = cy + r * 0.15
+                b = max(10, r * 0.09)
+                d.polygon([(bx - b, by), (bx + b, by), (bx + b * 0.6, by + b * 0.45), (bx - b * 0.6, by + b * 0.45)], fill=(120, 70, 40, 255))
+                d.polygon([(bx, by - b * 1.6), (bx, by - b * 0.05), (bx + b * 0.9, by - b * 0.05)], fill=(250, 250, 250, 255))
+                d.line([(bx, by - b * 1.7), (bx, by)], fill=(80, 50, 30, 255), width=max(1, int(b / 6)))
+            if j < idx or ac > 0.98:
+                tag = f"#{it['sira']}"; lw = d.textlength(tag, font=lab)
+                d.text((X - lw / 2, cy - r - 46 * min(max(z, 0.7), 1.3)), tag, font=lab,
+                       fill=(self.th["accent"] if j == idx else (255, 255, 255)) + (235,))
+
     # ---------- scenes ----------
     def frame_hook(self, t, gt, dur):
         th = self.th; acc = th["accent"]
@@ -587,9 +742,11 @@ class Renderer:
         ov = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(ov)
         self.progress(d, gt)
         rank = it["sira"]
+        out = prog(t, dur - 0.32, dur) ** 2          # texts slide up and fade at the end of the scene
+        self.fade, self.dy = 1 - out, -70 * out
         a = ease_out(prog(t, 0, 0.35)); xoff = (1 - a) * 700
         s = f"#{rank}"; fr = BLACK(300); w = d.textlength(s, font=fr)
-        d.text(((W - w) / 2 + xoff, 200), s, font=fr, fill=(acc if rank <= 3 else WHITE) + (int(255 * a),))
+        d.text(((W - w) / 2 + xoff, 200 + self.dy), s, font=fr, fill=(acc if rank <= 3 else WHITE) + (int(255 * a * self.fade),))
         an = ease_back(prog(t, 0.12, 0.5))
         name = it["ad"].upper()
         self.text_c(d, 560 + 40 * (1 - an), name, self.fit(d, name, BLACK, 104, W - 120), WHITE, 255 * clamp(an))
@@ -599,7 +756,12 @@ class Renderer:
         is_top = abs(v - self.maxv) < 1e-9
         label = "#1 ölçeği"  # never the name: it would give away the answer
         lab = SEMI(32)
-        if self.T.get("gorsel") == "dag":
+        fade_save = (self.fade, self.dy); self.fade, self.dy = 1.0, 0.0   # visuals don't take part in the exit
+        if self.T.get("animasyon") == "kamera" and self.T.get("gorsel") == "bina":
+            self.draw_skyline_scene(d, self.items.index(it), ac, t, dur, gt)
+        elif self.T.get("animasyon") == "kamera" and self.T.get("gorsel") == "sekil":
+            self.draw_map_scene(d, self.items.index(it), ac, t, dur, gt)
+        elif self.T.get("gorsel") == "dag":
             self.draw_mountain(d, it, v, ac, t, gt, is_top)
         elif self.T.get("gorsel") == "bina":
             self.draw_building(d, it, v, ac, t, gt, is_top)
@@ -627,16 +789,18 @@ class Renderer:
             if r > 1:
                 d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=circ + (200,))
                 d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=tuple(min(255, x + 110) for x in circ) + (255,), width=5)
+        self.fade, self.dy = fade_save
         cur = v * ease_out(prog(t, 0.3, 1.3))
         sval = fmt_num(cur, v) + (" " + self.T["birim"] if self.T.get("birim") else "")
         self.text_c(d, 1400, sval, self.fit(d, sval, BLACK, 110, W - 120), acc, 255 * ease_out(prog(t, 0.3, 0.5)), stroke=4)
         fact = it.get("bilgi") or []
         if fact:
             af = ease_out(prog(t, 1.75, 2.15)); dy = 30 * (1 - af)
-            d.rounded_rectangle([70, 1570 + dy, W - 70, 1780 + dy], 40, fill=(0, 0, 0, int(140 * af)))
+            d.rounded_rectangle([70, 1570 + dy + self.dy, W - 70, 1780 + dy + self.dy], 40, fill=(0, 0, 0, int(140 * af * self.fade)))
             self.text_c(d, 1600 + dy, fact[0], self.fit(d, fact[0], SEMI, 52, W - 200), WHITE, 255 * af)
             if len(fact) > 1:
                 self.text_c(d, 1680 + dy, fact[1], self.fit(d, fact[1], BOLD, 52, W - 200), WHITE, 255 * af)
+        self.fade, self.dy = 1.0, 0.0
         img.alpha_composite(ov)
         return img.convert("RGB")
 
@@ -710,8 +874,16 @@ def make_music(dur, starts, sr=44100):
     return np.tanh(out * 1.2) * 0.8
 
 
-def render(topic_path, outdir, theme=None, img_dir=None, preview=False, piper_model=None):
+CAMERA_VISUALS = ("bina", "sekil")   # visuals that also have the continuous camera animation
+
+
+def render(topic_path, outdir, theme=None, img_dir=None, preview=False, piper_model=None, animasyon=None):
+    """animasyon: "kamera" | "klasik" | None (None = whatever the topic file says, default klasik)."""
     topic = json.load(open(topic_path, encoding="utf-8"))
+    if animasyon == "kamera" and topic.get("gorsel") in CAMERA_VISUALS:
+        topic["animasyon"] = "kamera"
+    elif animasyon == "klasik":
+        topic.pop("animasyon", None)
     os.makedirs(outdir, exist_ok=True)
     theme = theme or os.environ.get("THEME") or pick_theme(topic["id"])
     R = Renderer(topic, theme, img_dir or os.environ.get("IMG_DIR"))

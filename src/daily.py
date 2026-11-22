@@ -6,6 +6,8 @@ from .render import render
 from .telegram import Telegram
 from .photos import fetch as fetch_photos
 from .themes import pick_theme
+from .render import CAMERA_VISUALS
+import random
 
 ROOT = S.ROOT
 
@@ -49,12 +51,14 @@ def main():
         got = fetch_photos(topic, img_dir, os.environ["PEXELS_API_KEY"],
                            ratio=float(os.environ.get("PHOTO_RATIO", "0.5")), seed=key)
     prev = s.get("last_theme") or (s["published"][-1].get("theme") if s.get("published") else None)
-    theme = render(path, work, theme=pick_theme(exclude=prev), img_dir=img_dir)
+    # sometimes the classic scenes, sometimes the continuous camera animation (where the visual supports it)
+    anim = random.choice(["kamera", "klasik"]) if topic.get("gorsel") in CAMERA_VISUALS else "klasik"
+    theme = render(path, work, theme=pick_theme(exclude=prev), img_dir=img_dir, animasyon=anim)
     s["last_theme"] = theme
 
     cap = caption_for(topic)
     left = S.remaining(s) - 1
-    msg = (f"📅 {today.strftime('%d.%m.%Y')} · {topic['id']}\n🎨 Tema: {theme} · 📷 Foto: {len(got)}\n"
+    msg = (f"📅 {today.strftime('%d.%m.%Y')} · {topic['id']}\n🎨 Tema: {theme} · 🎬 Stil: {'animasyonlu' if anim == 'kamera' else 'klasik'} · 📷 Foto: {len(got)}\n"
            f"📚 Kalan konu: {left}\n👉 ✅ Paylaş'a bastığın anda Instagram'a yüklenir.\n\n— Instagram açıklaması —\n{cap}")
     if topic.get("notlar"):
         msg += f"\n\n📝 Not: {topic['notlar']}"
