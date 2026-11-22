@@ -31,7 +31,7 @@ topic("002-dunyanin-en-yuksek-10-dagi.json", "dunyanin-en-yuksek-10-dagi",
       ["DÜNYANIN", "EN YÜKSEK", "DAĞI"],
       ["8.000 metreyi aşan 14 dağın", "HEPSİ Asya'da!"],
       "Dünyanın en yüksek on dağı! Sekiz bin metreyi aşan on dört dağın hepsi Asya'da.",
-      "m", "cubuk", [
+      "m", "dag", [
           ("Annapurna", 8091, "Nepal", ["İnsanların zirvesine çıktığı", "ilk 8.000'lik dağ (1950)"],
            "Annapurna. İnsanların zirvesine çıktığı ilk sekiz binlik dağ.", "Annapurna mountain"),
           ("Nanga Parbat", 8126, "Pakistan", ["Dağcılar arasında", "'katil dağ' diye anılır"],

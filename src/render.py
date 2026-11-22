@@ -183,6 +183,98 @@ class Renderer:
         d.rounded_rectangle([90, 120, W - 90, 134], 7, fill=(255, 255, 255, 50))
         d.rounded_rectangle([90, 120, 90 + (W - 180) * clamp(gt / self.total), 134], 7, fill=self.th["accent"] + (255,))
 
+    # ---------- illustrated visuals ----------
+    @staticmethod
+    def _ridge(x0, y0, x1, y1, n, amp, rng):
+        """Jagged line from (x0,y0) to (x1,y1): a mountain slope."""
+        pts = []
+        for k in range(n + 1):
+            f = k / n
+            jit = 0 if k in (0, n) else rng.uniform(-amp, amp) * math.sin(math.pi * f)
+            pts.append((x0 + (x1 - x0) * f + rng.uniform(-amp, amp) * 0.4 * (0 < k < n), y0 + (y1 - y0) * f + jit))
+        return pts
+
+    def _axis(self):
+        """Value axis for illustrated charts. When all values are close (e.g. every mountain > 8.000 m),
+        start the axis near the smallest value so the differences are visible; the labels stay honest."""
+        vals = [float(m["deger"]) for m in self.items]
+        vmin, vmax = min(vals), max(vals)
+        floor = 0.0
+        if vmin / vmax > 0.6:
+            for st in (100, 250, 500, 1000, 2000, 5000, 10000):
+                if (vmax - vmin) / st <= 4:
+                    floor = max(0.0, math.floor((vmin - (vmax - vmin) * 0.25) / st) * st); break
+        span = vmax - floor
+        step = next(st for st in (100, 250, 500, 1000, 2000, 5000, 10000, 20000) if span / st <= 5)
+        return floor, vmax, step
+
+    def draw_mountain(self, d, it, v, ac, t, gt, is_top):
+        th = self.th; acc = th["accent"]; c = th["circle"]
+        ground, Hmax, cx = 1350, 480, W / 2
+        floor, vmax, step = self._axis()
+        unit = self.T.get("birim", "")
+        frac = (v - floor) / (vmax - floor)
+        # value scale on the left
+        lab = SEMI(28)
+        k0 = math.ceil(floor / step)
+        for k in range(k0, int(vmax // step) + 1):
+            val = k * step
+            y = ground - Hmax * (val - floor) / (vmax - floor)
+            d.line([(60, y), (90, y)], fill=(255, 255, 255, int(110 * ac)), width=3)
+            d.text((98, y - 16), f"{fmt_num(val, val)} {unit}".strip(), font=lab, fill=(255, 255, 255, int(130 * ac)))
+        # reference outline: the tallest one
+        if not is_top:
+            rr = np.random.default_rng(7)
+            hw = 300
+            left = self._ridge(cx - hw, ground, cx, ground - Hmax, 9, 16, rr)
+            right = self._ridge(cx, ground - Hmax, cx + hw, ground, 9, 16, rr)
+            d.line(left + right[1:], fill=(255, 255, 255, int(90 * ac)), width=4, joint="curve")
+            lw = d.textlength("#1 ?", font=lab)
+            d.text((cx - 40 - lw, ground - Hmax - 14), "#1 ?", font=lab, fill=(255, 255, 255, int(140 * ac)))
+        # the mountain, growing from the ground
+        h = max(40.0, Hmax * frac) * ac
+        if h < 4:
+            return
+        hw = 220 + 80 * frac
+        rng = np.random.default_rng(sum(map(ord, it["ad"])))
+        peak = (cx + rng.uniform(-25, 25), ground - h)
+        left = self._ridge(cx - hw, ground, peak[0], peak[1], 10, 0.06 * h + 5, rng)
+        right = self._ridge(peak[0], peak[1], cx + hw, ground, 10, 0.06 * h + 5, rng)
+        dark = tuple(int(x * 0.45) for x in c); mid = tuple(int(x * 0.7) for x in c)
+        d.polygon(left + right[1:], fill=mid + (255,))
+        d.polygon([peak] + right[1:] + [(peak[0] + hw * 0.25, ground)], fill=dark + (255,))
+        # snow cap on the top ~30 %
+        snow_y = peak[1] + 0.30 * h
+        def slope_x(pts, y):
+            for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+                if (y0 - y) * (y1 - y) <= 0 and y0 != y1:
+                    return x0 + (x1 - x0) * (y - y0) / (y1 - y0)
+            return pts[-1][0]
+        lx, rx = slope_x(left, snow_y), slope_x(right, snow_y)
+        cap = [p for p in left if p[1] <= snow_y] + [p for p in right[1:] if p[1] <= snow_y]
+        zig = [(rx + (lx - rx) * k / 7, snow_y + (14 if k % 2 else -6) + rng.uniform(-4, 4)) for k in range(8)]
+        if len(cap) >= 2:
+            d.polygon([(lx, snow_y)] + cap + [(rx, snow_y)] + zig, fill=(245, 250, 255, 255))
+            rcap = [p for p in right if p[1] <= snow_y]
+            if rcap:
+                d.polygon([peak] + rcap + [(rx, snow_y), (peak[0] + (rx - peak[0]) * 0.35, snow_y + 8)], fill=(200, 215, 235, 255))
+        # summit flag once fully grown
+        af = ease_out(prog(t, 1.15, 1.45))
+        if af > 0:
+            fx, fy = peak
+            d.line([(fx, fy), (fx, fy - 64 * af)], fill=(255, 255, 255, 255), width=4)
+            wave = 6 * math.sin(gt * 6)
+            d.polygon([(fx, fy - 64 * af), (fx + 46 * af, fy - 53 * af + wave), (fx, fy - 42 * af)], fill=acc + (255,))
+        # two small clouds drifting across the mountain only
+        for k in range(2):
+            cy_ = ground - h * (0.42 + 0.22 * k)
+            rngx = hw * 1.2
+            cx_ = cx - rngx / 2 + ((gt * (24 + 12 * k) + k * 170) % rngx) - 60
+            sc = min(1.0, 0.45 + h / 500)
+            for dx, dy, r in ((0, 0, 30), (32, -10, 36), (70, 0, 28), (36, 9, 27)):
+                dx, dy, r = dx * sc, dy * sc, r * sc
+                d.ellipse([cx_ + dx - r, cy_ + dy - r * 0.6, cx_ + dx + r, cy_ + dy + r * 0.6], fill=(255, 255, 255, int(150 * ac)))
+
     # ---------- scenes ----------
     def frame_hook(self, t, gt, dur):
         th = self.th; acc = th["accent"]
@@ -224,9 +316,11 @@ class Renderer:
             self.text_c(d, 690, it["yer"], self.fit(d, it["yer"], SEMI, 46, W - 160), th["soft"], 255 * ease_out(prog(t, 0.25, 0.6)))
         v = float(it["deger"]); ac = ease_out(prog(t, 0.3, 1.2))
         is_top = abs(v - self.maxv) < 1e-9
-        label = f"{self.top_name} ölçeği"
+        label = "#1 ölçeği"  # never the name: it would give away the answer
         lab = SEMI(32)
-        if self.T.get("gorsel", "daire") == "cubuk":
+        if self.T.get("gorsel") == "dag":
+            self.draw_mountain(d, it, v, ac, t, gt, is_top)
+        elif self.T.get("gorsel", "daire") == "cubuk":
             bx0, bx1, by1, bh = W / 2 - 110, W / 2 + 110, 1340, 520
             if not is_top:
                 d.rounded_rectangle([bx0, by1 - bh, bx1, by1], 18, outline=(255, 255, 255, int(90 * ac)), width=4)
