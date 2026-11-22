@@ -29,12 +29,6 @@
    "date": "2026-11-21T13:29:48+00:00",
    "ig_media_id": "18062450666796195",
    "permalink": "https://www.instagram.com/reel/DgAV4lsD4Bs/"
-  },
-  {
-   "id": "dunyanin-en-yuksek-10-binasi",
-   "date": "2026-11-22T11:03:47+00:00",
-   "ig_media_id": "18122882333280649",
-   "permalink": "https://www.instagram.com/reel/DgCp9_1j5On/"
   }
  ],
  "rejected": [
@@ -45,6 +39,6 @@
  ],
  "pending": null,
  "tg_offset": 518928470,
- "last_daily": "20261122",
+ "last_daily": null,
  "last_theme": "kutup"
 }
