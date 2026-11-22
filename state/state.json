@@ -37,8 +37,16 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": null,
+ "pending": {
+  "key": "20261122",
+  "topic_id": "dunyanin-en-yuksek-10-binasi",
+  "file_id": "BAACAgIAAxkDAAMfawLPGPKI7LUPtLmI8veR_1hZXn0AAlGwAALv0BlIGXDjIdrMwTU9BA",
+  "message_id": 31,
+  "caption": "Dünyanın en yüksek 10 binası 🏙️ Burj Khalifa, 2. sıradakinden yaklaşık 150 metre daha uzun! Hangisini görmek isterdin? 👇\n\n#gökdelen #burjkhalifa #mimari #bilgi #bunlarıbiliyormuydunuz #dünya #keşfet #reels",
+  "theme": "zumrut",
+  "created": "2026-11-22T11:16:40+00:00"
+ },
  "tg_offset": 518928470,
- "last_daily": null,
- "last_theme": "kutup"
+ "last_daily": "20261122",
+ "last_theme": "zumrut"
 }
