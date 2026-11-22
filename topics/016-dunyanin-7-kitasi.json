@@ -1,0 +1,116 @@
+{
+ "id": "dunyanin-7-kitasi",
+ "baslik": [
+  "DÜNYANIN",
+  "BÜYÜKTEN KÜÇÜĞE",
+  "KITASI"
+ ],
+ "kanca": [
+  "1 numara tek başına",
+  "Ay'ın yüzeyinden BÜYÜK!"
+ ],
+ "kanca_seslendirme": "Dünyanın yedi kıtası! Bir numara, tek başına Ay'ın yüzeyinden bile büyük.",
+ "birim": "milyon km²",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 7,
+   "ad": "Avustralya (Okyanusya)",
+   "deger": 8.6,
+   "yer": "Güney Yarımküre",
+   "bilgi": [
+    "Kanguruların ve",
+    "koalaların yurdu"
+   ],
+   "seslendirme": "Yedinci sırada, Avustralya. Kanguruların ve koalaların yurdu.",
+   "foto": "Australia Uluru"
+  },
+  {
+   "sira": 6,
+   "ad": "Avrupa",
+   "deger": 10.2,
+   "yer": "Kuzey Yarımküre",
+   "bilgi": [
+    "Küçük ama",
+    "en kalabalıklardan"
+   ],
+   "seslendirme": "Altıncı, Avrupa. Küçük ama en kalabalıklardan.",
+   "foto": "Alps Europe"
+  },
+  {
+   "sira": 5,
+   "ad": "Antarktika",
+   "deger": 14.2,
+   "yer": "Güney Kutbu",
+   "bilgi": [
+    "Dünyadaki tatlı suyun",
+    "yaklaşık %70'i buzunda"
+   ],
+   "seslendirme": "Beşinci, Antarktika. Dünyadaki tatlı suyun yaklaşık yüzde yetmişi buzunda.",
+   "foto": "Antarctica penguins"
+  },
+  {
+   "sira": 4,
+   "ad": "Güney Amerika",
+   "deger": 17.8,
+   "yer": "Batı Yarımküre",
+   "bilgi": [
+    "Amazon ve And Dağları",
+    "bu kıtada"
+   ],
+   "seslendirme": "Dördüncü, Güney Amerika. Amazon ve And Dağları bu kıtada.",
+   "foto": "Andes mountains"
+  },
+  {
+   "sira": 3,
+   "ad": "Kuzey Amerika",
+   "deger": 24.7,
+   "yer": "Batı Yarımküre",
+   "bilgi": [
+    "Dünyanın en büyük adası",
+    "Grönland bu kıtada"
+   ],
+   "seslendirme": "Üçüncü, Kuzey Amerika. Dünyanın en büyük adası Grönland bu kıtada.",
+   "foto": "Grand Canyon"
+  },
+  {
+   "sira": 2,
+   "ad": "Afrika",
+   "deger": 30.3,
+   "yer": "Ekvatorun iki yanı",
+   "bilgi": [
+    "50'den fazla ülke:",
+    "en çok ülkesi olan kıta"
+   ],
+   "seslendirme": "İkinci, Afrika. Elliden fazla ülkesiyle en çok ülkesi olan kıta.",
+   "foto": "African savanna"
+  },
+  {
+   "sira": 1,
+   "ad": "Asya",
+   "deger": 44.6,
+   "yer": "Kuzey Yarımküre",
+   "bilgi": [
+    "Dünya nüfusunun yaklaşık",
+    "%60'ı burada yaşıyor"
+   ],
+   "seslendirme": "Ve bir numara, Asya! Dünya nüfusunun yaklaşık yüzde altmışı burada yaşıyor!",
+   "foto": "Himalaya"
+  }
+ ],
+ "kapanis_ust": "Sen kaç kıtaya",
+ "kapanis_vurgu": "gittin?",
+ "kapanis_seslendirme": "Sen kaç kıtaya gittin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın 7 kıtası 🌍 Asya tek başına Ay'ın yüzeyinden büyük! Sen kaç kıtaya gittin? 👇",
+ "etiketler": [
+  "#kıtalar",
+  "#asya",
+  "#dünya",
+  "#coğrafya",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Ay'ın yüzey alanı ~38 milyon km², Asya ~44,6 milyon km². Kıta alanları kaynağa göre biraz değişir."
+}

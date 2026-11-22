@@ -1,0 +1,128 @@
+{
+ "id": "dunyanin-en-yogun-8-havalimani",
+ "baslik": [
+  "DÜNYANIN",
+  "EN YOĞUN",
+  "HAVALİMANI"
+ ],
+ "kanca": [
+  "Listede bir de",
+  "İSTANBUL var!"
+ ],
+ "kanca_seslendirme": "Dünyanın en yoğun sekiz havalimanı! Ve listede bir de İstanbul var.",
+ "birim": "milyon yolcu",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 8,
+   "ad": "Chicago O'Hare",
+   "deger": 80.0,
+   "yer": "ABD",
+   "bilgi": [
+    "Uçak iniş-kalkışında",
+    "dünyanın en yoğunlarından"
+   ],
+   "seslendirme": "Sekizinci sırada, Şikago O Hare. Uçak iniş kalkışında dünyanın en yoğunlarından.",
+   "foto": "Chicago O'Hare airport"
+  },
+  {
+   "sira": 7,
+   "ad": "İstanbul Havalimanı",
+   "deger": 80.1,
+   "yer": "Türkiye",
+   "bilgi": [
+    "2019'dan bu yana yolcu",
+    "sayısı %50'den fazla arttı"
+   ],
+   "seslendirme": "Yedinci, İstanbul Havalimanı! İki bin on dokuzdan bu yana yolcu sayısı yüzde elliden fazla arttı.",
+   "foto": "Istanbul Airport terminal"
+  },
+  {
+   "sira": 6,
+   "ad": "Denver",
+   "deger": 82.4,
+   "yer": "ABD",
+   "bilgi": [
+    "ABD'nin yüzölçümü",
+    "en büyük havalimanı"
+   ],
+   "seslendirme": "Altıncı, Denver. ABD'nin yüzölçümü en büyük havalimanı.",
+   "foto": "Denver airport"
+  },
+  {
+   "sira": 5,
+   "ad": "Londra Heathrow",
+   "deger": 83.9,
+   "yer": "Birleşik Krallık",
+   "bilgi": [
+    "Avrupa'nın",
+    "en yoğun havalimanı"
+   ],
+   "seslendirme": "Beşinci, Londra Hitrou. Avrupa'nın en yoğun havalimanı.",
+   "foto": "Heathrow airport"
+  },
+  {
+   "sira": 4,
+   "ad": "Tokyo Haneda",
+   "deger": 85.9,
+   "yer": "Japonya",
+   "bilgi": [
+    "Asya'nın",
+    "en yoğun havalimanı"
+   ],
+   "seslendirme": "Dördüncü, Tokyo Haneda. Asya'nın en yoğun havalimanı.",
+   "foto": "Tokyo Haneda airport"
+  },
+  {
+   "sira": 3,
+   "ad": "Dallas Fort Worth",
+   "deger": 87.8,
+   "yer": "ABD",
+   "bilgi": [
+    "Manhattan adasından",
+    "daha büyük bir alana yayılır"
+   ],
+   "seslendirme": "Üçüncü, Dallas Fort Vörs. Manhattan adasından daha büyük bir alana yayılır.",
+   "foto": "Dallas Fort Worth airport"
+  },
+  {
+   "sira": 2,
+   "ad": "Dubai",
+   "deger": 92.3,
+   "yer": "BAE",
+   "bilgi": [
+    "Uluslararası yolcuda",
+    "dünya bir numarası"
+   ],
+   "seslendirme": "İkinci, Dubai. Uluslararası yolcuda dünya bir numarası.",
+   "foto": "Dubai airport"
+  },
+  {
+   "sira": 1,
+   "ad": "Atlanta",
+   "deger": 108.1,
+   "yer": "ABD",
+   "bilgi": [
+    "Yılda 108 milyon yolcu:",
+    "günde yaklaşık 300 bin kişi!"
+   ],
+   "seslendirme": "Ve bir numara, Atlanta! Yılda yüz sekiz milyon yolcu, yani günde yaklaşık üç yüz bin kişi!",
+   "foto": "Atlanta airport"
+  }
+ ],
+ "kapanis_ust": "Sen hangisinden",
+ "kapanis_vurgu": "uçtun?",
+ "kapanis_seslendirme": "Sen hangisinden uçtun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en yoğun 8 havalimanı 🛫 İstanbul Havalimanı da listede! Hangisinden uçtun? 👇",
+ "etiketler": [
+  "#havalimanı",
+  "#istanbulhavalimanı",
+  "#uçak",
+  "#seyahat",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "ACI World 2024 toplam yolcu sayıları (milyon). İstanbul (80,1) ile O'Hare (80,0) arasındaki fark çok küçük."
+}

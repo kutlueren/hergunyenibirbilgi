@@ -1,0 +1,92 @@
+{
+ "id": "dunyanin-en-buyuk-5-colu",
+ "baslik": [
+  "DÜNYANIN",
+  "EN BÜYÜK",
+  "ÇÖLÜ"
+ ],
+ "kanca": [
+  "En büyük çöl",
+  "sıcak değil, BUZ GİBİ!"
+ ],
+ "kanca_seslendirme": "Dünyanın en büyük beş çölü! Ve en büyük çöl, sıcak değil, buz gibi.",
+ "birim": "milyon km²",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Gobi Çölü",
+   "deger": 1.3,
+   "yer": "Çin – Moğolistan",
+   "bilgi": [
+    "Kışın sıcaklık",
+    "-40 °C'ye kadar düşer"
+   ],
+   "seslendirme": "Beşinci sırada, Gobi Çölü. Kışın sıcaklık eksi kırk dereceye kadar düşer.",
+   "foto": "Gobi desert"
+  },
+  {
+   "sira": 4,
+   "ad": "Arap Çölü",
+   "deger": 2.33,
+   "yer": "Arap Yarımadası",
+   "bilgi": [
+    "Dünyanın en büyük",
+    "kum denizi burada: Rub' al Hali"
+   ],
+   "seslendirme": "Dördüncü, Arap Çölü. Dünyanın en büyük kum denizi burada.",
+   "foto": "Arabian desert dunes"
+  },
+  {
+   "sira": 3,
+   "ad": "Sahra Çölü",
+   "deger": 9.2,
+   "yer": "Kuzey Afrika",
+   "bilgi": [
+    "Dünyanın en büyük",
+    "sıcak çölü"
+   ],
+   "seslendirme": "Üçüncü, Sahra Çölü. Dünyanın en büyük sıcak çölü.",
+   "foto": "Sahara desert"
+  },
+  {
+   "sira": 2,
+   "ad": "Arktik Çölü",
+   "deger": 13.9,
+   "yer": "Kuzey Kutbu",
+   "bilgi": [
+    "Kutup ayıları",
+    "bu çölde yaşar"
+   ],
+   "seslendirme": "İkinci, Arktik Çölü. Kutup ayıları bu çölde yaşar.",
+   "foto": "Arctic ice"
+  },
+  {
+   "sira": 1,
+   "ad": "Antarktika Çölü",
+   "deger": 14.2,
+   "yer": "Antarktika",
+   "bilgi": [
+    "Yağış çok az olduğu için",
+    "aslında bir çöl!"
+   ],
+   "seslendirme": "Ve bir numara, Antarktika! Yağış çok az olduğu için aslında dünyanın en büyük çölü!",
+   "foto": "Antarctica ice"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en büyük 5 çölü 🏜️ En büyük çöl sıcak değil, buz gibi! Sen biliyor muydun? 👇",
+ "etiketler": [
+  "#çöl",
+  "#sahra",
+  "#antarktika",
+  "#coğrafya",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Çöl, yağışa göre tanımlanır (yılda ~250 mm'den az). Avustralya çölünün alanı kaynağa göre 1,4–2,7 milyon km² arasında değiştiği için listeye alınmadı."
+}

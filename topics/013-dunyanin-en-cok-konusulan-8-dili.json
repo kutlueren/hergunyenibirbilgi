@@ -1,0 +1,128 @@
+{
+ "id": "dunyanin-en-cok-konusulan-8-dili",
+ "baslik": [
+  "DÜNYANIN",
+  "EN ÇOK KONUŞULAN",
+  "DİLİ"
+ ],
+ "kanca": [
+  "Çince değil!",
+  "1 numara seni şaşırtabilir"
+ ],
+ "kanca_seslendirme": "Dünyanın en çok konuşulan sekiz dili! Bir numara Çince değil.",
+ "birim": "milyar",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 8,
+   "ad": "Portekizce",
+   "deger": 0.27,
+   "yer": "Brezilya, Portekiz…",
+   "bilgi": [
+    "Konuşanların çoğu",
+    "Portekiz'de değil, Brezilya'da"
+   ],
+   "seslendirme": "Sekizinci sırada, Portekizce. Konuşanların çoğu Portekiz'de değil, Brezilya'da.",
+   "foto": null
+  },
+  {
+   "sira": 7,
+   "ad": "Bengalce",
+   "deger": 0.28,
+   "yer": "Bangladeş, Hindistan",
+   "bilgi": [
+    "Hindistan'ın milli marşı",
+    "da Bengalce yazıldı"
+   ],
+   "seslendirme": "Yedinci, Bengalce. Hindistan'ın milli marşı da Bengalce yazıldı.",
+   "foto": null
+  },
+  {
+   "sira": 6,
+   "ad": "Fransızca",
+   "deger": 0.31,
+   "yer": "Fransa, Afrika…",
+   "bilgi": [
+    "Konuşanların büyük kısmı",
+    "artık Afrika'da"
+   ],
+   "seslendirme": "Altıncı, Fransızca. Konuşanların büyük kısmı artık Afrika'da.",
+   "foto": null
+  },
+  {
+   "sira": 5,
+   "ad": "Arapça",
+   "deger": 0.34,
+   "yer": "Orta Doğu, Kuzey Afrika",
+   "bilgi": [
+    "20'den fazla ülkenin",
+    "resmî dili"
+   ],
+   "seslendirme": "Beşinci, Arapça. Yirmiden fazla ülkenin resmî dili.",
+   "foto": null
+  },
+  {
+   "sira": 4,
+   "ad": "İspanyolca",
+   "deger": 0.56,
+   "yer": "İspanya, Latin Amerika",
+   "bilgi": [
+    "Ana dili olarak",
+    "en çok konuşulan 2. dil"
+   ],
+   "seslendirme": "Dördüncü, İspanyolca. Ana dili olarak en çok konuşulan ikinci dil.",
+   "foto": null
+  },
+  {
+   "sira": 3,
+   "ad": "Hintçe",
+   "deger": 0.61,
+   "yer": "Hindistan",
+   "bilgi": [
+    "Hindistan'ın",
+    "en yaygın dili"
+   ],
+   "seslendirme": "Üçüncü, Hintçe. Hindistan'ın en yaygın dili.",
+   "foto": null
+  },
+  {
+   "sira": 2,
+   "ad": "Çince (Mandarin)",
+   "deger": 1.18,
+   "yer": "Çin",
+   "bilgi": [
+    "Ana dili olarak konuşulan",
+    "en yaygın dil"
+   ],
+   "seslendirme": "İkinci, Çince. Ana dili olarak en çok konuşulan dil.",
+   "foto": null
+  },
+  {
+   "sira": 1,
+   "ad": "İngilizce",
+   "deger": 1.52,
+   "yer": "Dünyanın her yeri",
+   "bilgi": [
+    "Konuşanların çoğu",
+    "onu sonradan öğrendi"
+   ],
+   "seslendirme": "Ve bir numara, İngilizce! Bir buçuk milyarı aşan konuşanının çoğu onu sonradan öğrendi!",
+   "foto": null
+  }
+ ],
+ "kapanis_ust": "Sen kaç dil",
+ "kapanis_vurgu": "konuşuyorsun?",
+ "kapanis_seslendirme": "Sen kaç dil konuşuyorsun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en çok konuşulan 8 dili 🗣️ 1 numara Çince değil! Sen kaç dil konuşuyorsun? 👇",
+ "etiketler": [
+  "#dil",
+  "#ingilizce",
+  "#diller",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#dünya",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Ana dil + ikinci dil toplamı, Ethnologue/Statista 2025 (milyar): İngilizce 1,52 · Mandarin 1,18 · Hintçe 0,61 · İspanyolca 0,56 · Arapça 0,34 · Fransızca 0,31 · Bengalce 0,28 · Portekizce 0,27."
+}

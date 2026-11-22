@@ -1,0 +1,92 @@
+{
+ "id": "dunyanin-5-okyanusu",
+ "baslik": [
+  "DÜNYANIN",
+  "BÜYÜKTEN KÜÇÜĞE",
+  "OKYANUSU"
+ ],
+ "kanca": [
+  "1 numara, tüm karalardan",
+  "daha BÜYÜK!"
+ ],
+ "kanca_seslendirme": "Dünyanın beş okyanusu! Bir numara, dünyadaki bütün karalardan daha büyük.",
+ "birim": "milyon km²",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Arktik Okyanusu",
+   "deger": 14.1,
+   "yer": "Kuzey Kutbu",
+   "bilgi": [
+    "En küçük ve en sığ okyanus;",
+    "yılın çoğu buzla kaplı"
+   ],
+   "seslendirme": "Beşinci sırada, Arktik Okyanusu. En küçük ve en sığ okyanus.",
+   "foto": "Arctic ocean ice"
+  },
+  {
+   "sira": 4,
+   "ad": "Güney Okyanusu",
+   "deger": 22.0,
+   "yer": "Antarktika çevresi",
+   "bilgi": [
+    "2021'de resmen",
+    "5. okyanus kabul edildi"
+   ],
+   "seslendirme": "Dördüncü, Güney Okyanusu. İki bin yirmi birde resmen beşinci okyanus kabul edildi.",
+   "foto": "Southern Ocean Antarctica"
+  },
+  {
+   "sira": 3,
+   "ad": "Hint Okyanusu",
+   "deger": 70.6,
+   "yer": "Afrika – Asya – Avustralya",
+   "bilgi": [
+    "Okyanusların",
+    "en sıcağı"
+   ],
+   "seslendirme": "Üçüncü, Hint Okyanusu. Okyanusların en sıcağı.",
+   "foto": "Indian Ocean beach"
+  },
+  {
+   "sira": 2,
+   "ad": "Atlas Okyanusu",
+   "deger": 106.5,
+   "yer": "Amerika – Avrupa – Afrika",
+   "bilgi": [
+    "Titanik bu okyanusun",
+    "dibinde yatıyor"
+   ],
+   "seslendirme": "İkinci, Atlas Okyanusu. Titanik bu okyanusun dibinde yatıyor.",
+   "foto": "Atlantic ocean waves"
+  },
+  {
+   "sira": 1,
+   "ad": "Pasifik Okyanusu",
+   "deger": 165.3,
+   "yer": "Asya – Amerika",
+   "bilgi": [
+    "En derin nokta burada:",
+    "Mariana Çukuru, ~11 km"
+   ],
+   "seslendirme": "Ve bir numara, Pasifik Okyanusu! Dünyanın en derin noktası, yaklaşık on bir kilometreyle burada!",
+   "foto": "Pacific ocean"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "gördün?",
+ "kapanis_seslendirme": "Sen hangisini gördün? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın 5 okyanusu 🌊 Pasifik, dünyadaki tüm karalardan daha büyük! Sen hangisini gördün? 👇",
+ "etiketler": [
+  "#okyanus",
+  "#pasifik",
+  "#deniz",
+  "#coğrafya",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Alanlar NOAA/Britannica'ya yakın değerler; kenar denizlerinin sayılmasına göre kaynaklar arasında küçük farklar var. Dünyanın kara alanı ~149 milyon km²."
+}

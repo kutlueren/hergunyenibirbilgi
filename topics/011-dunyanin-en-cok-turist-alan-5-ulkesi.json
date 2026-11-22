@@ -1,0 +1,92 @@
+{
+ "id": "dunyanin-en-cok-turist-alan-5-ulkesi",
+ "baslik": [
+  "DÜNYADA",
+  "EN ÇOK TURİST",
+  "ALAN ÜLKE"
+ ],
+ "kanca": [
+  "Türkiye listede,",
+  "İTALYA'nın bile önünde!"
+ ],
+ "kanca_seslendirme": "Dünyada en çok turist alan beş ülke! Türkiye listede, hem de İtalya'nın önünde.",
+ "birim": "milyon",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "İtalya",
+   "deger": 57.7,
+   "yer": "Avrupa",
+   "bilgi": [
+    "Dünyadaki UNESCO miras alanı",
+    "en çok olan ülkelerden"
+   ],
+   "seslendirme": "Beşinci sırada, İtalya. Dünyada UNESCO miras alanı en çok olan ülkelerden biri.",
+   "foto": "Rome Colosseum"
+  },
+  {
+   "sira": 4,
+   "ad": "Türkiye",
+   "deger": 60.6,
+   "yer": "Avrupa – Asya",
+   "bilgi": [
+    "2024'te turist sayısı",
+    "yaklaşık %10 arttı"
+   ],
+   "seslendirme": "Dördüncü, Türkiye! İki bin yirmi dörtte turist sayısı yaklaşık yüzde on arttı.",
+   "foto": "Cappadocia balloons"
+  },
+  {
+   "sira": 3,
+   "ad": "ABD",
+   "deger": 72.4,
+   "yer": "Kuzey Amerika",
+   "bilgi": [
+    "Turistlerin en çok",
+    "para harcadığı ülke"
+   ],
+   "seslendirme": "Üçüncü, ABD. Turistlerin en çok para harcadığı ülke.",
+   "foto": "New York skyline"
+  },
+  {
+   "sira": 2,
+   "ad": "İspanya",
+   "deger": 93.8,
+   "yer": "Avrupa",
+   "bilgi": [
+    "2024'te rekor:",
+    "93,8 milyon ziyaretçi"
+   ],
+   "seslendirme": "İkinci, İspanya. İki bin yirmi dörtte rekor kırdı.",
+   "foto": "Barcelona Sagrada Familia"
+  },
+  {
+   "sira": 1,
+   "ad": "Fransa",
+   "deger": 102.0,
+   "yer": "Avrupa",
+   "bilgi": [
+    "Yıllardır dünyanın",
+    "en çok ziyaret edilen ülkesi"
+   ],
+   "seslendirme": "Ve bir numara, Fransa! Yüz milyonu aşan turistle yıllardır dünyanın bir numarası!",
+   "foto": "Eiffel Tower Paris"
+  }
+ ],
+ "kapanis_ust": "Sen hangisine",
+ "kapanis_vurgu": "gittin?",
+ "kapanis_seslendirme": "Sen hangisine gittin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyada en çok turist alan 5 ülke ✈️ Türkiye 60,6 milyon turistle İtalya'nın önünde! Sen hangisine gittin? 👇",
+ "etiketler": [
+  "#türkiye",
+  "#turizm",
+  "#seyahat",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#dünya",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "BM Turizm Örgütü 2024 verileri (milyon uluslararası turist): Fransa 102,0 · İspanya 93,8 · ABD 72,4 · Türkiye 60,6 · İtalya 57,7."
+}

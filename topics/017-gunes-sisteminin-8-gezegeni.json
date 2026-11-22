@@ -1,0 +1,180 @@
+{
+ "id": "gunes-sisteminin-8-gezegeni",
+ "baslik": [
+  "GÜNEŞ SİSTEMİ'NİN",
+  "KÜÇÜKTEN BÜYÜĞE",
+  "GEZEGENİ"
+ ],
+ "kanca": [
+  "Jüpiter'in içine",
+  "1.300'den fazla Dünya sığar!"
+ ],
+ "kanca_seslendirme": "Güneş Sistemi'nin sekiz gezegeni! Jüpiter'in içine bin üç yüzden fazla Dünya sığar.",
+ "birim": "km",
+ "gorsel": "gezegen",
+ "maddeler": [
+  {
+   "sira": 8,
+   "ad": "Merkür",
+   "deger": 4879,
+   "yer": "Güneş'e en yakın",
+   "bilgi": [
+    "Güneş'e en yakın ama",
+    "en sıcak gezegen değil"
+   ],
+   "seslendirme": "Sekizinci sırada, Merkür. Güneş'e en yakın, ama en sıcak gezegen değil.",
+   "foto": null,
+   "renk": [
+    150,
+    145,
+    140
+   ],
+   "doku": "krater"
+  },
+  {
+   "sira": 7,
+   "ad": "Mars",
+   "deger": 6779,
+   "yer": "Kızıl gezegen",
+   "bilgi": [
+    "Olympus Dağı, Everest'in",
+    "yaklaşık 2,5 katı"
+   ],
+   "seslendirme": "Yedinci, Mars. Üzerindeki Olimpos Dağı, Everest'in yaklaşık iki buçuk katı.",
+   "foto": null,
+   "renk": [
+    200,
+    90,
+    50
+   ],
+   "doku": "krater"
+  },
+  {
+   "sira": 6,
+   "ad": "Venüs",
+   "deger": 12104,
+   "yer": "Dünya'nın komşusu",
+   "bilgi": [
+    "En sıcak gezegen:",
+    "yüzeyi yaklaşık 465 °C"
+   ],
+   "seslendirme": "Altıncı, Venüs. En sıcak gezegen, yüzeyi yaklaşık dört yüz altmış beş derece.",
+   "foto": null,
+   "renk": [
+    225,
+    190,
+    120
+   ],
+   "doku": "bulut"
+  },
+  {
+   "sira": 5,
+   "ad": "Dünya",
+   "deger": 12742,
+   "yer": "Evimiz",
+   "bilgi": [
+    "Bildiğimiz kadarıyla",
+    "hayat olan tek yer"
+   ],
+   "seslendirme": "Beşinci, Dünya. Bildiğimiz kadarıyla hayat olan tek yer.",
+   "foto": null,
+   "renk": [
+    50,
+    110,
+    200
+   ],
+   "doku": "dunya"
+  },
+  {
+   "sira": 4,
+   "ad": "Neptün",
+   "deger": 49244,
+   "yer": "Buz devi",
+   "bilgi": [
+    "Rüzgârları saatte",
+    "2.000 km'yi aşıyor"
+   ],
+   "seslendirme": "Dördüncü, Neptün. Rüzgârları saatte iki bin kilometreyi aşıyor.",
+   "foto": null,
+   "renk": [
+    50,
+    90,
+    210
+   ],
+   "doku": "bant"
+  },
+  {
+   "sira": 3,
+   "ad": "Uranüs",
+   "deger": 50724,
+   "yer": "Buz devi",
+   "bilgi": [
+    "Yan yatmış döner:",
+    "ekseni ~98° eğik"
+   ],
+   "seslendirme": "Üçüncü, Uranüs. Yan yatmış gibi döner.",
+   "foto": null,
+   "renk": [
+    130,
+    210,
+    220
+   ],
+   "doku": "duz",
+   "halka": "ince"
+  },
+  {
+   "sira": 2,
+   "ad": "Satürn",
+   "deger": 116460,
+   "yer": "Gaz devi",
+   "bilgi": [
+    "Yoğunluğu sudan az:",
+    "dev bir küvette yüzerdi!"
+   ],
+   "seslendirme": "İkinci, Satürn. Yoğunluğu sudan az, dev bir küvette yüzerdi!",
+   "foto": null,
+   "renk": [
+    215,
+    185,
+    125
+   ],
+   "doku": "bant",
+   "halka": "genis"
+  },
+  {
+   "sira": 1,
+   "ad": "Jüpiter",
+   "deger": 139820,
+   "yer": "Gaz devi",
+   "bilgi": [
+    "Diğer 7 gezegenin toplamından",
+    "2,5 kat daha ağır!"
+   ],
+   "seslendirme": "Ve bir numara, Jüpiter! Diğer yedi gezegenin toplamından iki buçuk kat daha ağır!",
+   "foto": null,
+   "renk": [
+    205,
+    160,
+    115
+   ],
+   "doku": "bant",
+   "leke": true
+  }
+ ],
+ "kapanis_ust": "En sevdiğin gezegen",
+ "kapanis_vurgu": "hangisi?",
+ "kapanis_seslendirme": "En sevdiğin gezegen hangisi? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Güneş Sistemi'nin 8 gezegeni 🪐 Jüpiter'in içine 1.300'den fazla Dünya sığar! En sevdiğin gezegen hangisi? 👇",
+ "etiketler": [
+  "#uzay",
+  "#gezegenler",
+  "#jüpiter",
+  "#satürn",
+  "#astronomi",
+  "#bilgi",
+  "#bunlarıbiliyormuydunuz",
+  "#keşfet",
+  "#reels"
+ ],
+ "notlar": "Ortalama çaplar (km). Her gezegen Dünya ile gerçek oranında karşılaştırılarak çizilir."
+}
