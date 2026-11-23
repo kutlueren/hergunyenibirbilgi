@@ -144,7 +144,24 @@ def run():
     shutil.rmtree(tmp)
 
 
+def test_no_spoilers():
+    """The #1 answer may appear only in the #1 scene: never in the caption, hashtags, hook or earlier scenes."""
+    import glob
+    from src.spoilers import find_spoilers
+    bad = {p: find_spoilers(json.load(open(p, encoding="utf-8"))) for p in glob.glob(os.path.join(S.ROOT, "topics", "*.json"))}
+    bad = {p: v for p, v in bad.items() if v}
+    assert not bad, bad
+    # and the caption guard strips a leak even if a topic slips through
+    from src.spoilers import safe_caption
+    t = json.load(open(os.path.join(S.ROOT, "topics", "008-dunyanin-en-buyuk-10-ulkesi.json"), encoding="utf-8"))
+    t["aciklama"] = "Rusya tek başına Türkiye'nin 22 katı!"; t["etiketler"] = ["#rusya", "#ülkeler"]
+    c = safe_caption(t)
+    assert "rusya" not in c.lower() and "#ülkeler" in c, c
+    print("spoiler check ok")
+
+
 if __name__ == "__main__":
+    test_no_spoilers()
     run()
 
 def test_pipeline():

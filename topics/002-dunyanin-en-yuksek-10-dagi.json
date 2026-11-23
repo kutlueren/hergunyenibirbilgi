@@ -91,10 +91,10 @@
    "deger": 8516,
    "yer": "Nepal – Çin",
    "bilgi": [
-    "Everest'e bir sırtla bağlı;",
-    "adı 'güney zirve' demek"
+    "Adı Tibetçe",
+    "'güney zirve' demek"
    ],
-   "seslendirme": "Dördüncü, Lhotse. Everest'e bir sırtla bağlıdır.",
+   "seslendirme": "Dördüncü, Lotse. Adı Tibetçe, güney zirve demek.",
    "foto": "Lhotse"
   },
   {
@@ -116,9 +116,9 @@
    "yer": "Pakistan – Çin",
    "bilgi": [
     "'Vahşi dağ': tırmanması",
-    "Everest'ten çok daha zor"
+    "en zor dağlardan biri"
    ],
-   "seslendirme": "İkinci, Ka iki. Vahşi dağ lakaplı, tırmanması Everest'ten çok daha zor.",
+   "seslendirme": "İkinci, Ka iki. Vahşi dağ lakaplı, tırmanması en zor dağlardan biri.",
    "foto": "K2 mountain Karakoram"
   },
   {
@@ -139,9 +139,9 @@
  "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
  "aciklama": "Dünyanın en yüksek 10 dağı 🏔️ 8.000 metreyi aşan 14 dağın hepsi Asya'da! Sen hangisini biliyordun? 👇",
  "etiketler": [
-  "#everest",
   "#dağ",
   "#himalaya",
+  "#dağcılık",
   "#bilgi",
   "#bunlarıbiliyormuydunuz",
   "#coğrafya",

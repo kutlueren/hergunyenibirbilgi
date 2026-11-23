@@ -6,10 +6,10 @@
   "İLİ"
  ],
  "kanca": [
-  "Her 5 kişiden",
-  "neredeyse 1'i İSTANBUL'da!"
+  "Her 5 kişiden neredeyse 1'i",
+  "TEK BİR ilde yaşıyor!"
  ],
- "kanca_seslendirme": "Türkiye'nin en kalabalık beş ili! Türkiye'de her beş kişiden neredeyse biri İstanbul'da yaşıyor.",
+ "kanca_seslendirme": "Türkiye'nin en kalabalık beş ili! Türkiye'de her beş kişiden neredeyse biri tek bir ilde yaşıyor.",
  "birim": "milyon",
  "gorsel": "ikon",
  "maddeler": [
@@ -77,12 +77,12 @@
  "kapanis_ust": "Sen hangi ilde",
  "kapanis_vurgu": "yaşıyorsun?",
  "kapanis_seslendirme": "Sen hangi ilde yaşıyorsun? Yorumlara yaz, ve takip etmeyi unutma!",
- "aciklama": "Türkiye'nin en kalabalık 5 ili 🏙️ Her 5 kişiden neredeyse 1'i İstanbul'da yaşıyor! Sen hangi ildesin? 👇",
+ "aciklama": "Türkiye'nin en kalabalık 5 ili 🏙️ Her 5 kişiden neredeyse 1'i tek bir ilde yaşıyor! Sence hangi il? 👇",
  "etiketler": [
   "#türkiye",
-  "#istanbul",
   "#nüfus",
   "#tüik",
+  "#iller",
   "#bilgi",
   "#bunlarıbiliyormuydunuz",
   "#keşfet",

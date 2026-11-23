@@ -24,5 +24,10 @@ def topic(fname, id_, baslik, kanca, kanca_ses, birim, gorsel, items, aciklama, 
          "aciklama": aciklama, "etiketler": etiketler}
     if olcek: t["olcek"] = olcek
     if notlar: t["notlar"] = notlar
+    import sys; sys.path.insert(0, ROOT)
+    from src.spoilers import find_spoilers
+    sp = find_spoilers(t)
+    if sp:
+        raise ValueError(f"{fname}: the #1 answer leaks outside the #1 scene: {sp}")
     with open(os.path.join(ROOT, "topics", fname), "w", encoding="utf-8") as f:
         json.dump(t, f, ensure_ascii=False, indent=1); f.write("\n")

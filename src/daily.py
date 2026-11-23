@@ -6,6 +6,7 @@ from .render import render
 from .telegram import Telegram
 from .photos import fetch as fetch_photos
 from .themes import pick_theme
+from .spoilers import find_spoilers, safe_caption
 from .render import CAMERA_VISUALS
 import random
 
@@ -13,8 +14,8 @@ ROOT = S.ROOT
 
 
 def caption_for(t):
-    tags = " ".join(t.get("etiketler", []))
-    return (t.get("aciklama", "") + ("\n\n" + tags if tags else "")).strip()
+    """Instagram caption + hashtags. Never contains the #1 answer (see spoilers.py)."""
+    return safe_caption(t)
 
 
 SEND_WINDOW = (dt.time(11, 30), dt.time(13, 30))  # Berlin saati; video ~12:00'de gelsin
@@ -62,6 +63,10 @@ def main():
            f"📚 Kalan konu: {left}\n👉 ✅ Paylaş'a bastığın anda Instagram'a yüklenir.\n\n— Instagram açıklaması —\n{cap}")
     if topic.get("notlar"):
         msg += f"\n\n📝 Not: {topic['notlar']}"
+    sp = find_spoilers(topic)
+    if sp:
+        msg += "\n\n⚠️ Cevabı erken veren yerler (açıklama/hashtag'den otomatik çıkarıldı; videodakileri kontrol et):\n" + \
+               "\n".join(f"• {w}: {txt}" for w, txt in sp)
     res = tg.send_video_for_approval(os.path.join(work, "video.mp4"), msg, key)
     s["pending"] = {"key": key, "topic_id": topic["id"], "file_id": res["video"]["file_id"],
                     "message_id": res["message_id"], "caption": cap, "theme": theme,

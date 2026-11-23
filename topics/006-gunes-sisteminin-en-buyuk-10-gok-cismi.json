@@ -41,7 +41,7 @@
    "sira": 8,
    "ad": "Ganymede",
    "deger": 5268,
-   "yer": "Jüpiter'in uydusu",
+   "yer": "Bir gaz devinin uydusu",
    "bilgi": [
     "Güneş Sistemi'nin",
     "en büyük uydusu"
@@ -140,7 +140,6 @@
  "aciklama": "Güneş Sistemi'nin en büyük 10 gök cismi 🪐 Bir uydu, bir gezegenden büyük! Sen hangisini biliyordun? 👇",
  "etiketler": [
   "#uzay",
-  "#jüpiter",
   "#gezegen",
   "#astronomi",
   "#bilgi",
