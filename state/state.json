@@ -43,8 +43,16 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": null,
+ "pending": {
+  "key": "20261123",
+  "topic_id": "dunyanin-en-buyuk-10-ulkesi",
+  "file_id": "BAACAgIAAxkDAAMiawQcO-05fPX9fKKTsolksZWqfjoAApauAAInliFIJLAjLmXu6sU9BA",
+  "message_id": 34,
+  "caption": "Dünyanın yüzölçümü en büyük 10 ülkesi 🌍 Rusya tek başına Türkiye'nin 22 katı! Hangisini gezmek isterdin? 👇\n\n#ülkeler #rusya #coğrafya #bilgi #bunlarıbiliyormuydunuz #dünya #keşfet #reels",
+  "theme": "neon",
+  "created": "2026-11-23T10:58:04+00:00"
+ },
  "tg_offset": 518928471,
- "last_daily": "20261122",
- "last_theme": "zumrut"
+ "last_daily": "20261123",
+ "last_theme": "neon"
 }
