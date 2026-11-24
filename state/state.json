@@ -49,8 +49,16 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": null,
+ "pending": {
+  "key": "20261124",
+  "topic_id": "dunyanin-en-buyuk-10-golu",
+  "file_id": "BAACAgIAAxkDAAMlawVtxD8UZfxsJp0aBcPlIZHMLCoAAiK6AAInlilIWogOPzQvusY9BA",
+  "message_id": 37,
+  "caption": "Dünyanın en büyük 10 gölü 🌊 1 numara, sonraki 5 gölün toplamından büyük! Sence hangisi? Tahminini yorumlara yaz 👇\n\n#göl #doğa #coğrafya #bilgi #bunlarıbiliyormuydunuz #dünya #keşfet #reels",
+  "theme": "kutup",
+  "created": "2026-11-24T10:58:12+00:00"
+ },
  "tg_offset": 518928472,
- "last_daily": "20261123",
- "last_theme": "neon"
+ "last_daily": "20261124",
+ "last_theme": "kutup"
 }
