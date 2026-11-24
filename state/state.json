@@ -41,6 +41,12 @@
    "date": "2026-11-23T10:58:35+00:00",
    "ig_media_id": "17953235535344960",
    "permalink": "https://www.instagram.com/reel/DgFOLslgvJz/"
+  },
+  {
+   "id": "dunyanin-en-buyuk-10-golu",
+   "date": "2026-11-24T11:04:18+00:00",
+   "ig_media_id": "17951825916067200",
+   "permalink": "https://www.instagram.com/reel/DgHzjqdk7Fu/"
   }
  ],
  "rejected": [
@@ -49,16 +55,8 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": {
-  "key": "20261124",
-  "topic_id": "dunyanin-en-buyuk-10-golu",
-  "file_id": "BAACAgIAAxkDAAMlawVtxD8UZfxsJp0aBcPlIZHMLCoAAiK6AAInlilIWogOPzQvusY9BA",
-  "message_id": 37,
-  "caption": "Dünyanın en büyük 10 gölü 🌊 1 numara, sonraki 5 gölün toplamından büyük! Sence hangisi? Tahminini yorumlara yaz 👇\n\n#göl #doğa #coğrafya #bilgi #bunlarıbiliyormuydunuz #dünya #keşfet #reels",
-  "theme": "kutup",
-  "created": "2026-11-24T10:58:12+00:00"
- },
- "tg_offset": 518928472,
+ "pending": null,
+ "tg_offset": 518928473,
  "last_daily": "20261124",
  "last_theme": "kutup"
 }
