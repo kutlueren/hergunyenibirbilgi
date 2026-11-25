@@ -55,8 +55,16 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": null,
+ "pending": {
+  "key": "20261125",
+  "topic_id": "turkiyenin-en-kalabalik-5-ili",
+  "file_id": "BAACAgIAAxkDAAMoawa_GfvzUf9mEo4zTR0tnjBQM7AAAsKxAAJg0jhIf_C0OUjJxVk9BA",
+  "message_id": 40,
+  "caption": "Türkiye'nin en kalabalık 5 ili 🏙️ Her 5 kişiden neredeyse 1'i tek bir ilde yaşıyor! Sence hangi il? 👇\n\n#türkiye #nüfus #tüik #iller #bilgi #bunlarıbiliyormuydunuz #keşfet #reels",
+  "theme": "aurora",
+  "created": "2026-11-25T10:57:29+00:00"
+ },
  "tg_offset": 518928473,
- "last_daily": "20261124",
- "last_theme": "kutup"
+ "last_daily": "20261125",
+ "last_theme": "aurora"
 }
