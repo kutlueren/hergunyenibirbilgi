@@ -47,6 +47,12 @@
    "date": "2026-11-24T11:04:18+00:00",
    "ig_media_id": "17951825916067200",
    "permalink": "https://www.instagram.com/reel/DgHzjqdk7Fu/"
+  },
+  {
+   "id": "turkiyenin-en-kalabalik-5-ili",
+   "date": "2026-11-25T10:58:47+00:00",
+   "ig_media_id": "18087629498708366",
+   "permalink": "https://www.instagram.com/reel/DgKXtznAYf0/"
   }
  ],
  "rejected": [
@@ -55,16 +61,8 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": {
-  "key": "20261125",
-  "topic_id": "turkiyenin-en-kalabalik-5-ili",
-  "file_id": "BAACAgIAAxkDAAMoawa_GfvzUf9mEo4zTR0tnjBQM7AAAsKxAAJg0jhIf_C0OUjJxVk9BA",
-  "message_id": 40,
-  "caption": "Türkiye'nin en kalabalık 5 ili 🏙️ Her 5 kişiden neredeyse 1'i tek bir ilde yaşıyor! Sence hangi il? 👇\n\n#türkiye #nüfus #tüik #iller #bilgi #bunlarıbiliyormuydunuz #keşfet #reels",
-  "theme": "aurora",
-  "created": "2026-11-25T10:57:29+00:00"
- },
- "tg_offset": 518928473,
+ "pending": null,
+ "tg_offset": 518928474,
  "last_daily": "20261125",
  "last_theme": "aurora"
 }
