@@ -53,6 +53,12 @@
    "date": "2026-11-25T10:58:47+00:00",
    "ig_media_id": "18087629498708366",
    "permalink": "https://www.instagram.com/reel/DgKXtznAYf0/"
+  },
+  {
+   "id": "dunyanin-en-cok-turist-alan-5-ulkesi",
+   "date": "2026-11-26T10:58:49+00:00",
+   "ig_media_id": "17873201277696392",
+   "permalink": "https://www.instagram.com/reel/DgM8gdKsUgb/"
   }
  ],
  "rejected": [
@@ -61,16 +67,8 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": {
-  "key": "20261126",
-  "topic_id": "dunyanin-en-cok-turist-alan-5-ulkesi",
-  "file_id": "BAACAgIAAxkDAAMrawgQnWGKaRf0zPc9zwveIfrT79cAAvy5AAIL70BImaWMXozvhH49BA",
-  "message_id": 43,
-  "caption": "Dünyada en çok turist alan 5 ülke ✈️ Türkiye 60,6 milyon turistle İtalya'nın önünde! Sen hangisine gittin? 👇\n\n#türkiye #turizm #seyahat #bilgi #bunlarıbiliyormuydunuz #dünya #keşfet #reels",
-  "theme": "zumrut",
-  "created": "2026-11-26T10:57:34+00:00"
- },
- "tg_offset": 518928474,
+ "pending": null,
+ "tg_offset": 518928475,
  "last_daily": "20261126",
  "last_theme": "zumrut"
 }
