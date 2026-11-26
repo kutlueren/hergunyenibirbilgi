@@ -61,8 +61,16 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": null,
+ "pending": {
+  "key": "20261126",
+  "topic_id": "dunyanin-en-cok-turist-alan-5-ulkesi",
+  "file_id": "BAACAgIAAxkDAAMrawgQnWGKaRf0zPc9zwveIfrT79cAAvy5AAIL70BImaWMXozvhH49BA",
+  "message_id": 43,
+  "caption": "Dünyada en çok turist alan 5 ülke ✈️ Türkiye 60,6 milyon turistle İtalya'nın önünde! Sen hangisine gittin? 👇\n\n#türkiye #turizm #seyahat #bilgi #bunlarıbiliyormuydunuz #dünya #keşfet #reels",
+  "theme": "zumrut",
+  "created": "2026-11-26T10:57:34+00:00"
+ },
  "tg_offset": 518928474,
- "last_daily": "20261125",
- "last_theme": "aurora"
+ "last_daily": "20261126",
+ "last_theme": "zumrut"
 }
