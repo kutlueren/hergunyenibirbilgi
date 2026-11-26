@@ -1,0 +1,92 @@
+{
+ "id": "avrupanin-en-buyuk-5-ulkesi",
+ "baslik": [
+  "TAMAMI AVRUPA'DA",
+  "EN BÜYÜK",
+  "ÜLKE"
+ ],
+ "kanca": [
+  "Rusya'yı saymazsak",
+  "1 numara seni ŞAŞIRTABİLİR!"
+ ],
+ "kanca_seslendirme": "Topraklarının tamamı Avrupa'da olan en büyük beş ülke! Rusya'yı saymazsak, bir numara seni şaşırtabilir.",
+ "birim": "bin km²",
+ "gorsel": "sekil",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Norveç",
+   "deger": 385.2,
+   "yer": "İskandinavya",
+   "bilgi": [
+    "Fiyortlarıyla kıyısı",
+    "100.000 km'yi aşıyor"
+   ],
+   "seslendirme": "Beşinci sırada, Norveç. Fiyortları ve adalarıyla kıyısı yüz bin kilometreyi aşıyor.",
+   "foto": "Norway fjord"
+  },
+  {
+   "sira": 4,
+   "ad": "İsveç",
+   "deger": 450.3,
+   "yer": "İskandinavya",
+   "bilgi": [
+    "Yaklaşık 100.000",
+    "gölü var"
+   ],
+   "seslendirme": "Dördüncü, İsveç. Yaklaşık yüz bin gölü var.",
+   "foto": "Sweden"
+  },
+  {
+   "sira": 3,
+   "ad": "İspanya",
+   "deger": 506.0,
+   "yer": "İber Yarımadası",
+   "bilgi": [
+    "Avrupa'nın en dağlık",
+    "ülkelerinden"
+   ],
+   "seslendirme": "Üçüncü, İspanya. Avrupa'nın en dağlık ülkelerinden biri.",
+   "foto": "Spain"
+  },
+  {
+   "sira": 2,
+   "ad": "Fransa",
+   "deger": 551.7,
+   "yer": "Batı Avrupa",
+   "bilgi": [
+    "Dünyada en çok turist",
+    "ağırlayan ülke"
+   ],
+   "seslendirme": "İkinci, Fransa. Dünyada en çok turist ağırlayan ülke.",
+   "foto": "France"
+  },
+  {
+   "sira": 1,
+   "ad": "Ukrayna",
+   "deger": 603.6,
+   "yer": "Doğu Avrupa",
+   "bilgi": [
+    "Toprağının yarısından",
+    "fazlası verimli kara toprak"
+   ],
+   "seslendirme": "Ve bir numara, Ukrayna! Tamamı Avrupa'da olan en büyük ülke. Toprağının yarısından fazlası verimli kara toprak.",
+   "foto": "Ukraine wheat"
+  }
+ ],
+ "kapanis_ust": "Sen hangisine",
+ "kapanis_vurgu": "gittin?",
+ "kapanis_seslendirme": "Sen hangisine gittin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Tamamı Avrupa'da olan en büyük 5 ülke 🗺️ Rusya'yı saymazsak 1 numara seni şaşırtabilir! Sence hangisi? 👇",
+ "etiketler": [
+  "#avrupa",
+  "#ülke",
+  "#harita",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Rusya, Türkiye ve Kazakistan topraklarının çoğu Asya'da olduğu için hariç. Fransa: anakara; Norveç: Svalbard dahil.",
+ "stil": "kara"
+}

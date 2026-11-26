@@ -1,0 +1,91 @@
+{
+ "id": "gezegenlerin-uydu-sayisi",
+ "baslik": [
+  "EN ÇOK UYDUSU",
+  "OLAN",
+  "GEZEGEN"
+ ],
+ "kanca": [
+  "1 numaranın uydu sayısı",
+  "diğerlerinin TOPLAMINDAN fazla!"
+ ],
+ "kanca_seslendirme": "En çok uydusu olan beş gezegen! Bir numaranın uydu sayısı, diğer tüm gezegenlerin toplamından fazla.",
+ "birim": "uydu",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Mars",
+   "deger": 2,
+   "yer": "Kızıl gezegen",
+   "bilgi": [
+    "Uyduları Phobos ve",
+    "Deimos: Korku ve Dehşet"
+   ],
+   "seslendirme": "Beşinci sırada, Mars. İki uydusunun adı Fobos ve Deimos, yani korku ve dehşet.",
+   "foto": "Mars"
+  },
+  {
+   "sira": 4,
+   "ad": "Neptün",
+   "deger": 16,
+   "yer": "Buz devi",
+   "bilgi": [
+    "En büyük uydusu Triton",
+    "ters yönde dönüyor"
+   ],
+   "seslendirme": "Dördüncü, Neptün. En büyük uydusu Triton, gezegenin etrafında ters yönde dönüyor.",
+   "foto": "Neptune"
+  },
+  {
+   "sira": 3,
+   "ad": "Uranüs",
+   "deger": 29,
+   "yer": "Buz devi",
+   "bilgi": [
+    "Uydularına Shakespeare",
+    "karakterlerinin adı verildi"
+   ],
+   "seslendirme": "Üçüncü, Uranüs. Uydularına Şekspir karakterlerinin adları verildi.",
+   "foto": "Uranus"
+  },
+  {
+   "sira": 2,
+   "ad": "Jüpiter",
+   "deger": 115,
+   "yer": "Gaz devi",
+   "bilgi": [
+    "En büyük uydu da",
+    "bu gezegende"
+   ],
+   "seslendirme": "İkinci, Jüpiter. Güneş Sistemi'nin en büyük uydusu da bu gezegende.",
+   "foto": "Jupiter"
+  },
+  {
+   "sira": 1,
+   "ad": "Satürn",
+   "deger": 292,
+   "yer": "Gaz devi",
+   "bilgi": [
+    "Uydularının çoğu sadece",
+    "birkaç kilometre boyunda"
+   ],
+   "seslendirme": "Ve bir numara, Satürn! Uydu kralı. Uydularının çoğu sadece birkaç kilometre boyunda.",
+   "foto": "Saturn"
+  }
+ ],
+ "kapanis_ust": "Sen bunu",
+ "kapanis_vurgu": "biliyor muydun?",
+ "kapanis_seslendirme": "Sen bunu biliyor muydun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "En çok uydusu olan 5 gezegen 🪐 1 numaranın uydu sayısı diğerlerinin toplamından fazla! Sence hangisi? 👇",
+ "etiketler": [
+  "#uzay",
+  "#gezegen",
+  "#astronomi",
+  "#güneşsistemi",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Yörüngesi duyurulmuş uydular, 2026 ortası (Minor Planet Center / Wikipedia). Sayılar yeni keşiflerle artabiliyor; yayından önce kontrol et."
+}

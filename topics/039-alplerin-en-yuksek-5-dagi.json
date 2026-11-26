@@ -1,0 +1,91 @@
+{
+ "id": "alplerin-en-yuksek-5-dagi",
+ "baslik": [
+  "ALPLERİN",
+  "EN YÜKSEK",
+  "DAĞI"
+ ],
+ "kanca": [
+  "1 numaranın zirvesi",
+  "her yıl BOYU değişiyor!"
+ ],
+ "kanca_seslendirme": "Alplerin en yüksek beş dağı! Bir numaranın zirvesi, her yıl boyu değişiyor.",
+ "birim": "m",
+ "gorsel": "dag",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Weisshorn",
+   "deger": 4506,
+   "yer": "İsviçre",
+   "bilgi": [
+    "Alplerin en güzel",
+    "piramitlerinden biri"
+   ],
+   "seslendirme": "Beşinci sırada, Vayshorn, İsviçre. Alplerin en güzel piramit şekilli zirvelerinden.",
+   "foto": "Weisshorn"
+  },
+  {
+   "sira": 4,
+   "ad": "Lyskamm",
+   "deger": 4527,
+   "yer": "İsviçre – İtalya",
+   "bilgi": [
+    "Çığları yüzünden",
+    "'insan yiyen' lakaplı"
+   ],
+   "seslendirme": "Dördüncü, Liskam, İsviçre ve İtalya. Çığları yüzünden insan yiyen lakabı var.",
+   "foto": "Lyskamm"
+  },
+  {
+   "sira": 3,
+   "ad": "Dom",
+   "deger": 4545,
+   "yer": "İsviçre",
+   "bilgi": [
+    "Tamamı İsviçre'de olan",
+    "en yüksek dağ"
+   ],
+   "seslendirme": "Üçüncü, Dom, İsviçre. Tamamı İsviçre'de olan en yüksek dağ.",
+   "foto": "Dom mountain"
+  },
+  {
+   "sira": 2,
+   "ad": "Monte Rosa",
+   "deger": 4634,
+   "yer": "İsviçre – İtalya",
+   "bilgi": [
+    "Avrupa'nın en yüksek",
+    "kulübesi zirvesinde"
+   ],
+   "seslendirme": "İkinci, Monte Roza, İsviçre ve İtalya. Avrupa'nın en yüksek dağ kulübesi zirvesinde.",
+   "foto": "Monte Rosa"
+  },
+  {
+   "sira": 1,
+   "ad": "Mont Blanc",
+   "deger": 4806,
+   "yer": "Fransa – İtalya",
+   "bilgi": [
+    "Zirvesindeki buz yüzünden",
+    "boyu her yıl değişiyor"
+   ],
+   "seslendirme": "Ve bir numara, Mon Blan! Alplerin ve Batı Avrupa'nın çatısı. Zirvesindeki buz yüzünden boyu her ölçümde değişiyor.",
+   "foto": "Mont Blanc"
+  }
+ ],
+ "kapanis_ust": "Sen hangisine",
+ "kapanis_vurgu": "tırmanmak isterdin?",
+ "kapanis_seslendirme": "Sen hangisine tırmanmak isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Alplerin en yüksek 5 dağı 🏔️ 1 numaranın zirvesi her yıl boyu değişiyor! Sence hangisi? 👇",
+ "etiketler": [
+  "#alpler",
+  "#dağ",
+  "#avrupa",
+  "#doğa",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Ayrı dağlar, alt zirveler sayılmadı. Mont Blanc son ölçüm ~4.805,6 m."
+}

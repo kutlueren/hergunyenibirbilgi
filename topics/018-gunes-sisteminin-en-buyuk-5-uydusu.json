@@ -1,0 +1,121 @@
+{
+ "id": "gunes-sisteminin-en-buyuk-5-uydusu",
+ "baslik": [
+  "GÜNEŞ SİSTEMİ'NİN",
+  "EN BÜYÜK",
+  "UYDUSU"
+ ],
+ "kanca": [
+  "1 numara, Merkür",
+  "gezegeninden bile BÜYÜK!"
+ ],
+ "kanca_seslendirme": "Güneş Sistemi'nin en büyük beş uydusu! Bir numara, Merkür gezegeninden bile büyük.",
+ "birim": "km",
+ "gorsel": "gezegen",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Ay",
+   "deger": 3475,
+   "yer": "Dünya",
+   "bilgi": [
+    "Her yıl Dünya'dan",
+    "yaklaşık 3,8 cm uzaklaşıyor"
+   ],
+   "seslendirme": "Beşinci sırada, Ay. Her yıl Dünya'dan yaklaşık üç virgül sekiz santim uzaklaşıyor.",
+   "foto": "Moon",
+   "renk": [
+    175,
+    172,
+    165
+   ],
+   "doku": "krater"
+  },
+  {
+   "sira": 4,
+   "ad": "İo",
+   "deger": 3643,
+   "yer": "Jüpiter",
+   "bilgi": [
+    "Güneş Sistemi'nde en çok",
+    "yanardağı olan gök cismi"
+   ],
+   "seslendirme": "Dördüncü, İo. Güneş Sistemi'nde en çok yanardağı olan gök cismi.",
+   "foto": "Io moon",
+   "renk": [
+    222,
+    196,
+    92
+   ],
+   "doku": "krater"
+  },
+  {
+   "sira": 3,
+   "ad": "Kallisto",
+   "deger": 4821,
+   "yer": "Jüpiter",
+   "bilgi": [
+    "Güneş Sistemi'nde en çok",
+    "krater kaplı yüzeylerden biri"
+   ],
+   "seslendirme": "Üçüncü, Kallisto. Güneş Sistemi'nde en çok kraterle kaplı yüzeylerden biri.",
+   "foto": "Callisto",
+   "renk": [
+    105,
+    96,
+    86
+   ],
+   "doku": "krater"
+  },
+  {
+   "sira": 2,
+   "ad": "Titan",
+   "deger": 5150,
+   "yer": "Satürn",
+   "bilgi": [
+    "Kalın atmosferi olan",
+    "tek uydu"
+   ],
+   "seslendirme": "İkinci, Titan. Kalın bir atmosferi olan tek uydu. Yüzeyinde metan gölleri var.",
+   "foto": "Titan moon",
+   "renk": [
+    214,
+    158,
+    68
+   ],
+   "doku": "bulut"
+  },
+  {
+   "sira": 1,
+   "ad": "Ganymede",
+   "deger": 5268,
+   "yer": "Jüpiter",
+   "bilgi": [
+    "Kendi manyetik alanı",
+    "olan tek uydu"
+   ],
+   "seslendirme": "Ve bir numara, Ganimed! Güneş Sistemi'nin en büyük uydusu, ve kendi manyetik alanı olan tek uydu.",
+   "foto": "Ganymede",
+   "renk": [
+    150,
+    138,
+    122
+   ],
+   "doku": "krater"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Güneş Sistemi'nin en büyük 5 uydusu 🌕 1 numara Merkür'den bile büyük! Sence hangisi? Tahminini yorumlara yaz 👇",
+ "etiketler": [
+  "#uzay",
+  "#uydu",
+  "#güneşsistemi",
+  "#astronomi",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Ortalama çaplar (NASA). Karşılaştırma için Dünya çizilir."
+}

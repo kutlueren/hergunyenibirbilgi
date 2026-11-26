@@ -1,0 +1,94 @@
+{
+ "id": "dunyanin-en-buyuk-5-stadyumu",
+ "baslik": [
+  "DÜNYANIN",
+  "EN BÜYÜK",
+  "STADYUMU"
+ ],
+ "kanca": [
+  "1 numara bir futbol değil,",
+  "KRİKET stadyumu!"
+ ],
+ "kanca_seslendirme": "Dünyanın en büyük beş stadyumu! Bir numara, bir futbol değil kriket stadyumu.",
+ "birim": "kişi",
+ "gorsel": "ikon",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Ohio Stadyumu",
+   "deger": 102780,
+   "yer": "Columbus, ABD",
+   "bilgi": [
+    "Bir üniversite",
+    "futbol stadyumu"
+   ],
+   "seslendirme": "Beşinci sırada, Ohayo Stadyumu, Amerika. Bir üniversite futbol stadyumu.",
+   "foto": "Ohio Stadium"
+  },
+  {
+   "sira": 4,
+   "ad": "Beaver Stadyumu",
+   "deger": 106572,
+   "yer": "Pennsylvania, ABD",
+   "bilgi": [
+    "Maç günü eyaletin",
+    "en kalabalık 3. şehri olur"
+   ],
+   "seslendirme": "Dördüncü, Biver Stadyumu, Amerika. Maç günü eyaletin en kalabalık üçüncü şehri gibi.",
+   "foto": "Beaver Stadium"
+  },
+  {
+   "sira": 3,
+   "ad": "Michigan Stadyumu",
+   "deger": 107601,
+   "yer": "Ann Arbor, ABD",
+   "bilgi": [
+    "Lakabı 'Büyük Ev':",
+    "ABD'nin en büyüğü"
+   ],
+   "seslendirme": "Üçüncü, Miçigın Stadyumu, Amerika. Lakabı Büyük Ev.",
+   "foto": "Michigan Stadium"
+  },
+  {
+   "sira": 2,
+   "ad": "Rungrado 1 Mayıs",
+   "deger": 114000,
+   "yer": "Pyongyang, Kuzey Kore",
+   "bilgi": [
+    "Çatısı bir çiçeğin",
+    "taç yapraklarına benziyor"
+   ],
+   "seslendirme": "İkinci, Rungrado Bir Mayıs Stadyumu, Kuzey Kore. Çatısı bir çiçeğin taç yapraklarına benziyor.",
+   "foto": "Rungrado May Day Stadium"
+  },
+  {
+   "sira": 1,
+   "ad": "Narendra Modi Stadyumu",
+   "deger": 132000,
+   "yer": "Ahmedabad, Hindistan",
+   "bilgi": [
+    "Dünyanın en büyük",
+    "kriket stadyumu"
+   ],
+   "seslendirme": "Ve bir numara, Narendra Modi Stadyumu, Hindistan! Yüz otuz iki bin kişilik bir kriket stadyumu.",
+   "foto": "Narendra Modi Stadium"
+  }
+ ],
+ "kapanis_ust": "Sen hangisinde",
+ "kapanis_vurgu": "maç izlemek isterdin?",
+ "kapanis_seslendirme": "Sen hangisinde maç izlemek isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en büyük 5 stadyumu 🏟️ 1 numara futbol değil, kriket stadyumu! Sence hangisi? 👇",
+ "etiketler": [
+  "#stadyum",
+  "#spor",
+  "#futbol",
+  "#dünya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Oturma kapasitesi (Wikipedia). Rungrado için eski 150.000 iddiası resmi değil; güncel 114.000.",
+ "ikon": "insan",
+ "ikon_deger": 10000,
+ "ikon_etiket": "10 bin kişi"
+}

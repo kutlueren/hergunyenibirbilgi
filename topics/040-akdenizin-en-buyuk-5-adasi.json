@@ -1,0 +1,91 @@
+{
+ "id": "akdenizin-en-buyuk-5-adasi",
+ "baslik": [
+  "AKDENİZ'İN",
+  "EN BÜYÜK",
+  "ADASI"
+ ],
+ "kanca": [
+  "1 numaranın üstünde, Avrupa'nın",
+  "en yüksek AKTİF yanardağı var!"
+ ],
+ "kanca_seslendirme": "Akdeniz'in en büyük beş adası! Bir numaranın üstünde, Avrupa'nın en yüksek aktif yanardağı var.",
+ "birim": "km²",
+ "gorsel": "sekil",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Girit",
+   "deger": 8336,
+   "yer": "Yunanistan",
+   "bilgi": [
+    "Minos uygarlığının",
+    "beşiği"
+   ],
+   "seslendirme": "Beşinci sırada, Girit, Yunanistan. Minos uygarlığının beşiği.",
+   "foto": "Crete"
+  },
+  {
+   "sira": 4,
+   "ad": "Korsika",
+   "deger": 8680,
+   "yer": "Fransa",
+   "bilgi": [
+    "Napolyon'un",
+    "doğduğu ada"
+   ],
+   "seslendirme": "Dördüncü, Korsika, Fransa. Napolyon'un doğduğu ada.",
+   "foto": "Corsica"
+  },
+  {
+   "sira": 3,
+   "ad": "Kıbrıs",
+   "deger": 9251,
+   "yer": "Doğu Akdeniz",
+   "bilgi": [
+    "Doğu Akdeniz'in",
+    "en büyük adası"
+   ],
+   "seslendirme": "Üçüncü, Kıbrıs. Doğu Akdeniz'in en büyük adası.",
+   "foto": "Cyprus"
+  },
+  {
+   "sira": 2,
+   "ad": "Sardinya",
+   "deger": 24090,
+   "yer": "İtalya",
+   "bilgi": [
+    "Dünyada en çok 100 yaşını",
+    "aşanın yaşadığı yerlerden"
+   ],
+   "seslendirme": "İkinci, Sardinya, İtalya. Dünyada yüz yaşını aşan insanların en çok yaşadığı yerlerden.",
+   "foto": "Sardinia"
+  },
+  {
+   "sira": 1,
+   "ad": "Sicilya",
+   "deger": 25711,
+   "yer": "İtalya",
+   "bilgi": [
+    "Etna Yanardağı:",
+    "yaklaşık 3.300 metre"
+   ],
+   "seslendirme": "Ve bir numara, Sicilya! Akdeniz'in en büyük adası. Üstünde Avrupa'nın en yüksek aktif yanardağı Etna var.",
+   "foto": "Sicily"
+  }
+ ],
+ "kapanis_ust": "Sen hangisine",
+ "kapanis_vurgu": "gitmek isterdin?",
+ "kapanis_seslendirme": "Sen hangisine gitmek isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Akdeniz'in en büyük 5 adası 🏝️ 1 numaranın üstünde Avrupa'nın en yüksek aktif yanardağı var! Sence hangisi? 👇",
+ "etiketler": [
+  "#akdeniz",
+  "#ada",
+  "#tatil",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "stil": "kara"
+}

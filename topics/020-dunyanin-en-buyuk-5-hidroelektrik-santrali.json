@@ -1,0 +1,91 @@
+{
+ "id": "dunyanin-en-buyuk-5-hidroelektrik-santrali",
+ "baslik": [
+  "DÜNYANIN",
+  "EN BÜYÜK",
+  "BARAJ SANTRALİ"
+ ],
+ "kanca": [
+  "1 numara, Dünya'nın",
+  "dönüşünü bile YAVAŞLATTI!"
+ ],
+ "kanca_seslendirme": "Dünyanın en büyük beş hidroelektrik santrali! Bir numaranın barajı, Dünya'nın dönüşünü bile yavaşlattı.",
+ "birim": "GW",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Belo Monte",
+   "deger": 11.2,
+   "yer": "Brezilya",
+   "bilgi": [
+    "Amazon'un kolu Xingu",
+    "Nehri üzerinde"
+   ],
+   "seslendirme": "Beşinci sırada, Belo Monte, Brezilya. Amazonun kollarından Şingu Nehri üzerinde.",
+   "foto": "Belo Monte Dam"
+  },
+  {
+   "sira": 4,
+   "ad": "Xiluodu",
+   "deger": 13.9,
+   "yer": "Çin",
+   "bilgi": [
+    "Yangtze'nin yukarı kolu",
+    "Jinsha Nehri'nde"
+   ],
+   "seslendirme": "Dördüncü, Şiluodu, Çin. Yangçe'nin yukarı kolu Cinşa Nehri üzerinde.",
+   "foto": "Xiluodu Dam"
+  },
+  {
+   "sira": 3,
+   "ad": "Itaipu",
+   "deger": 14.0,
+   "yer": "Brezilya – Paraguay",
+   "bilgi": [
+    "Paraguay elektriğinin",
+    "neredeyse tamamını sağlıyor"
+   ],
+   "seslendirme": "Üçüncü, İtaypu, Brezilya ve Paraguay. Paraguay'ın elektriğinin neredeyse tamamını sağlıyor.",
+   "foto": "Itaipu Dam"
+  },
+  {
+   "sira": 2,
+   "ad": "Baihetan",
+   "deger": 16.0,
+   "yer": "Çin",
+   "bilgi": [
+    "Dünyanın en güçlü",
+    "türbinleri burada: 1 GW"
+   ],
+   "seslendirme": "İkinci, Bayhetan, Çin. Dünyanın en güçlü türbinleri burada, her biri bir gigavat.",
+   "foto": "Baihetan Dam"
+  },
+  {
+   "sira": 1,
+   "ad": "Üç Boğaz Barajı",
+   "deger": 22.5,
+   "yer": "Çin",
+   "bilgi": [
+    "Dünyanın en büyük",
+    "elektrik santrali"
+   ],
+   "seslendirme": "Ve bir numara, Üç Boğaz Barajı! Dünyanın en büyük elektrik santrali. Biriktirdiği su, günü mikrosaniyenin küçük bir kesri kadar uzattı.",
+   "foto": "Three Gorges Dam"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en büyük 5 hidroelektrik santrali ⚡ 1 numaranın barajı Dünya'nın dönüşünü bile yavaşlattı! Sence hangisi? 👇",
+ "etiketler": [
+  "#enerji",
+  "#baraj",
+  "#mühendislik",
+  "#elektrik",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Kurulu güç (GW). Yavaşlama etkisi NASA hesabı: günü yaklaşık 0,06 mikrosaniye uzatır."
+}

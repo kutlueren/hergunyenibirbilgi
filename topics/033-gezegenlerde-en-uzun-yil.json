@@ -1,0 +1,91 @@
+{
+ "id": "gezegenlerde-en-uzun-yil",
+ "baslik": [
+  "YILI EN UZUN",
+  "SÜREN",
+  "GEZEGEN"
+ ],
+ "kanca": [
+  "1 numara keşfedildiğinden beri",
+  "Güneş'i ancak 1 KEZ dolandı!"
+ ],
+ "kanca_seslendirme": "Bir yılı en uzun süren beş gezegen! Bir numara keşfedildiğinden beri, Güneş'in etrafını ancak bir kez dolandı.",
+ "birim": "Dünya yılı",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Mars",
+   "deger": 1.88,
+   "yer": "Kızıl gezegen",
+   "bilgi": [
+    "Bir yılı yaklaşık",
+    "687 gün sürüyor"
+   ],
+   "seslendirme": "Beşinci sırada, Mars. Bir yılı yaklaşık altı yüz seksen yedi gün sürüyor.",
+   "foto": "Mars"
+  },
+  {
+   "sira": 4,
+   "ad": "Jüpiter",
+   "deger": 11.86,
+   "yer": "Gaz devi",
+   "bilgi": [
+    "Bir günü ise",
+    "sadece 10 saat"
+   ],
+   "seslendirme": "Dördüncü, Jüpiter. Bir yılı on iki yıla yakın, ama bir günü sadece on saat.",
+   "foto": "Jupiter"
+  },
+  {
+   "sira": 3,
+   "ad": "Satürn",
+   "deger": 29.46,
+   "yer": "Gaz devi",
+   "bilgi": [
+    "Burada 30 yaşında",
+    "olan kimse yok"
+   ],
+   "seslendirme": "Üçüncü, Satürn. Bir yılı neredeyse otuz Dünya yılı.",
+   "foto": "Saturn"
+  },
+  {
+   "sira": 2,
+   "ad": "Uranüs",
+   "deger": 84.0,
+   "yer": "Buz devi",
+   "bilgi": [
+    "Yan yatmış döner: 42 yıl",
+    "gündüz, 42 yıl gece"
+   ],
+   "seslendirme": "İkinci, Uranüs. Yan yatmış döndüğü için kutuplarında kırk iki yıl gündüz, kırk iki yıl gece.",
+   "foto": "Uranus"
+  },
+  {
+   "sira": 1,
+   "ad": "Neptün",
+   "deger": 164.8,
+   "yer": "Buz devi",
+   "bilgi": [
+    "1846'da keşfedildi; ilk tam",
+    "turunu 2011'de bitirdi"
+   ],
+   "seslendirme": "Ve bir numara, Neptün! Bir yılı yüz altmış beş Dünya yılı. Bin sekiz yüz kırk altıda keşfedildi, ilk tam turunu iki bin on birde tamamladı.",
+   "foto": "Neptune"
+  }
+ ],
+ "kapanis_ust": "Sen bunu",
+ "kapanis_vurgu": "biliyor muydun?",
+ "kapanis_seslendirme": "Sen bunu biliyor muydun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Bir yılı en uzun süren 5 gezegen 🪐 1 numara keşfedildiğinden beri Güneş'i ancak 1 kez dolandı! Sence hangisi? 👇",
+ "etiketler": [
+  "#uzay",
+  "#gezegen",
+  "#astronomi",
+  "#güneşsistemi",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Yörünge dönemleri Dünya yılı cinsinden (NASA)."
+}

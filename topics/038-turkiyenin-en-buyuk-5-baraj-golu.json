@@ -1,0 +1,92 @@
+{
+ "id": "turkiyenin-en-buyuk-5-baraj-golu",
+ "baslik": [
+  "TÜRKİYE'NİN",
+  "EN BÜYÜK",
+  "BARAJ GÖLÜ"
+ ],
+ "kanca": [
+  "1 numara, Türkiye'nin",
+  "en büyük 3. gölü!"
+ ],
+ "kanca_seslendirme": "Türkiye'nin en büyük beş baraj gölü! Bir numara, doğal göller dahil Türkiye'nin en büyük üçüncü gölü.",
+ "birim": "km²",
+ "gorsel": "sekil",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Hirfanlı",
+   "deger": 263,
+   "yer": "Kırşehir – Ankara",
+   "bilgi": [
+    "Kızılırmak üzerinde;",
+    "1959'da tamamlandı"
+   ],
+   "seslendirme": "Beşinci sırada, Hirfanlı Baraj Gölü, Kızılırmak üzerinde. Bin dokuz yüz elli dokuzda tamamlandı.",
+   "foto": null
+  },
+  {
+   "sira": 4,
+   "ad": "Karakaya",
+   "deger": 298,
+   "yer": "Malatya – Elazığ – Diyarbakır",
+   "bilgi": [
+    "Fırat üzerindeki",
+    "ikinci büyük baraj"
+   ],
+   "seslendirme": "Dördüncü, Karakaya Baraj Gölü, Fırat üzerinde.",
+   "foto": null
+  },
+  {
+   "sira": 3,
+   "ad": "Ilısu",
+   "deger": 313,
+   "yer": "Mardin – Şırnak – Siirt – Batman",
+   "bilgi": [
+    "Dicle üzerinde;",
+    "eski Hasankeyf sular altında"
+   ],
+   "seslendirme": "Üçüncü, Ilısu Baraj Gölü, Dicle üzerinde. Eski Hasankeyf sular altında kaldı.",
+   "foto": null
+  },
+  {
+   "sira": 2,
+   "ad": "Keban",
+   "deger": 675,
+   "yer": "Elazığ – Tunceli",
+   "bilgi": [
+    "Türkiye'nin ilk",
+    "dev baraj projesi"
+   ],
+   "seslendirme": "İkinci, Keban Baraj Gölü, Elazığ. Türkiye'nin ilk dev baraj projesi.",
+   "foto": null
+  },
+  {
+   "sira": 1,
+   "ad": "Atatürk Baraj Gölü",
+   "deger": 817,
+   "yer": "Şanlıurfa – Adıyaman",
+   "bilgi": [
+    "GAP'ın kalbi;",
+    "Van ve Tuz Gölü'nden sonra"
+   ],
+   "seslendirme": "Ve bir numara, Atatürk Baraj Gölü! GAP'ın kalbi. Van ve Tuz Gölünden sonra Türkiye'nin en büyük üçüncü gölü.",
+   "foto": null
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "gördün?",
+ "kapanis_seslendirme": "Sen hangisini gördün? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Türkiye'nin en büyük 5 baraj gölü 💧 1 numara, doğal göller dahil Türkiye'nin en büyük 3. gölü! Sence hangisi? 👇",
+ "etiketler": [
+  "#türkiye",
+  "#baraj",
+  "#göl",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Yüzölçümleri (Wikipedia 'List of lakes of Turkey' / DSİ). Su seviyesine göre değişir.",
+ "stil": "su"
+}

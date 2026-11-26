@@ -1,0 +1,91 @@
+{
+ "id": "turkiyenin-en-yuksek-5-dagi",
+ "baslik": [
+  "TÜRKİYE'NİN",
+  "EN YÜKSEK",
+  "DAĞI"
+ ],
+ "kanca": [
+  "1 numara, 5.000 metreyi",
+  "aşan TEK dağımız!"
+ ],
+ "kanca_seslendirme": "Türkiye'nin en yüksek beş dağı! Bir numara, beş bin metreyi aşan tek dağımız.",
+ "birim": "m",
+ "gorsel": "dag",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Erciyes",
+   "deger": 3917,
+   "yer": "Kayseri",
+   "bilgi": [
+    "Orta Anadolu'nun",
+    "en yüksek zirvesi"
+   ],
+   "seslendirme": "Beşinci sırada, Erciyes, Kayseri. Orta Anadolunun en yüksek zirvesi, aynı zamanda bir kayak merkezi.",
+   "foto": "Mount Erciyes"
+  },
+  {
+   "sira": 4,
+   "ad": "Kaçkar",
+   "deger": 3937,
+   "yer": "Rize",
+   "bilgi": [
+    "Karadeniz'in en yüksek",
+    "dağı; buzul gölleri var"
+   ],
+   "seslendirme": "Dördüncü, Kaçkar, Rize. Karadeniz'in en yüksek dağı. Zirvesinin çevresinde buzul gölleri var.",
+   "foto": "Kackar Mountains"
+  },
+  {
+   "sira": 3,
+   "ad": "Süphan",
+   "deger": 4058,
+   "yer": "Bitlis",
+   "bilgi": [
+    "Sönmüş bir volkan;",
+    "Van Gölü'ne bakıyor"
+   ],
+   "seslendirme": "Üçüncü, Süphan, Bitlis. Van Gölüne bakan, sönmüş bir volkan.",
+   "foto": "Mount Suphan"
+  },
+  {
+   "sira": 2,
+   "ad": "Uludoruk",
+   "deger": 4135,
+   "yer": "Hakkâri",
+   "bilgi": [
+    "Cilo Dağları'nın zirvesi;",
+    "Türkiye'nin buzul yurdu"
+   ],
+   "seslendirme": "İkinci, Uludoruk, Hakkâri. Cilo Dağlarının zirvesi. Türkiye'nin en büyük buzulları burada.",
+   "foto": "Cilo Mountains"
+  },
+  {
+   "sira": 1,
+   "ad": "Ağrı Dağı",
+   "deger": 5137,
+   "yer": "Ağrı – Iğdır",
+   "bilgi": [
+    "Zirvesi yaz kış",
+    "buzul ile kaplı"
+   ],
+   "seslendirme": "Ve bir numara, Ağrı Dağı! Türkiye'nin çatısı. Zirvesi yaz kış buzul ile kaplı.",
+   "foto": "Mount Ararat"
+  }
+ ],
+ "kapanis_ust": "Sen hangisine",
+ "kapanis_vurgu": "tırmanmak isterdin?",
+ "kapanis_seslendirme": "Sen hangisine tırmanmak isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Türkiye'nin en yüksek 5 dağı 🏔️ 1 numara 5.000 metreyi aşan tek dağımız! Sence hangisi? 👇",
+ "etiketler": [
+  "#türkiye",
+  "#dağ",
+  "#doğa",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Yükseklikler kaynaklara göre birkaç metre değişebilir (ör. Uludoruk 4.116–4.135 m)."
+}

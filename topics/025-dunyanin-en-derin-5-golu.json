@@ -1,0 +1,91 @@
+{
+ "id": "dunyanin-en-derin-5-golu",
+ "baslik": [
+  "DÜNYANIN",
+  "EN DERİN",
+  "GÖLÜ"
+ ],
+ "kanca": [
+  "1 numara, dünyadaki tatlı",
+  "suyun 5'te BİRİNİ tutuyor!"
+ ],
+ "kanca_seslendirme": "Dünyanın en derin beş gölü! Bir numara, dünyadaki donmamış tatlı suyun beşte birini tutuyor.",
+ "birim": "m",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Malavi Gölü",
+   "deger": 706,
+   "yer": "Malavi – Mozambik – Tanzanya",
+   "bilgi": [
+    "Dünyada en çok balık",
+    "türü yaşayan göl"
+   ],
+   "seslendirme": "Beşinci sırada, Malavi Gölü. Dünyada en çok balık türünün yaşadığı göl.",
+   "foto": "Lake Malawi"
+  },
+  {
+   "sira": 4,
+   "ad": "O'Higgins / San Martín",
+   "deger": 836,
+   "yer": "Şili – Arjantin",
+   "bilgi": [
+    "Amerika kıtasının",
+    "en derin gölü"
+   ],
+   "seslendirme": "Dördüncü, O Higgins, San Martin Gölü, Şili ve Arjantin. Amerika kıtasının en derin gölü.",
+   "foto": "OHiggins Lake"
+  },
+  {
+   "sira": 3,
+   "ad": "Hazar Denizi",
+   "deger": 1025,
+   "yer": "Asya – Avrupa",
+   "bilgi": [
+    "Adı deniz ama dünyanın",
+    "en büyük gölü"
+   ],
+   "seslendirme": "Üçüncü, Hazar Denizi. Adı deniz ama aslında dünyanın en büyük gölü.",
+   "foto": "Caspian Sea"
+  },
+  {
+   "sira": 2,
+   "ad": "Tanganika Gölü",
+   "deger": 1470,
+   "yer": "Doğu Afrika",
+   "bilgi": [
+    "Dünyanın en uzun",
+    "tatlı su gölü: 673 km"
+   ],
+   "seslendirme": "İkinci, Tanganika Gölü, Doğu Afrika. Dünyanın en uzun tatlı su gölü.",
+   "foto": "Lake Tanganyika"
+  },
+  {
+   "sira": 1,
+   "ad": "Baykal Gölü",
+   "deger": 1642,
+   "yer": "Rusya",
+   "bilgi": [
+    "25 milyon yaşında;",
+    "dünyanın en eski gölü"
+   ],
+   "seslendirme": "Ve bir numara, Baykal Gölü! Dünyanın en derin ve en eski gölü, yaklaşık yirmi beş milyon yaşında.",
+   "foto": "Lake Baikal"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "biliyordun?",
+ "kapanis_seslendirme": "Sen hangisini biliyordun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en derin 5 gölü 🌊 1 numara dünyadaki tatlı suyun 5'te 1'ini tutuyor! Sence hangisi? 👇",
+ "etiketler": [
+  "#göl",
+  "#doğa",
+  "#dünya",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "En büyük derinlik. Buzul altındaki Vostok Gölü hariç."
+}

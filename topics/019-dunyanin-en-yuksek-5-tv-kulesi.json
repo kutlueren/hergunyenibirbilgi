@@ -1,0 +1,91 @@
+{
+ "id": "dunyanin-en-yuksek-5-tv-kulesi",
+ "baslik": [
+  "DÜNYANIN",
+  "EN YÜKSEK",
+  "TV KULESİ"
+ ],
+ "kanca": [
+  "1 numara, Eyfel Kulesi'nin",
+  "neredeyse 2 KATI!"
+ ],
+ "kanca_seslendirme": "Dünyanın en yüksek beş televizyon kulesi! Bir numara, Eyfel Kulesi'nin neredeyse iki katı.",
+ "birim": "m",
+ "gorsel": "bina",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Oriental Pearl Kulesi",
+   "deger": 468,
+   "yer": "Şanghay, Çin",
+   "bilgi": [
+    "İçinde küreler var:",
+    "en üstteki bir gözlem salonu"
+   ],
+   "seslendirme": "Beşinci sırada, Oriental Pörl Kulesi, Şanghay. Gövdesindeki kürelerin en üstü bir gözlem salonu.",
+   "foto": "Oriental Pearl Tower"
+  },
+  {
+   "sira": 4,
+   "ad": "Ostankino Kulesi",
+   "deger": 540,
+   "yer": "Moskova, Rusya",
+   "bilgi": [
+    "Avrupa'nın en yüksek",
+    "serbest duran yapısı"
+   ],
+   "seslendirme": "Dördüncü, Ostankino Kulesi, Moskova. Avrupa'nın en yüksek serbest duran yapısı.",
+   "foto": "Ostankino Tower"
+  },
+  {
+   "sira": 3,
+   "ad": "CN Tower",
+   "deger": 553,
+   "yer": "Toronto, Kanada",
+   "bilgi": [
+    "32 yıl boyunca dünyanın",
+    "en yüksek serbest yapısıydı"
+   ],
+   "seslendirme": "Üçüncü, Si En Tavır, Toronto. Otuz iki yıl boyunca dünyanın en yüksek serbest duran yapısıydı.",
+   "foto": "CN Tower"
+  },
+  {
+   "sira": 2,
+   "ad": "Canton Kulesi",
+   "deger": 604,
+   "yer": "Guançu, Çin",
+   "bilgi": [
+    "Tepesinde dönen",
+    "dev kabinler var"
+   ],
+   "seslendirme": "İkinci, Kanton Kulesi, Guançu. Tepesinde dönen dev kabinler var.",
+   "foto": "Canton Tower"
+  },
+  {
+   "sira": 1,
+   "ad": "Tokyo Skytree",
+   "deger": 634,
+   "yer": "Tokyo, Japonya",
+   "bilgi": [
+    "Dünyanın en yüksek kulesi;",
+    "634 sayısı 'Musaşi' okunur"
+   ],
+   "seslendirme": "Ve bir numara, Tokyo Skaytri! Dünyanın en yüksek kulesi. Altı yüz otuz dört sayısı Japoncada Musaşi diye okunuyor, bölgenin eski adı.",
+   "foto": "Tokyo Skytree"
+  }
+ ],
+ "kapanis_ust": "Sen hangisine",
+ "kapanis_vurgu": "çıkmak isterdin?",
+ "kapanis_seslendirme": "Sen hangisine çıkmak isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en yüksek 5 TV kulesi 🗼 1 numara Eyfel'in neredeyse 2 katı! Sence hangisi? 👇",
+ "etiketler": [
+  "#kule",
+  "#mimari",
+  "#dünya",
+  "#mühendislik",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Toplam yükseklik (anten dahil). Burj Khalifa bina olduğu için listede yok."
+}

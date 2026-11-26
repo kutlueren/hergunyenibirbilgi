@@ -1,0 +1,94 @@
+{
+ "id": "turkiyenin-en-kalabalik-5-ilcesi",
+ "baslik": [
+  "TÜRKİYE'NİN",
+  "EN KALABALIK",
+  "İLÇESİ"
+ ],
+ "kanca": [
+  "1 numara, nüfusuyla",
+  "57 İLİ geride bırakıyor!"
+ ],
+ "kanca_seslendirme": "Türkiye'nin en kalabalık beş ilçesi! Bir numara, nüfusuyla elli yedi ili geride bırakıyor.",
+ "birim": "kişi",
+ "gorsel": "ikon",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Şehitkamil",
+   "deger": 905880,
+   "yer": "Gaziantep",
+   "bilgi": [
+    "Gaziantep'in iki dev",
+    "ilçesinden biri"
+   ],
+   "seslendirme": "Beşinci sırada, Şehitkamil, Gaziantep. Şehrin iki dev ilçesinden biri.",
+   "foto": null
+  },
+  {
+   "sira": 4,
+   "ad": "Keçiören",
+   "deger": 931722,
+   "yer": "Ankara",
+   "bilgi": [
+    "Başkentin en kalabalık",
+    "ikinci ilçesi"
+   ],
+   "seslendirme": "Dördüncü, Keçiören, Ankara. Başkentin en kalabalık ikinci ilçesi.",
+   "foto": null
+  },
+  {
+   "sira": 3,
+   "ad": "Çankaya",
+   "deger": 952198,
+   "yer": "Ankara",
+   "bilgi": [
+    "Meclis, Anıtkabir ve",
+    "bakanlıklar burada"
+   ],
+   "seslendirme": "Üçüncü, Çankaya, Ankara. Meclis, Anıtkabir ve bakanlıklar burada.",
+   "foto": null
+  },
+  {
+   "sira": 2,
+   "ad": "Şahinbey",
+   "deger": 957792,
+   "yer": "Gaziantep",
+   "bilgi": [
+    "Gaziantep Kalesi ve",
+    "Zeugma Müzesi burada"
+   ],
+   "seslendirme": "İkinci, Şahinbey, Gaziantep. Gaziantep Kalesi ve Zeugma Müzesi burada.",
+   "foto": null
+  },
+  {
+   "sira": 1,
+   "ad": "Esenyurt",
+   "deger": 1003905,
+   "yer": "İstanbul",
+   "bilgi": [
+    "Nüfusu 1 milyonu aşan",
+    "ilk ilçe"
+   ],
+   "seslendirme": "Ve bir numara, Esenyurt, İstanbul! Nüfusu bir milyonu aşan ilk ilçe. Elli yedi ilden daha kalabalık.",
+   "foto": null
+  }
+ ],
+ "kapanis_ust": "Sen hangi ilçede",
+ "kapanis_vurgu": "yaşıyorsun?",
+ "kapanis_seslendirme": "Sen hangi ilçede yaşıyorsun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Türkiye'nin en kalabalık 5 ilçesi 🏙️ 1 numara, nüfusuyla 57 ili geride bırakıyor! Sence hangisi? 👇",
+ "etiketler": [
+  "#türkiye",
+  "#nüfus",
+  "#tüik",
+  "#şehir",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "TÜİK ADNKS 2025 sonuçları (31.12.2025).",
+ "ikon": "insan",
+ "ikon_deger": 100000,
+ "ikon_etiket": "100 bin kişi"
+}

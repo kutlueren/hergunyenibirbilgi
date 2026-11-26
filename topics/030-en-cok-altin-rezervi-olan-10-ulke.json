@@ -1,0 +1,151 @@
+{
+ "id": "en-cok-altin-rezervi-olan-10-ulke",
+ "baslik": [
+  "EN ÇOK",
+  "ALTIN REZERVİ",
+  "OLAN ÜLKE"
+ ],
+ "kanca": [
+  "1 numaranın altını,",
+  "2. sıradakinin 2 KATINDAN fazla!"
+ ],
+ "kanca_seslendirme": "En çok altın rezervi olan on ülke! Bir numaranın altını, ikinci sıradakinin iki katından fazla.",
+ "birim": "ton",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 10,
+   "ad": "Polonya",
+   "deger": 648,
+   "yer": "Avrupa",
+   "bilgi": [
+    "Son yılların en çok",
+    "altın alan merkez bankası"
+   ],
+   "seslendirme": "Onuncu sırada, Polonya. Son yılların en çok altın alan merkez bankalarından.",
+   "foto": "Poland"
+  },
+  {
+   "sira": 9,
+   "ad": "Japonya",
+   "deger": 846,
+   "yer": "Asya",
+   "bilgi": [
+    "Rezervlerinin sadece",
+    "küçük bir kısmı altın"
+   ],
+   "seslendirme": "Dokuzuncu, Japonya. Rezervlerinin sadece küçük bir kısmı altın.",
+   "foto": "Japan"
+  },
+  {
+   "sira": 8,
+   "ad": "Hindistan",
+   "deger": 881,
+   "yer": "Asya",
+   "bilgi": [
+    "Halkın elindeki altın",
+    "bundan kat kat fazla"
+   ],
+   "seslendirme": "Sekizinci, Hindistan. Halkın elindeki altın bunun kat kat fazlası.",
+   "foto": "India"
+  },
+  {
+   "sira": 7,
+   "ad": "İsviçre",
+   "deger": 1040,
+   "yer": "Avrupa",
+   "bilgi": [
+    "Kişi başına en çok altını",
+    "olan ülkelerden"
+   ],
+   "seslendirme": "Yedinci, İsviçre. Kişi başına en çok altını olan ülkelerden.",
+   "foto": "Switzerland"
+  },
+  {
+   "sira": 6,
+   "ad": "Rusya",
+   "deger": 2271,
+   "yer": "Avrupa – Asya",
+   "bilgi": [
+    "Son 20 yılda",
+    "rezervini kat kat büyüttü"
+   ],
+   "seslendirme": "Altıncı, Rusya. Son yirmi yılda altın rezervini katlayarak büyüttü.",
+   "foto": "Russia"
+  },
+  {
+   "sira": 5,
+   "ad": "Çin",
+   "deger": 2387,
+   "yer": "Asya",
+   "bilgi": [
+    "Aylardır aralıksız",
+    "altın alıyor"
+   ],
+   "seslendirme": "Beşinci, Çin. Merkez bankası aylardır aralıksız altın alıyor.",
+   "foto": "China"
+  },
+  {
+   "sira": 4,
+   "ad": "Fransa",
+   "deger": 2437,
+   "yer": "Avrupa",
+   "bilgi": [
+    "Altının çoğu Paris'te",
+    "yeraltı kasalarında"
+   ],
+   "seslendirme": "Dördüncü, Fransa. Altının çoğu Pariste, yeraltı kasalarında.",
+   "foto": "France"
+  },
+  {
+   "sira": 3,
+   "ad": "İtalya",
+   "deger": 2452,
+   "yer": "Avrupa",
+   "bilgi": [
+    "Rezervinin yaklaşık",
+    "üçte ikisi altın"
+   ],
+   "seslendirme": "Üçüncü, İtalya. Döviz rezervinin büyük kısmı altın.",
+   "foto": "Italy"
+  },
+  {
+   "sira": 2,
+   "ad": "Almanya",
+   "deger": 3349,
+   "yer": "Avrupa",
+   "bilgi": [
+    "Bir kısmı hâlâ New York",
+    "ve Londra'da saklanıyor"
+   ],
+   "seslendirme": "İkinci, Almanya. Altınının bir kısmı hâlâ New York ve Londra'da saklanıyor.",
+   "foto": "Germany"
+  },
+  {
+   "sira": 1,
+   "ad": "ABD",
+   "deger": 8133,
+   "yer": "Kuzey Amerika",
+   "bilgi": [
+    "Çoğu Fort Knox'ta;",
+    "yıllardır miktar sabit"
+   ],
+   "seslendirme": "Ve bir numara, Amerika Birleşik Devletleri! Altının büyük kısmı Fort Noks'ta. Miktar yıllardır neredeyse hiç değişmedi.",
+   "foto": "Fort Knox"
+  }
+ ],
+ "kapanis_ust": "Sen bunu",
+ "kapanis_vurgu": "biliyor muydun?",
+ "kapanis_seslendirme": "Sen bunu biliyor muydun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "En çok altın rezervi olan 10 ülke 🥇 1 numaranın altını 2. sıradakinin 2 katından fazla! Sence hangisi? 👇",
+ "etiketler": [
+  "#altın",
+  "#ekonomi",
+  "#merkezbankası",
+  "#dünya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Resmi altın rezervleri, World Gold Council / IMF IFS (Temmuz–Ağustos 2026 verisi, bestbrokers.com Ekim 2026). Türkiye ve Hollanda yakın sıralarda; sıralama alımlarla değişebilir."
+}

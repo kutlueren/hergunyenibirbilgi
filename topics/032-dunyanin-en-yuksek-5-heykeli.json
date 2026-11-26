@@ -1,0 +1,91 @@
+{
+ "id": "dunyanin-en-yuksek-5-heykeli",
+ "baslik": [
+  "DÜNYANIN",
+  "EN YÜKSEK",
+  "HEYKELİ"
+ ],
+ "kanca": [
+  "1 numara, Özgürlük Heykeli'nin",
+  "neredeyse 4 KATI!"
+ ],
+ "kanca_seslendirme": "Dünyanın en yüksek beş heykeli! Bir numara, Özgürlük Heykeli'nin neredeyse dört katı.",
+ "birim": "m",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Ushiku Daibutsu",
+   "deger": 100,
+   "yer": "Japonya",
+   "bilgi": [
+    "İçinde asansörle çıkılan",
+    "bir gözlem katı var"
+   ],
+   "seslendirme": "Beşinci sırada, Uşiku Daybutsu, Japonya. İçinde asansörle çıkılan bir gözlem katı var.",
+   "foto": "Ushiku Daibutsu"
+  },
+  {
+   "sira": 4,
+   "ad": "Vishwas Swaroopam",
+   "deger": 106,
+   "yer": "Hindistan",
+   "bilgi": [
+    "Dünyanın en yüksek",
+    "Şiva heykeli"
+   ],
+   "seslendirme": "Dördüncü, Vişvas Svarupam, Hindistan. Dünyanın en yüksek Şiva heykeli.",
+   "foto": "Statue of Belief Nathdwara"
+  },
+  {
+   "sira": 3,
+   "ad": "Laykyun Sekkya",
+   "deger": 116,
+   "yer": "Myanmar",
+   "bilgi": [
+    "Önünde 95 metrelik",
+    "yatan bir Buda da var"
+   ],
+   "seslendirme": "Üçüncü, Laykyun Sekya, Myanmar. Önünde doksan beş metrelik yatan bir Buda heykeli de var.",
+   "foto": "Laykyun Sekkya"
+  },
+  {
+   "sira": 2,
+   "ad": "Bahar Tapınağı Budası",
+   "deger": 128,
+   "yer": "Henan, Çin",
+   "bilgi": [
+    "10 yıl boyunca dünyanın",
+    "en yüksek heykeliydi"
+   ],
+   "seslendirme": "İkinci, Bahar Tapınağı Budası, Çin. On yıl boyunca dünyanın en yüksek heykeliydi.",
+   "foto": "Spring Temple Buddha"
+  },
+  {
+   "sira": 1,
+   "ad": "Birlik Heykeli",
+   "deger": 182,
+   "yer": "Gucerat, Hindistan",
+   "bilgi": [
+    "Sardar Patel'i anlatıyor;",
+    "kaidesiyle 240 metre"
+   ],
+   "seslendirme": "Ve bir numara, Birlik Heykeli, Hindistan! Bağımsızlık lideri Sardar Patel'i anlatıyor. Kaidesiyle birlikte iki yüz kırk metre.",
+   "foto": "Statue of Unity"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "görmek isterdin?",
+ "kapanis_seslendirme": "Sen hangisini görmek isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en yüksek 5 heykeli 🗿 1 numara Özgürlük Heykeli'nin neredeyse 4 katı! Sence hangisi? 👇",
+ "etiketler": [
+  "#heykel",
+  "#anıt",
+  "#dünya",
+  "#mimari",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Kaidesiz heykel yüksekliği (Wikipedia, BBC Science Focus). Özgürlük Heykeli kaidesiz 46 m."
+}

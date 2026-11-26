@@ -1,0 +1,94 @@
+{
+ "id": "dunyanin-en-kalabalik-5-adasi",
+ "baslik": [
+  "DÜNYANIN",
+  "EN KALABALIK",
+  "ADASI"
+ ],
+ "kanca": [
+  "1 numarada, Türkiye'den",
+  "çok daha FAZLA insan yaşıyor!"
+ ],
+ "kanca_seslendirme": "Dünyanın en kalabalık beş adası! Bir numarada, Türkiye'den çok daha fazla insan yaşıyor.",
+ "birim": "milyon",
+ "gorsel": "ikon",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Sumatra",
+   "deger": 58.6,
+   "yer": "Endonezya",
+   "bilgi": [
+    "Orangutanların yaşadığı",
+    "iki adadan biri"
+   ],
+   "seslendirme": "Beşinci sırada, Sumatra, Endonezya. Orangutanların yaşadığı iki adadan biri.",
+   "foto": "Sumatra"
+  },
+  {
+   "sira": 4,
+   "ad": "Luzon",
+   "deger": 64.3,
+   "yer": "Filipinler",
+   "bilgi": [
+    "Başkent Manila",
+    "bu adada"
+   ],
+   "seslendirme": "Dördüncü, Luzon, Filipinler. Başkent Manila bu adada.",
+   "foto": "Luzon"
+  },
+  {
+   "sira": 3,
+   "ad": "Büyük Britanya",
+   "deger": 65.0,
+   "yer": "Birleşik Krallık",
+   "bilgi": [
+    "İngiltere, İskoçya ve",
+    "Galler bu adada"
+   ],
+   "seslendirme": "Üçüncü, Büyük Britanya. İngiltere, İskoçya ve Galler bu adada.",
+   "foto": "Great Britain"
+  },
+  {
+   "sira": 2,
+   "ad": "Honşu",
+   "deger": 104.0,
+   "yer": "Japonya",
+   "bilgi": [
+    "Tokyo, Osaka ve",
+    "Kyoto bu adada"
+   ],
+   "seslendirme": "İkinci, Honşu, Japonya. Tokyo, Osaka ve Kyoto bu adada.",
+   "foto": "Honshu"
+  },
+  {
+   "sira": 1,
+   "ad": "Cava",
+   "deger": 151.6,
+   "yer": "Endonezya",
+   "bilgi": [
+    "Endonezyalıların yarısından",
+    "fazlası burada yaşıyor"
+   ],
+   "seslendirme": "Ve bir numara, Cava, Endonezya! Dünyanın en kalabalık adası. Endonezyalıların yarısından fazlası burada yaşıyor.",
+   "foto": "Java Indonesia"
+  }
+ ],
+ "kapanis_ust": "Sen hangisine",
+ "kapanis_vurgu": "gitmek isterdin?",
+ "kapanis_seslendirme": "Sen hangisine gitmek isterdin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en kalabalık 5 adası 🏝️ 1 numarada Türkiye'den çok daha fazla insan yaşıyor! Sence hangisi? 👇",
+ "etiketler": [
+  "#ada",
+  "#nüfus",
+  "#dünya",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Son nüfus sayımları (Endonezya/Filipinler/Japonya 2020, Birleşik Krallık 2021–22); yaklaşık değerler.",
+ "ikon": "insan",
+ "ikon_deger": 10,
+ "ikon_etiket": "10 milyon kişi"
+}

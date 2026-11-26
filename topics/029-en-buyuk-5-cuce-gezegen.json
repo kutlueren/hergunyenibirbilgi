@@ -1,0 +1,121 @@
+{
+ "id": "en-buyuk-5-cuce-gezegen",
+ "baslik": [
+  "GÜNEŞ SİSTEMİ'NİN",
+  "EN BÜYÜK",
+  "CÜCE GEZEGENİ"
+ ],
+ "kanca": [
+  "1 numara 76 yıl boyunca",
+  "GEZEGEN sayıldı!"
+ ],
+ "kanca_seslendirme": "Güneş Sistemi'nin en büyük beş cüce gezegeni! Bir numara, yetmiş altı yıl boyunca gezegen sayıldı.",
+ "birim": "km",
+ "gorsel": "gezegen",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Gonggong",
+   "deger": 1230,
+   "yer": "Kuiper Kuşağı ötesi",
+   "bilgi": [
+    "Adını Çin mitolojisindeki",
+    "su tanrısından alıyor"
+   ],
+   "seslendirme": "Beşinci sırada, Gonggong. Adını Çin mitolojisindeki su tanrısından alıyor.",
+   "foto": null,
+   "renk": [
+    175,
+    95,
+    80
+   ],
+   "doku": "duz"
+  },
+  {
+   "sira": 4,
+   "ad": "Makemake",
+   "deger": 1430,
+   "yer": "Kuiper Kuşağı",
+   "bilgi": [
+    "Paskalya Adası'nın",
+    "yaratıcı tanrısı"
+   ],
+   "seslendirme": "Dördüncü, Makemake. Adı Paskalya Adası halkının yaratıcı tanrısı.",
+   "foto": null,
+   "renk": [
+    196,
+    128,
+    92
+   ],
+   "doku": "duz"
+  },
+  {
+   "sira": 3,
+   "ad": "Haumea",
+   "deger": 1560,
+   "yer": "Kuiper Kuşağı",
+   "bilgi": [
+    "Çok hızlı döndüğü için",
+    "yumurta şeklinde"
+   ],
+   "seslendirme": "Üçüncü, Haumea. Dört saatte bir döndüğü için yumurta şeklinde.",
+   "foto": null,
+   "renk": [
+    228,
+    228,
+    232
+   ],
+   "doku": "duz"
+  },
+  {
+   "sira": 2,
+   "ad": "Eris",
+   "deger": 2326,
+   "yer": "Dağınık disk",
+   "bilgi": [
+    "Keşfi, 9. gezegenin",
+    "sonunu getirdi"
+   ],
+   "seslendirme": "İkinci, Eris. Onun keşfi, dokuzuncu gezegen tartışmasını başlattı.",
+   "foto": null,
+   "renk": [
+    214,
+    214,
+    220
+   ],
+   "doku": "krater"
+  },
+  {
+   "sira": 1,
+   "ad": "Plüton",
+   "deger": 2377,
+   "yer": "Kuiper Kuşağı",
+   "bilgi": [
+    "1930–2006 arası",
+    "9. gezegendi"
+   ],
+   "seslendirme": "Ve bir numara, Plüton! Bin dokuz yüz otuzdan iki bin altıya kadar dokuzuncu gezegendi. Yüzeyinde dev bir kalp şekli var.",
+   "foto": null,
+   "renk": [
+    206,
+    176,
+    146
+   ],
+   "doku": "krater"
+  }
+ ],
+ "kapanis_ust": "Sen bunu",
+ "kapanis_vurgu": "biliyor muydun?",
+ "kapanis_seslendirme": "Sen bunu biliyor muydun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Güneş Sistemi'nin en büyük 5 cüce gezegeni 🌑 1 numara 76 yıl boyunca gezegen sayıldı! Sence hangisi? 👇",
+ "etiketler": [
+  "#uzay",
+  "#astronomi",
+  "#güneşsistemi",
+  "#gezegen",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Ortalama çaplar (NASA/Wikipedia). Haumea uzun şekilli olduğundan ortalama değer verildi. Gonggong IAU tarafından resmi cüce gezegen olarak onaylanmadı ama yaygın kabul görüyor."
+}

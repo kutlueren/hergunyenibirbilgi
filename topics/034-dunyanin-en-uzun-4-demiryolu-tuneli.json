@@ -1,0 +1,79 @@
+{
+ "id": "dunyanin-en-uzun-4-demiryolu-tuneli",
+ "baslik": [
+  "DÜNYANIN",
+  "EN UZUN",
+  "TREN TÜNELİ"
+ ],
+ "kanca": [
+  "Dünyada 50 km'yi aşan",
+  "sadece 4 tren tüneli var!"
+ ],
+ "kanca_seslendirme": "Dünyanın en uzun dört demiryolu tüneli! Dünyada elli kilometreyi aşan sadece dört tren tüneli var.",
+ "birim": "km",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 4,
+   "ad": "Yulhyeon Tüneli",
+   "deger": 50.3,
+   "yer": "Güney Kore",
+   "bilgi": [
+    "Sadece 3,5 yılda",
+    "tamamlandı"
+   ],
+   "seslendirme": "Dördüncü sırada, Yulhyon Tüneli, Güney Kore. Sadece üç buçuk yılda tamamlandı.",
+   "foto": "Yulhyeon Tunnel"
+  },
+  {
+   "sira": 3,
+   "ad": "Manş Tüneli",
+   "deger": 50.5,
+   "yer": "İngiltere – Fransa",
+   "bilgi": [
+    "38 km'si deniz altında:",
+    "bir rekor"
+   ],
+   "seslendirme": "Üçüncü, Manş Tüneli, İngiltere ve Fransa. Otuz sekiz kilometresi deniz altında, bu bir dünya rekoru.",
+   "foto": "Channel Tunnel"
+  },
+  {
+   "sira": 2,
+   "ad": "Seikan Tüneli",
+   "deger": 53.9,
+   "yer": "Japonya",
+   "bilgi": [
+    "Deniz tabanının 100 m",
+    "altından geçiyor"
+   ],
+   "seslendirme": "İkinci, Seykan Tüneli, Japonya. Deniz tabanının yüz metre altından geçiyor.",
+   "foto": "Seikan Tunnel"
+  },
+  {
+   "sira": 1,
+   "ad": "Gotthard Tüneli",
+   "deger": 57.1,
+   "yer": "İsviçre",
+   "bilgi": [
+    "Üstünde 2.300 metre",
+    "dağ var"
+   ],
+   "seslendirme": "Ve bir numara, Gothard Tüneli, İsviçre! Dünyanın en uzun ve en derin tren tüneli. Üstünde iki bin üç yüz metre dağ var.",
+   "foto": "Gotthard Base Tunnel"
+  }
+ ],
+ "kapanis_ust": "Sen hangisinden",
+ "kapanis_vurgu": "geçtin?",
+ "kapanis_seslendirme": "Sen hangisinden geçtin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en uzun 4 tren tüneli 🚄 50 km'yi aşan sadece 4 tünel var! Sence 1 numara hangisi? 👇",
+ "etiketler": [
+  "#tünel",
+  "#tren",
+  "#mühendislik",
+  "#dünya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Metro tünelleri hariç (Wikipedia)."
+}

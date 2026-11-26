@@ -1,0 +1,91 @@
+{
+ "id": "dunyanin-en-uzun-5-asma-koprusu",
+ "baslik": [
+  "DÜNYANIN",
+  "EN UZUN",
+  "ASMA KÖPRÜSÜ"
+ ],
+ "kanca": [
+  "1 numaranın orta açıklığı",
+  "2 KİLOMETREYİ aşıyor!"
+ ],
+ "kanca_seslendirme": "Dünyanın en uzun açıklıklı beş asma köprüsü! Bir numaranın orta açıklığı iki kilometreyi aşıyor.",
+ "birim": "m",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Nansha Köprüsü",
+   "deger": 1688,
+   "yer": "Guangdong, Çin",
+   "bilgi": [
+    "Günde 100.000'den",
+    "fazla araç geçiyor"
+   ],
+   "seslendirme": "Beşinci sırada, Nanşa Köprüsü, Çin. Günde yüz binden fazla araç geçiyor.",
+   "foto": "Nansha Bridge"
+  },
+  {
+   "sira": 4,
+   "ad": "Yangsigang Köprüsü",
+   "deger": 1700,
+   "yer": "Vuhan, Çin",
+   "bilgi": [
+    "Dünyanın en uzun",
+    "çift katlı asma köprüsü"
+   ],
+   "seslendirme": "Dördüncü, Yangsıgang Köprüsü, Vuhan. Dünyanın en uzun açıklıklı çift katlı asma köprüsü.",
+   "foto": "Yangsigang Yangtze River Bridge"
+  },
+  {
+   "sira": 3,
+   "ad": "Nanjing Xianxin Köprüsü",
+   "deger": 1760,
+   "yer": "Nanjing, Çin",
+   "bilgi": [
+    "2025'te açıldı;",
+    "Yangtze'yi tek açıklıkla geçer"
+   ],
+   "seslendirme": "Üçüncü, Nancing Şyanşin Köprüsü. İki bin yirmi beşte açıldı, Yangçe'yi tek açıklıkla geçiyor.",
+   "foto": "Nanjing Xianxin Bridge"
+  },
+  {
+   "sira": 2,
+   "ad": "Akashi Kaikyō",
+   "deger": 1991,
+   "yer": "Japonya",
+   "bilgi": [
+    "24 yıl boyunca",
+    "dünya rekoru onda kaldı"
+   ],
+   "seslendirme": "İkinci, Akaşi Kaykyo Köprüsü, Japonya. Yirmi dört yıl boyunca dünya rekoru ondaydı.",
+   "foto": "Akashi Kaikyo Bridge"
+  },
+  {
+   "sira": 1,
+   "ad": "1915 Çanakkale Köprüsü",
+   "deger": 2023,
+   "yer": "Çanakkale, Türkiye",
+   "bilgi": [
+    "Açıklığı 2023 m:",
+    "Cumhuriyet'in 100. yılı"
+   ],
+   "seslendirme": "Ve bir numara, Bin dokuz yüz on beş Çanakkale Köprüsü! İki bin yirmi üç metrelik açıklığı, Cumhuriyetin yüzüncü yılına bir selam.",
+   "foto": "1915 Canakkale Bridge"
+  }
+ ],
+ "kapanis_ust": "Sen hangisinden",
+ "kapanis_vurgu": "geçtin?",
+ "kapanis_seslendirme": "Sen hangisinden geçtin? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en uzun 5 asma köprüsü 🌉 1 numaranın orta açıklığı 2 km'yi aşıyor! Sence hangisi? 👇",
+ "etiketler": [
+  "#köprü",
+  "#mühendislik",
+  "#mimari",
+  "#dünya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Orta açıklığa göre (Wikipedia). DİKKAT: Çin'deki Yanji Köprüsü (1.860 m) 2026 sonunda açılırsa 3. sıraya girer; yayından önce kontrol et."
+}

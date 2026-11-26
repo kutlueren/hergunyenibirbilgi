@@ -1,0 +1,92 @@
+{
+ "id": "avrupanin-en-buyuk-5-golu",
+ "baslik": [
+  "AVRUPA'NIN",
+  "EN BÜYÜK",
+  "GÖLÜ"
+ ],
+ "kanca": [
+  "1 numara, 2. sıradakinin",
+  "neredeyse 2 KATI!"
+ ],
+ "kanca_seslendirme": "Avrupa'nın en büyük beş gölü! Bir numara, ikinci sıradakinin neredeyse iki katı.",
+ "birim": "km²",
+ "gorsel": "sekil",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Peipus Gölü",
+   "deger": 3555,
+   "yer": "Estonya – Rusya",
+   "bilgi": [
+    "Avrupa'nın sınır ötesi",
+    "en büyük gölü"
+   ],
+   "seslendirme": "Beşinci sırada, Peypus Gölü, Estonya ve Rusya. Avrupa'nın en büyük sınır ötesi gölü.",
+   "foto": "Lake Peipus"
+  },
+  {
+   "sira": 4,
+   "ad": "Saimaa Gölü",
+   "deger": 4377,
+   "yer": "Finlandiya",
+   "bilgi": [
+    "Nadir Saimaa foku",
+    "sadece burada yaşıyor"
+   ],
+   "seslendirme": "Dördüncü, Saymaa Gölü, Finlandiya. Nadir Saymaa foku sadece burada yaşıyor.",
+   "foto": "Lake Saimaa"
+  },
+  {
+   "sira": 3,
+   "ad": "Vänern Gölü",
+   "deger": 5655,
+   "yer": "İsveç",
+   "bilgi": [
+    "Avrupa Birliği'nin",
+    "en büyük gölü"
+   ],
+   "seslendirme": "Üçüncü, Venern Gölü, İsveç. Avrupa Birliği'nin en büyük gölü.",
+   "foto": "Lake Vanern"
+  },
+  {
+   "sira": 2,
+   "ad": "Onega Gölü",
+   "deger": 9700,
+   "yer": "Rusya",
+   "bilgi": [
+    "Ahşap kiliseleriyle",
+    "ünlü Kiji Adası burada"
+   ],
+   "seslendirme": "İkinci, Onega Gölü, Rusya. Ahşap kiliseleriyle ünlü Kiji Adası burada.",
+   "foto": "Lake Onega"
+  },
+  {
+   "sira": 1,
+   "ad": "Ladoga Gölü",
+   "deger": 17700,
+   "yer": "Rusya",
+   "bilgi": [
+    "Kuşatmada Leningrad'a",
+    "uzanan 'Hayat Yolu'"
+   ],
+   "seslendirme": "Ve bir numara, Ladoga Gölü! Avrupa'nın en büyük gölü. Kuşatma sırasında buzunun üstünden Hayat Yolu geçti.",
+   "foto": "Lake Ladoga"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "gördün?",
+ "kapanis_seslendirme": "Sen hangisini gördün? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Avrupa'nın en büyük 5 gölü 💧 1 numara, 2. sıradakinin neredeyse 2 katı! Sence hangisi? 👇",
+ "etiketler": [
+  "#avrupa",
+  "#göl",
+  "#doğa",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Doğal göller; Hazar Denizi ve baraj gölleri hariç (Wikipedia / EEA).",
+ "stil": "su"
+}

@@ -1,0 +1,130 @@
+{
+ "id": "dunyanin-en-kalabalik-8-ulkesi",
+ "baslik": [
+  "DÜNYANIN",
+  "EN KALABALIK",
+  "ÜLKESİ"
+ ],
+ "kanca": [
+  "Dünyadaki her 6 kişiden",
+  "biri 1 NUMARADA yaşıyor!"
+ ],
+ "kanca_seslendirme": "Dünyanın en kalabalık sekiz ülkesi! Dünyadaki her altı kişiden biri, bir numarada yaşıyor.",
+ "birim": "milyon",
+ "gorsel": "ikon",
+ "maddeler": [
+  {
+   "sira": 8,
+   "ad": "Bangladeş",
+   "deger": 177.8,
+   "yer": "Asya",
+   "bilgi": [
+    "Dünyanın en yoğun nüfuslu",
+    "büyük ülkesi"
+   ],
+   "seslendirme": "Sekizinci sırada, Bangladeş. Dünyanın en yoğun nüfuslu büyük ülkesi.",
+   "foto": "Bangladesh"
+  },
+  {
+   "sira": 7,
+   "ad": "Brezilya",
+   "deger": 213.6,
+   "yer": "Güney Amerika",
+   "bilgi": [
+    "Güney Amerika'nın",
+    "en kalabalık ülkesi"
+   ],
+   "seslendirme": "Yedinci, Brezilya. Güney Amerika'nın en kalabalık ülkesi.",
+   "foto": "Brazil"
+  },
+  {
+   "sira": 6,
+   "ad": "Nijerya",
+   "deger": 242.4,
+   "yer": "Afrika",
+   "bilgi": [
+    "Afrika'nın en",
+    "kalabalık ülkesi"
+   ],
+   "seslendirme": "Altıncı, Nijerya. Afrika'nın en kalabalık ülkesi, ve en hızlı büyüyenlerden.",
+   "foto": "Nigeria"
+  },
+  {
+   "sira": 5,
+   "ad": "Pakistan",
+   "deger": 259.3,
+   "yer": "Asya",
+   "bilgi": [
+    "Nüfusu her yıl",
+    "yüzde 1,6 artıyor"
+   ],
+   "seslendirme": "Beşinci, Pakistan. Nüfusu her yıl yüzde bir virgül altı artıyor.",
+   "foto": "Pakistan"
+  },
+  {
+   "sira": 4,
+   "ad": "Endonezya",
+   "deger": 287.9,
+   "yer": "Asya",
+   "bilgi": [
+    "17.000'den fazla",
+    "adadan oluşuyor"
+   ],
+   "seslendirme": "Dördüncü, Endonezya. On yedi binden fazla adadan oluşuyor.",
+   "foto": "Indonesia"
+  },
+  {
+   "sira": 3,
+   "ad": "ABD",
+   "deger": 349.0,
+   "yer": "Kuzey Amerika",
+   "bilgi": [
+    "Asya dışındaki",
+    "en kalabalık ülke"
+   ],
+   "seslendirme": "Üçüncü, Amerika Birleşik Devletleri. Asya dışındaki en kalabalık ülke.",
+   "foto": "United States"
+  },
+  {
+   "sira": 2,
+   "ad": "Çin",
+   "deger": 1412.9,
+   "yer": "Asya",
+   "bilgi": [
+    "Nüfusu artık",
+    "azalmaya başladı"
+   ],
+   "seslendirme": "İkinci, Çin. Nüfusu artık azalmaya başladı.",
+   "foto": "China"
+  },
+  {
+   "sira": 1,
+   "ad": "Hindistan",
+   "deger": 1476.6,
+   "yer": "Asya",
+   "bilgi": [
+    "2023'te zirveye çıktı;",
+    "her 6 kişiden 1'i burada"
+   ],
+   "seslendirme": "Ve bir numara, Hindistan! İki bin yirmi üçte zirveye çıktı. Dünyadaki her altı kişiden biri burada yaşıyor.",
+   "foto": "India"
+  }
+ ],
+ "kapanis_ust": "Sen bunu",
+ "kapanis_vurgu": "biliyor muydun?",
+ "kapanis_seslendirme": "Sen bunu biliyor muydun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Dünyanın en kalabalık 8 ülkesi 🌍 Her 6 kişiden 1'i 1 numarada yaşıyor! Sence hangisi? 👇",
+ "etiketler": [
+  "#nüfus",
+  "#ülke",
+  "#dünya",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "BM World Population Prospects 2024, 2026 tahmini (Worldometer).",
+ "ikon": "insan",
+ "ikon_deger": 100,
+ "ikon_etiket": "100 milyon kişi"
+}

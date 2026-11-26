@@ -1,0 +1,92 @@
+{
+ "id": "asteroit-kusaginin-en-buyuk-5-cismi",
+ "baslik": [
+  "ASTEROİT KUŞAĞI'NIN",
+  "EN BÜYÜK",
+  "CİSMİ"
+ ],
+ "kanca": [
+  "1 numara tek başına kuşağın",
+  "kütlesinin 3'te BİRİ!"
+ ],
+ "kanca_seslendirme": "Asteroit kuşağının en büyük beş cismi! Bir numara, tek başına kuşağın kütlesinin üçte biri.",
+ "birim": "km",
+ "gorsel": "daire",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Interamnia",
+   "deger": 332,
+   "yer": "Asteroit kuşağı",
+   "bilgi": [
+    "Adı İtalya'daki",
+    "Teramo şehrinden"
+   ],
+   "seslendirme": "Beşinci sırada, İnteramnia. Adını İtalya'daki Teramo şehrinin eski adından alıyor.",
+   "foto": null
+  },
+  {
+   "sira": 4,
+   "ad": "Hygiea",
+   "deger": 434,
+   "yer": "Asteroit kuşağı",
+   "bilgi": [
+    "Neredeyse küre şeklinde;",
+    "cüce gezegen adayı"
+   ],
+   "seslendirme": "Dördüncü, Haygiya. Neredeyse küre şeklinde, cüce gezegen adayı.",
+   "foto": null
+  },
+  {
+   "sira": 3,
+   "ad": "Pallas",
+   "deger": 511,
+   "yer": "Asteroit kuşağı",
+   "bilgi": [
+    "Yörüngesi çok",
+    "eğik"
+   ],
+   "seslendirme": "Üçüncü, Pallas. Yörüngesi diğerlerine göre çok eğik.",
+   "foto": null
+  },
+  {
+   "sira": 2,
+   "ad": "Vesta",
+   "deger": 525,
+   "yer": "Asteroit kuşağı",
+   "bilgi": [
+    "Bazen çıplak gözle",
+    "görülebilen tek asteroit"
+   ],
+   "seslendirme": "İkinci, Vesta. Bazen çıplak gözle görülebilen tek asteroit.",
+   "foto": null
+  },
+  {
+   "sira": 1,
+   "ad": "Ceres",
+   "deger": 939,
+   "yer": "Asteroit kuşağı",
+   "bilgi": [
+    "Kuşaktaki tek",
+    "cüce gezegen"
+   ],
+   "seslendirme": "Ve bir numara, Seres! Kuşağın en büyük cismi, ve kuşaktaki tek cüce gezegen.",
+   "foto": null
+  }
+ ],
+ "kapanis_ust": "Sen bunu",
+ "kapanis_vurgu": "biliyor muydun?",
+ "kapanis_seslendirme": "Sen bunu biliyor muydun? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Asteroit kuşağının en büyük 5 cismi ☄️ 1 numara tek başına kuşağın kütlesinin 3'te 1'i! Sence hangisi? 👇",
+ "etiketler": [
+  "#uzay",
+  "#asteroit",
+  "#astronomi",
+  "#güneşsistemi",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "olcek": "dogrusal",
+ "notlar": "Ortalama çaplar (NASA/JPL)."
+}

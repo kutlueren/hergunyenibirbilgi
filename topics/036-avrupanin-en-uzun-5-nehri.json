@@ -1,0 +1,91 @@
+{
+ "id": "avrupanin-en-uzun-5-nehri",
+ "baslik": [
+  "AVRUPA'NIN",
+  "EN UZUN",
+  "NEHRİ"
+ ],
+ "kanca": [
+  "1 numara baştan sona",
+  "TEK BİR ülkeden akıyor!"
+ ],
+ "kanca_seslendirme": "Avrupa'nın en uzun beş nehri! Bir numara baştan sona tek bir ülkeden akıyor.",
+ "birim": "km",
+ "gorsel": "cubuk",
+ "maddeler": [
+  {
+   "sira": 5,
+   "ad": "Don",
+   "deger": 1870,
+   "yer": "Rusya",
+   "bilgi": [
+    "Azak Denizi'ne",
+    "dökülüyor"
+   ],
+   "seslendirme": "Beşinci sırada, Don Nehri, Rusya. Azak Denizine dökülüyor.",
+   "foto": "Don River"
+  },
+  {
+   "sira": 4,
+   "ad": "Dinyeper",
+   "deger": 2201,
+   "yer": "Rusya – Belarus – Ukrayna",
+   "bilgi": [
+    "Kiev'in ortasından",
+    "geçiyor"
+   ],
+   "seslendirme": "Dördüncü, Dinyeper. Kiev'in ortasından geçiyor ve Karadeniz'e dökülüyor.",
+   "foto": "Dnieper"
+  },
+  {
+   "sira": 3,
+   "ad": "Ural",
+   "deger": 2428,
+   "yer": "Rusya – Kazakistan",
+   "bilgi": [
+    "Avrupa ile Asya'nın",
+    "sınırı sayılıyor"
+   ],
+   "seslendirme": "Üçüncü, Ural Nehri. Avrupa ile Asya'nın sınırı sayılıyor.",
+   "foto": "Ural River"
+  },
+  {
+   "sira": 2,
+   "ad": "Tuna",
+   "deger": 2850,
+   "yer": "10 ülke",
+   "bilgi": [
+    "Dünyada en çok ülkeden",
+    "geçen nehir: 10"
+   ],
+   "seslendirme": "İkinci, Tuna. Dünyada en çok ülkeden geçen nehir, tam on ülke.",
+   "foto": "Danube"
+  },
+  {
+   "sira": 1,
+   "ad": "Volga",
+   "deger": 3530,
+   "yer": "Rusya",
+   "bilgi": [
+    "Hazar Denizi'ne",
+    "dökülüyor"
+   ],
+   "seslendirme": "Ve bir numara, Volga! Avrupa'nın en uzun nehri. Baştan sona Rusya'dan akıp Hazar Denizine dökülüyor.",
+   "foto": "Volga River"
+  }
+ ],
+ "kapanis_ust": "Sen hangisini",
+ "kapanis_vurgu": "gördün?",
+ "kapanis_seslendirme": "Sen hangisini gördün? Yorumlara yaz, ve takip etmeyi unutma!",
+ "aciklama": "Avrupa'nın en uzun 5 nehri 🏞️ 1 numara baştan sona tek bir ülkeden akıyor! Sence hangisi? 👇",
+ "etiketler": [
+  "#avrupa",
+  "#nehir",
+  "#doğa",
+  "#coğrafya",
+  "#bilgi",
+  "#reels",
+  "#keşfet"
+ ],
+ "notlar": "Uzunluklar kaynaklara göre biraz değişebilir."
+}

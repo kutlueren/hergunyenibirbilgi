@@ -3,7 +3,8 @@ the Instagram caption, the hashtags, the hook, and the scenes before #1."""
 import re
 
 STOP = {"gölü", "golu", "çölü", "okyanusu", "dağı", "adası", "ili", "ülkesi", "binası", "havalimanı", "dili",
-        "the", "de", "ve", "okyanusya", "mandarin", "gezegen", "kulesi", "merkezi"}
+        "the", "de", "ve", "okyanusya", "mandarin", "gezegen", "kulesi", "merkezi",
+        "baraj", "barajı", "stadyumu", "tüneli", "köprüsü", "heykeli", "mont"}
 
 
 def _low(s):
