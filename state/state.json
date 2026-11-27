@@ -71,6 +71,12 @@
    "date": "2026-11-27T12:37:03+00:00",
    "ig_media_id": "18134592682744930",
    "permalink": "https://www.instagram.com/reel/DgPsiwFxDfD/"
+  },
+  {
+   "id": "dunyanin-en-buyuk-5-colu",
+   "date": "2026-11-27T12:41:54+00:00",
+   "ig_media_id": "18123431932767112",
+   "permalink": "https://www.instagram.com/reel/DgPtGbkoCX9/"
   }
  ],
  "rejected": [
@@ -79,16 +85,8 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": {
-  "key": "20261127",
-  "topic_id": "dunyanin-en-buyuk-5-colu",
-  "file_id": "BAACAgIAAxkDAAM0awl6gQQXl3ctKGywYYnOhQMDOJsAArmqAAIL71BITfNSBBTg5wE9BA",
-  "message_id": 52,
-  "caption": "Dünyanın en büyük 5 çölü 🏜️ En büyük çöl sıcak değil, buz gibi! Sen biliyor muydun? 👇\n\n#çöl #sahra #coğrafya #doğa #bilgi #bunlarıbiliyormuydunuz #keşfet #reels",
-  "theme": "gunbatimi",
-  "created": "2026-11-27T12:41:37+00:00"
- },
- "tg_offset": 518928477,
+ "pending": null,
+ "tg_offset": 518928478,
  "last_daily": "20261127",
  "last_theme": "gunbatimi"
 }
