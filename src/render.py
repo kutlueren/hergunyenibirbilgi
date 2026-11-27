@@ -161,6 +161,18 @@ class Renderer:
                 x = rng.uniform(0, W); y = rng.uniform(0, H); r = rng.uniform(1, 2.5)
                 d.ellipse([x - r, y - r, x + r, y + r], fill=(255, 255, 255, 70))
 
+    @staticmethod
+    def _bird(d, x, y, s, phase, alpha):
+        """A gull 'v' that flaps its wings."""
+        f = math.sin(phase) * 0.55
+        pts = [(x - s, y - s * f), (x - s * 0.45, y - s * (0.25 + f * 0.4)), (x, y), (x + s * 0.45, y - s * (0.25 + f * 0.4)), (x + s, y - s * f)]
+        d.line(pts, fill=(255, 255, 255, int(alpha)), width=max(2, int(s / 7)), joint="curve")
+
+    def _plane_tile(self, s, col, angle):
+        tile = Image.new("RGBA", (int(s) + 4, int(s) + 4), (0, 0, 0, 0))
+        self._icon(ImageDraw.Draw(tile), "ucak", 2, 2, s, col)
+        return tile.rotate(angle, resample=Image.BICUBIC, expand=True)
+
     def background(self, gt, key=None, t=0.0, dur=1.0):
         im = self.photo(key) if key else None
         if im is not None:
@@ -353,6 +365,7 @@ class Renderer:
                 for c_ in range(cols):
                     seed = (i * 131 + r_ * 17 + c_ * 7) % 23
                     lit = (seed + int(gt * 1.5 + seed)) % 5 != 0 and seed % 3 != 0
+                    lit = lit and (ground - (yb - 14 - r_ * 26)) / max(1.0, ground - blocks[-1][2]) <= prog(t, 0.7, 1.7) * 1.05  # floor by floor
                     wx = x0 + 8 + c_ * ww; wy = yb - 14 - r_ * 26
                     col = (255, 236, 170, 230) if lit else tuple(int(q * 0.6) for q in c) + (200,)
                     d.rectangle([wx + 3, wy - 13, wx + ww - 4, wy], fill=col)
@@ -382,6 +395,14 @@ class Renderer:
             k = 1 + sum(amps[j] * math.sin((j + 2) * a + phs[j]) for j in range(6))
             pts.append((cx + r * k * math.cos(a), cy + r * k * 0.92 * math.sin(a)))
         return pts
+
+        # three gulls gliding across, once the mountain has grown
+        ba = 170 * ease_out(prog(t, 1.0, 1.6))
+        if ba > 0:
+            for k in range(3):
+                bx = -80 + ((gt * 70 + k * 55) % (W + 200)) + (k % 2) * 30
+                by = ground - Hmax - 60 + k * 26 + 10 * math.sin(gt * 1.3 + k)
+                self._bird(d, bx, by, 16 - 2 * k, gt * 7 + k * 1.7, ba)
 
     def draw_shape(self, d, it, v, ac, t, gt, is_top):
         cx, cy, R = W / 2, 1090, 255
@@ -422,6 +443,23 @@ class Renderer:
                 a = rng.uniform(0, 2 * math.pi); l = r * rng.uniform(0.1, 0.6)
                 x, y = cx + l * math.cos(a), cy + l * math.sin(a) * 0.8; rr_ = max(3, r * 0.05)
                 d.ellipse([x - rr_, y - rr_, x + rr_, y + rr_], fill=(45, 110, 65, 230))
+        ca = ease_out(prog(t, 1.0, 1.5))
+        if ca > 0 and stil == "su":   # sun glints twinkling on the water
+            for k in range(5):
+                ph = (gt * 0.9 + k * 0.37) % 1.0
+                a_ = rng.uniform(0, 2 * math.pi); l = r * rng.uniform(0.15, 0.65)
+                x, y = cx + l * math.cos(a_), cy + l * math.sin(a_) * 0.8
+                g = math.sin(ph * math.pi) * ca; ss = max(4, r * 0.06) * g
+                if ss > 1:
+                    d.line([(x - ss, y), (x + ss, y)], fill=(255, 255, 255, int(230 * g)), width=3)
+                    d.line([(x, y - ss), (x, y + ss)], fill=(255, 255, 255, int(230 * g)), width=3)
+        elif ca > 0 and stil in ("kara", "col"):   # clouds drifting over the land
+            for k in range(2):
+                span = r * 2.6
+                x = cx - span / 2 + ((gt * (30 + 14 * k) + k * span / 2) % span)
+                y = cy - r * 0.35 + k * r * 0.5; sc = max(0.35, r / 260)
+                for dx, dy, rr_ in ((0, 0, 34), (36, -12, 40), (78, 0, 30), (40, 10, 30)):
+                    d.ellipse([x + (dx - rr_) * sc, y + (dy - rr_ * 0.6) * sc, x + (dx + rr_) * sc, y + (dy + rr_ * 0.6) * sc], fill=(255, 255, 255, int(165 * ca)))
 
     # --- icon charts: people, planes, speech bubbles ------------------------------------
     @staticmethod
@@ -459,13 +497,48 @@ class Renderer:
         d.text((W / 2 - lw / 2, y0 - 58), legend, font=lab, fill=(255, 255, 255, int(150 * ac)))
         c = self.th["circle"]; on = tuple(min(255, q + 40) for q in c) + (255,); off = (255, 255, 255, 38)
         shown = (v / unit) * ac
+        full = math.floor(v / unit + 1e-9)          # icons that end up completely filled
         img = d._image
+        if kind == "ucak":   # one plane taking off across the chart, every few seconds
+            ta = ease_out(prog(t, 0.2, 0.6))
+            ph = ((t + 0.8) % 3.6) / 3.6
+            if ta > 0 and ph < 0.85:
+                q = ph / 0.85
+                px = -120 + q * (W + 240); lift = max(0.0, q - 0.3) / 0.7
+                py = y0 + bh + 10 - (bh + 120) * lift ** 1.6
+                ang = 8 + 22 * min(1.0, lift * 2)
+                prev = None
+                for k in range(40):           # fading contrail
+                    qq = q - k * 0.006
+                    if qq <= 0: break
+                    l2 = max(0.0, qq - 0.3) / 0.7
+                    pt = (-120 + qq * (W + 240) - 40, y0 + bh + 10 - (bh + 120) * l2 ** 1.6 + 4)
+                    if prev:
+                        d.line([prev, pt], fill=(255, 255, 255, int(90 * ta * (1 - k / 40))), width=max(2, int(7 * (1 - k / 40))))
+                    prev = pt
+                tile = self._plane_tile(110, (255, 255, 255, int(170 * ta)), ang)
+                img.alpha_composite(tile, (int(px - tile.width / 2), int(py - tile.height / 2)))
         for i in range(maxn):
             r_, c_ = divmod(i, cols)
             x = gx + c_ * cell + (cell - s_) / 2; y = gy + r_ * cell + (cell - s_) / 2
             self._icon(d, kind, x, y, s_, off)
-            if i + 1 <= shown:
-                self._icon(d, kind, x, y, s_, on)
+            p_ = clamp(shown - i)
+            if i < full and p_ > 0:
+                if kind == "ucak":            # lands into its slot from the upper left
+                    e = ease_out(p_)
+                    if e >= 1:
+                        self._icon(d, kind, x, y, s_, on)
+                    else:
+                        tile = self._plane_tile(s_, on[:3] + (int(255 * e),), -14 * (1 - e))
+                        img.alpha_composite(tile, (int(x - 160 * (1 - e) + (s_ - tile.width) / 2), int(y - 90 * (1 - e) + (s_ - tile.height) / 2)))
+                else:                         # pops in with a little bounce, then breathes
+                    k_ = ease_back(p_) if p_ < 1 else 1 + 0.035 * math.sin(gt * 3 + i * 0.6) * ease_out(prog(t, 1.3, 1.8))
+                    ss = s_ * k_; self._icon(d, kind, x + (s_ - ss) / 2, y + (s_ - ss), ss, on)
+                    if kind == "balon" and p_ >= 1:   # typing dots
+                        for j in range(3):
+                            dx = x + s_ * (0.3 + 0.2 * j); lift = 4 * max(0.0, math.sin(gt * 6 - j * 0.9 - i * 0.4))
+                            d.ellipse([dx - s_ * 0.05, y + s_ * 0.36 - lift, dx + s_ * 0.05, y + s_ * 0.46 - lift], fill=on[:3] + (255,))
+                            d.ellipse([dx - s_ * 0.05, y + s_ * 0.36 - lift, dx + s_ * 0.05, y + s_ * 0.46 - lift], fill=(255, 255, 255, 230))
             elif i < shown:  # partly filled icon, cut from the left
                 tile = Image.new("RGBA", (int(s_) + 2, int(s_) + 2), (0, 0, 0, 0))
                 self._icon(ImageDraw.Draw(tile), kind, 0, 0, s_, on)
@@ -494,7 +567,7 @@ class Renderer:
         elif doku == "krater":
             for k in range(14):
                 a = rng.uniform(0, 2 * math.pi); l = r * math.sqrt(rng.uniform(0, 0.8)); cr = r * rng.uniform(0.05, 0.14)
-                x = cxp + l * math.cos(a); y = cyp + l * math.sin(a)
+                x = cxp + ((l * math.cos(a) + r + gt * r * 0.07) % (2 * r)) - r; y = cyp + l * math.sin(a)
                 bd.ellipse([x - cr, y - cr, x + cr, y + cr], fill=tuple(int(q * 0.78) for q in c0) + (255,))
         elif doku == "bulut":
             for k in range(7):
@@ -776,9 +849,15 @@ class Renderer:
             if not is_top:
                 d.rounded_rectangle([bx0, by1 - bh, bx1, by1], 18, outline=(255, 255, 255, int(90 * ac)), width=4)
                 lw = d.textlength(label, font=lab); d.text((W / 2 - lw / 2, by1 - bh - 50), label, font=lab, fill=(255, 255, 255, int(130 * ac)))
-            h = bh * (v / self.maxv) * ac
+            h = bh * (v / self.maxv) * (ease_back(prog(t, 0.3, 1.2)) if t < 1.2 else 1)
             if h > 2:
                 d.rounded_rectangle([bx0, by1 - h, bx1, by1], 18, fill=circ + (210,), outline=tuple(min(255, x + 110) for x in circ) + (255,), width=5)
+                sw = ease_out(prog(t, 1.3, 1.6))
+                if sw > 0 and h > 40:      # light band sweeping up the bar
+                    q = ((t - 1.3) % 2.4) / 1.1
+                    if q < 1:
+                        yb = by1 - 10 - q * (h - 30)
+                        d.rectangle([bx0 + 8, yb - 14, bx1 - 8, yb], fill=(255, 255, 255, int(70 * sw * math.sin(q * math.pi))))
         else:
             cx, cy, R = W / 2, 1110, 250
             if not is_top:
@@ -786,6 +865,12 @@ class Renderer:
                 lw = d.textlength(label, font=lab); d.text((cx - lw / 2, cy - R - 50), label, font=lab, fill=(255, 255, 255, int(130 * ac)))
             frac = v / self.maxv
             r = R * (frac if self.T.get("olcek") == "dogrusal" else math.sqrt(frac)) * ac
+            pa = ease_out(prog(t, 1.3, 1.6))
+            if r > 1 and pa > 0:           # soft pulse rings
+                for k in range(2):
+                    q = ((t - 1.3) / 2.0 + k * 0.5) % 1.0
+                    rr_ = r + 90 * q
+                    d.ellipse([cx - rr_, cy - rr_, cx + rr_, cy + rr_], outline=circ + (int(140 * pa * (1 - q)),), width=4)
             if r > 1:
                 d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=circ + (200,))
                 d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=tuple(min(255, x + 110) for x in circ) + (255,), width=5)
