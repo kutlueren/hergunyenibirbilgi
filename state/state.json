@@ -67,8 +67,16 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": null,
+ "pending": {
+  "key": "20261127",
+  "topic_id": "dunyanin-en-yogun-8-havalimani",
+  "file_id": "BAACAgIAAxkDAAMuawliOMjgGlI9BrGG4S-9q0C1HPYAAkmpAAIL71BIZrUBfPDwYdM9BA",
+  "message_id": 46,
+  "caption": "Dünyanın en yoğun 8 havalimanı 🛫 İstanbul Havalimanı da listede! Hangisinden uçtun? 👇\n\n#havalimanı #istanbulhavalimanı #uçak #seyahat #bilgi #bunlarıbiliyormuydunuz #keşfet #reels",
+  "theme": "neon",
+  "created": "2026-11-27T10:58:01+00:00"
+ },
  "tg_offset": 518928475,
- "last_daily": "20261126",
- "last_theme": "zumrut"
+ "last_daily": "20261127",
+ "last_theme": "neon"
 }
