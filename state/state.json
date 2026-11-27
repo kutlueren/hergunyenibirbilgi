@@ -77,6 +77,12 @@
    "date": "2026-11-27T12:41:54+00:00",
    "ig_media_id": "18123431932767112",
    "permalink": "https://www.instagram.com/reel/DgPtGbkoCX9/"
+  },
+  {
+   "id": "dunyanin-5-okyanusu",
+   "date": "2026-11-27T12:44:56+00:00",
+   "ig_media_id": "18144068902529399",
+   "permalink": "https://www.instagram.com/reel/DgPthcpii12/"
   }
  ],
  "rejected": [
@@ -85,16 +91,8 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": {
-  "key": "20261127",
-  "topic_id": "dunyanin-5-okyanusu",
-  "file_id": "BAACAgIAAxkDAAM3awl7NXnPbiMz1guX3RgBrJCdJdoAAsGqAAIL71BIny00Gco2ZHU9BA",
-  "message_id": 55,
-  "caption": "Dünyanın 5 okyanusu 🌊 1 numara, dünyadaki tüm karalardan daha büyük! Sence hangisi? 👇\n\n#okyanus #deniz #coğrafya #doğa #bilgi #bunlarıbiliyormuydunuz #keşfet #reels",
-  "theme": "gece",
-  "created": "2026-11-27T12:44:37+00:00"
- },
- "tg_offset": 518928478,
+ "pending": null,
+ "tg_offset": 518928479,
  "last_daily": "20261127",
  "last_theme": "gece"
 }
