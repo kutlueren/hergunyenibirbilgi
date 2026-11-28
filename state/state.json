@@ -83,6 +83,12 @@
    "date": "2026-11-27T12:44:56+00:00",
    "ig_media_id": "18144068902529399",
    "permalink": "https://www.instagram.com/reel/DgPthcpii12/"
+  },
+  {
+   "id": "dunyanin-7-kitasi",
+   "date": "2026-11-28T11:06:37+00:00",
+   "ig_media_id": "18115491551245236",
+   "permalink": "https://www.instagram.com/reel/DgSG_Z0xGAw/"
   }
  ],
  "rejected": [
@@ -91,16 +97,8 @@
    "date": "2026-11-22T10:59:02+00:00"
   }
  ],
- "pending": {
-  "key": "20261128",
-  "topic_id": "dunyanin-7-kitasi",
-  "file_id": "BAACAgIAAxkDAAM6awqzgaKDQoDhe1A51mlvXhvBm9MAAnekAAIhGVhIQ97Fa5CMuzM9BA",
-  "message_id": 58,
-  "caption": "Dünyanın 7 kıtası 🌍 1 numara tek başına Ay'ın yüzeyinden büyük! Sence hangisi? 👇\n\n#kıtalar #dünya #coğrafya #harita #bilgi #bunlarıbiliyormuydunuz #keşfet #reels",
-  "theme": "kutup",
-  "created": "2026-11-28T10:57:05+00:00"
- },
- "tg_offset": 518928479,
+ "pending": null,
+ "tg_offset": 518928480,
  "last_daily": "20261128",
  "last_theme": "kutup"
 }
