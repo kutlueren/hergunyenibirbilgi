@@ -22,7 +22,7 @@
     "Rwenzori'de: 'Ay Dağları'",
     "olarak bilinen sıra"
    ],
-   "seslendirme": "Beşinci sırada, Beyker Dağı, Uganda. Ay Dağları diye bilinen Ruvenzori sırasında.",
+   "seslendirme": "Beşinci sırada, {Baker} Dağı, Uganda. Ay Dağları diye bilinen Ruvenzori sırasında.",
    "foto": "Mount Baker Rwenzori"
   },
   {
@@ -34,7 +34,7 @@
     "Adını Nil'in kaynağını",
     "arayan kaşiften alıyor"
    ],
-   "seslendirme": "Dördüncü, Spik Dağı, Uganda. Adını Nilin kaynağını arayan kaşiften alıyor.",
+   "seslendirme": "Dördüncü, {Speke} Dağı, Uganda. Adını Nilin kaynağını arayan kaşiften alıyor.",
    "foto": "Mount Speke"
   },
   {
@@ -46,7 +46,7 @@
     "Ekvator'un hemen yanında",
     "ama buzulları var"
    ],
-   "seslendirme": "Üçüncü, Stenli Dağı, Uganda ve Kongo. Ekvatorun hemen yanında ama buzulları var.",
+   "seslendirme": "Üçüncü, {Stanley} Dağı, Uganda ve Kongo. Ekvatorun hemen yanında ama buzulları var.",
    "foto": "Mount Stanley"
   },
   {

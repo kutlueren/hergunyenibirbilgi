@@ -22,7 +22,7 @@
     "İçinde küreler var:",
     "en üstteki bir gözlem salonu"
    ],
-   "seslendirme": "Beşinci sırada, Oriental Pörl Kulesi, Şanghay. Gövdesindeki kürelerin en üstü bir gözlem salonu.",
+   "seslendirme": "Beşinci sırada, {Oriental Pearl} Kulesi, Şanghay. Gövdesindeki kürelerin en üstü bir gözlem salonu.",
    "foto": "Oriental Pearl Tower"
   },
   {
@@ -46,7 +46,7 @@
     "32 yıl boyunca dünyanın",
     "en yüksek serbest yapısıydı"
    ],
-   "seslendirme": "Üçüncü, Si En Tavır, Toronto. Otuz iki yıl boyunca dünyanın en yüksek serbest duran yapısıydı.",
+   "seslendirme": "Üçüncü, {CN Tower}, Toronto. Otuz iki yıl boyunca dünyanın en yüksek serbest duran yapısıydı.",
    "foto": "CN Tower"
   },
   {
@@ -70,7 +70,7 @@
     "Dünyanın en yüksek kulesi;",
     "634 sayısı 'Musaşi' okunur"
    ],
-   "seslendirme": "Ve bir numara, Tokyo Skaytri! Dünyanın en yüksek kulesi. Altı yüz otuz dört sayısı Japoncada Musaşi diye okunuyor, bölgenin eski adı.",
+   "seslendirme": "Ve bir numara, Tokyo {Skytree}! Dünyanın en yüksek kulesi. Altı yüz otuz dört sayısı Japoncada Musaşi diye okunuyor, bölgenin eski adı.",
    "foto": "Tokyo Skytree"
   }
  ],

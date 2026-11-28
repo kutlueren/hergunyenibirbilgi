@@ -14,8 +14,8 @@ SPOKEN = {
     "Kangçencunga": "Kançencunga", "Guangzhou": "Guançu", "Shenzhen": "Şenzen", "Shanghai": "Şanghay",
     "Tianjin": "Tiencin", "UNESCO": "Yunesko", "TÜİK": "Tüik", "BAE": "Birleşik Arap Emirlikleri",
     "Mississippi": "Misisipi", "Missouri": "Missuri", "Yangtze": "Yangçe", "Ganymede": "Ganimed",
-    "Aconcagua": "Akonkagua", "Victoria": "Viktorya", "Michigan": "Miçigan", "Superior": "Süperior",
-    "Ellesmere": "Ellesmir", "Honshu": "Honşu", "New York": "Nüyork", "Burj Khalifa": "Burç Halife",
+    "Aconcagua": "Akonkagua", "Victoria": "Viktorya", "Superior": "Süperior",
+    "Ellesmere": "Ellesmir", "Honshu": "Honşu", "Burj Khalifa": "Burç Halife",
     "ABD": "A Be De", "km²": "kilometrekare", "km": "kilometre",
 }
 

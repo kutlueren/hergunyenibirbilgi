@@ -5,6 +5,9 @@ The text is cleaned (tts_text.clean), turned into phonemes by espeak, corrected 
 - espeak's Turkish rules read a "ü" in a closed syllable as "ö": "yüz" -> "yöz", so every year
   ("bin sekiz yüz...") and "yüzde" came out wrong. Those vowels are put back to "ü".
 - PHONEMES holds hand-written pronunciations for words espeak gets wrong ("katil" -> KAAtil).
+- English words are read in English: text in braces ({Tokyo Skytree}) and words in EN_WORDS are
+  phonemised with espeak's English voice and mapped onto the sounds the Turkish voice knows,
+  so the same Fahrettin voice says them the way a Turkish presenter would say English.
 """
 import os, re, wave
 import numpy as np
@@ -17,6 +20,43 @@ SPEED = float(os.environ.get("VOICE_SPEED", "1.05"))
 PHONEMES = {
     "katil": "kˈaːtil",
 }
+
+# words that are always read in English (lower case). Avoid words that also exist in Turkish ("bay", "park").
+EN_WORDS = {
+    "tower", "towers", "stadium", "international", "airport", "center", "centre", "street", "square",
+    "bridge", "building", "state", "empire", "trade", "world", "golden", "gate", "station", "central",
+    "island", "lake", "mount", "river", "national", "university", "college", "hall", "house", "times",
+    "new", "york", "angeles", "chicago", "atlanta", "dallas", "denver", "heathrow", "ohare", "o'hare",
+    "jfk", "fort", "knox", "beaver", "ohio", "michigan", "shakespeare", "skytree", "cn", "pearl", "oriental",
+    "washington", "hollywood", "silicon", "valley", "manhattan", "brooklyn", "boston", "seattle",
+}
+
+# English espeak phonemes -> sounds the Turkish voice was trained on
+_EN_MAP = {
+    "ɹ": "ɾ", "ɚ": "ɛɾ", "ɝ": "øɾ", "ɜ": "ø", "ə": "ɛ", "ɐ": "a", "ʌ": "a", "ɑ": "a", "ɒ": "o",
+    "ɔ": "o", "ᵻ": "ɪ", "θ": "t", "ð": "d", "w": "v", "ʍ": "v", "ŋ": "nɡ", "ɾ": "d", "ʔ": "",
+    "ʲ": "", "ɬ": "l", "x": "h", "ɡ": "ɡ",
+}
+_EN_DIPH = {"eɪ": "ej", "aɪ": "aj", "ɔɪ": "oj", "oʊ": "o", "aʊ": "av", "ɪə": "ɪɛ", "eə": "eɛ", "ʊə": "ʊɛ"}
+_PUNCT = ".,!?;:"
+_ESPEAK = None
+
+
+def _english(word):
+    """Phonemes for one English word, mapped onto the Turkish voice's sounds."""
+    global _ESPEAK
+    if _ESPEAK is None:
+        import piper
+        from piper.phonemize_espeak import EspeakPhonemizer
+        _ESPEAK = EspeakPhonemizer(os.path.join(os.path.dirname(piper.__file__), "espeak-ng-data"))
+    raw = "".join(ch for sent in _ESPEAK.phonemize("en-us", word) for ch in sent if ch != " ")
+    # the English tap (as in "water") is already "ɾ"; turn it into "d" before "ɹ" becomes "ɾ"
+    raw = raw.replace("ɾ", "d")
+    for a, b in _EN_DIPH.items():
+        raw = raw.replace(a, b)
+    out = "".join(_EN_MAP.get(ch, ch) if ch != "ɾ" else ch for ch in raw)
+    return list(out)
+
 
 _LETTER_VOWELS = "aeıioöuüâîû"
 _PHON_VOWELS = set("aæeɛɯiɪoɔøœuʊyʏ")
@@ -43,9 +83,55 @@ def fix_word(word, phon):
     return phon
 
 
+_PLACEHOLDER = "fırfırık"   # a made-up word: never in a narration line, always one espeak word
+
+
+def _is_english(w):
+    w = w.lower()
+    return w in EN_WORDS or w.replace("'", "").replace("’", "") in EN_WORDS
+
+
+def _mark_english(text):
+    """Swaps English words for a placeholder word (so the Turkish clean-up and espeak leave them
+    alone and word alignment still works). Returns the new text and, in order, (english, suffix)
+    pairs; a Turkish suffix after an apostrophe ("O'Hare'da") is kept and read in Turkish."""
+    english = []
+
+    def swap(word, forced=False):
+        m = re.match(r"^([\"(«]*)(.*?)([.,!?;:)»\"]*)$", word)
+        lead, core, tail = m.groups()
+        base, suffix = core, ""
+        if not (forced or _is_english(core)):
+            parts = re.split(r"['’]", core)
+            if len(parts) < 2 or not _is_english("'".join(parts[:-1])):
+                return word
+            base, suffix = "'".join(parts[:-1]), parts[-1]
+        elif forced:
+            m2 = re.match(r"^(.*)['’](\w+)$", core)
+            if m2 and "}" in m2.group(1): base, suffix = m2.group(1), m2.group(2)
+        english.append((base.strip("{}"), suffix))
+        return lead + _PLACEHOLDER + tail
+
+    def braces(m):
+        ws = m.group(1).split()
+        if m.group(2): ws[-1] += "'" + m.group(2)
+        out = []
+        for w in ws:
+            parts = re.split(r"['’]", w)
+            if m.group(2) and w is ws[-1]:
+                english.append(("'".join(parts[:-1]), parts[-1])); out.append(_PLACEHOLDER)
+            else:
+                english.append((w, "")); out.append(_PLACEHOLDER)
+        return " ".join(out)
+    text = re.sub(r"\{([^}]*)\}(?:['’](\w+))?", braces, text)
+    text = " ".join(swap(w) if _PLACEHOLDER not in w else w for w in text.split())
+    return text, english
+
+
 def phonemes_for(pv, text):
     """Returns one phoneme list per sentence, corrected word by word.
     Words are lined up across the whole line (espeak sometimes merges or splits sentences)."""
+    text, english = _mark_english(text)
     text = clean(text)
     sentences = pv.phonemize(text)
     words_per_sent = []
@@ -62,7 +148,19 @@ def phonemes_for(pv, text):
     flat = [w for ws in words_per_sent for w in ws]
     tw = text.split()
     if len(tw) == len(flat):
-        fixed = iter([fix_word(w, p) for w, p in zip(tw, flat)])
+        en = iter(english)
+        fixed = []
+        for w, p in zip(tw, flat):
+            core = re.sub(r"[^\wçğıöşü]", "", _lower(w))
+            if core.startswith(_PLACEHOLDER):
+                word, suffix = next(en)
+                ph = _english(word)
+                if suffix:   # Turkish suffix, read with the Turkish voice
+                    ph += [ch for sent in pv.phonemize(clean(suffix)) for ch in sent if ch not in " ˈˌ" + _PUNCT]
+                fixed.append(ph + [ch for ch in p if ch in _PUNCT])
+            else:
+                fixed.append(fix_word(w, p))
+        fixed = iter(fixed)
         words_per_sent = [[next(fixed) for _ in ws] for ws in words_per_sent]
     else:
         print(f"[voice] word alignment failed ({len(tw)} vs {len(flat)}), uncorrected: {text[:60]}")
